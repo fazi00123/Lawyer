@@ -11,33 +11,94 @@
 </head>
 <body class="bg-[#121212]">
 
-  <nav class="bg-[#F8D100]">
-    <div class="flex justify-between items-center px-20 pt-8">
-      <div>
-        <img src="./assets/img/Logo.png" alt="">
-      </div>
-      <div>
-        <ul class="flex space-x-10">
-          <li><a href="">Home</a></li>
-          <li><a href="">Home</a></li>
-          <li><a href="">Home</a></li>
-          <li><a href="">Home</a></li>
-          <li><a href="">Home</a></li>
-          <li><a href="">Home</a></li>
-        </ul>
-      </div>
-      <div>
-        <button class="uppercase bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed">Kontakt</button>
-      </div>
+<!-- navbar  -->
+
+ <nav class="bg-[#F8D100] w-full">
+  <div class="flex justify-between items-center xl:px-20 lg:px-10 px-5 xl:pt-8 pt-5">
+    <!-- Logo -->
+    <div>
+      <img src="./assets/img/Logo.png" alt="Logo" class="w-32">
     </div>
-    <div class="px-20 pt-4">
-    <hr class="">
+
+    <!-- Menu (Desktop) -->
+    <div class="hidden lg:flex">
+      <ul class="flex space-x-10 font-medium text-lg">
+        <li><a href="#" class="hover:text-[#121212] transition">Home</a></li>
+        <li><a href="#" class="hover:text-[#121212] transition">About</a></li>
+        <li><a href="#" class="hover:text-[#121212] transition">Services</a></li>
+        <li><a href="#" class="hover:text-[#121212] transition">Portfolio</a></li>
+        <li><a href="#" class="hover:text-[#121212] transition">Blog</a></li>
+        <li><a href="#" class="hover:text-[#121212] transition">Contact</a></li>
+      </ul>
     </div>
-  </nav>
+
+    <!-- Contact Button (Desktop) -->
+    <div class="hidden lg:block">
+      <button class="uppercase bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed hover:bg-[#1f1f1f] transition">Kontakt</button>
+    </div>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="lg:hidden">
+      <button id="menu-btn" class="relative w-10 h-10 focus:outline-none">
+        <span class="sr-only">Toggle Menu</span>
+        <div class="hamburger-lines">
+          <span class="absolute bg-[#121212] w-8 h-[3px] top-2 left-1 transition-all duration-300 ease-in-out origin-top-left"></span>
+          <span class="absolute bg-[#121212] w-8 h-[3px] top-4 left-1 transition-all duration-300 ease-in-out"></span>
+          <span class="absolute bg-[#121212] w-8 h-[3px] top-6 left-1 transition-all duration-300 ease-in-out origin-bottom-left"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden px-5 pb-5">
+    <ul class="flex flex-col justify-center items-center space-y-4 text-lg font-medium mt-4">
+      <li><a href="#" class="block hover:text-[#121212] transition">Home</a></li>
+      <li><a href="#" class="block hover:text-[#121212] transition">About</a></li>
+      <li><a href="#" class="block hover:text-[#121212] transition">Services</a></li>
+      <li><a href="#" class="block hover:text-[#121212] transition">Portfolio</a></li>
+      <li><a href="#" class="block hover:text-[#121212] transition">Blog</a></li>
+      <li><a href="#" class="block hover:text-[#121212] transition">Contact</a></li>
+      <li>
+        <button class="uppercase bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed hover:bg-[#1f1f1f] transition w-full">Kontakt</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="xl:px-20 lg:px-10 px-5 pt-4">
+    <hr>
+  </div>
+</nav>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const lines = menuBtn.querySelectorAll('span');
+
+  let isOpen = false;
+
+  menuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.classList.toggle('hidden');
+
+    // Animate hamburger icon
+    if (isOpen) {
+      lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      lines[1].style.opacity = '0';
+      lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    } else {
+      lines[0].style.transform = 'rotate(0) translate(0, 0)';
+      lines[1].style.opacity = '1';
+      lines[2].style.transform = 'rotate(0) translate(0, 0)';
+    }
+  });
+</script>
+
+
 <!-- hero section  -->
   <section class="bg-[#F8D100]  rounded-bl-[60px] rounded-br-[60px]">
     <!-- slider  -->
-    <div class="slider top-14">
+    <div class="slider lg:top-14 md:top-8 top-4">
 	<div class="slide-track">
 		<div class="slide">
 			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
@@ -85,19 +146,19 @@
 </div>
 
 <!-- hero content  -->
-    <div class="flex justify-between items-center pb-20 pt-28 px-20">
+    <div class="flex md:flex-row flex-col justify-between items-center gap-10 md:gap-0 pb-20 lg:pt-28 md:pt-16 pt-6 xl:px-20 lg:px-10 px-5 md:text-start text-center">
 
-      <div class="w-1/2 ">
+      <div class="md:w-1/2 w-full">
         <h1 class="text-black text-xl">Gemeinsam stark.</h1>
-        <h1 class="text-white xl:text-6xl 2xl:text-7xl">Ihr Anliegen verdient Kompetenz und Engagement</h1>
-        <p class="text-white text-lg pt-5">Ob arbeits-, sozial- oder strafrechtliche Fragen – wir stehen Ihnen mit Erfahrung, klaren Empfehlungen und persönlichem Einsatz zur Seite. Gemeinsam finden wir rechtssichere und praxisnahe Lösungen für Ihr Unternehmen.</p>
-         <div class="pt-5">
+        <h1 class="text-white text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl 2xl:leading-[90px] xl:leading-[75px] lg:leading-[60px] leading-9 font-bold">Ihr Anliegen verdient Kompetenz und Engagement</h1>
+        <p class="text-white lg:text-lg text-sm pt-5">Ob arbeits-, sozial- oder strafrechtliche Fragen – wir stehen Ihnen mit Erfahrung, klaren Empfehlungen und persönlichem Einsatz zur Seite. Gemeinsam finden wir rechtssichere und praxisnahe Lösungen für Ihr Unternehmen.</p>
+         <div class="pt-10">
         <button class="bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed uppercase">JETZT MITGLIED WERDEN</button>
       </div>
       </div>
 
-      <div class="w-1/2 flex justify-end">
-        <div class="bg-black rounded-3xl overflow-hidden shadow-lg w-3/4">
+      <div class="md:w-1/2 w-full flex justify-end">
+        <div class="bg-black rounded-3xl overflow-hidden shadow-lg lg:w-3/4 w-full">
     <!-- Header -->
     <div class="text-center text-[#F8D100] px-6 py-4 text-lg font-semibold uppercase tracking-wider">
       Jetzt kostenloses Erstgespräch vereinbaren
@@ -218,23 +279,23 @@
 	</div>
 </div>
 
-
+<!-- date and year section  -->
 <section class="pt-20">
-  <div class="flex justify-between px-20">
+  <div class="flex md:flex-row flex-col justify-between xl:px-20lg:px-10 px-5">
 
-    <div class="w-[30%] flex flex-col justify-center items-center"> 
-      <h1 class="text-4xl font-bold text-[#F8D100]">Unsere Geschichte</h1>
+    <div class="md:w-[30%] w-full flex flex-col justify-center items-center"> 
+      <h1 class="xl:text-5xl lg:text-3xl md:text-2xl text-4xl font-bold text-[#F8D100] pb-2">Unsere Geschichte</h1>
       <img src="./assets/img/unser.png" alt="">
     </div>
 
-    <div class="w-2/5 relative" id="date-container">
-      <div class="flex flex-col items-center justify-center space-y-8 text-[#F8D100] 2xl:pt-20">
-        <div id="date1" class="text-7xl font-bold blurred">11</div>
-        <div id="date2" class="text-8xl font-extrabold active">12</div>
-        <div id="date3" class="text-7xl font-bold blurred">13</div>
+    <div class="md:w-2/5 w-full relative" id="date-container">
+      <div class="flex flex-col items-center justify-center space-y-8 text-[#F8D100] xl:pt-20 md:pt-0 pt-10 pb-10 md:pb-0">
+        <div id="date1" class="xl:text-7xl lg:text-6xl text-4xl font-bold blurred">11</div>
+        <div id="date2" class="xl:text-7xl lg:text-6xl text-4xl font-extrabold active">12</div>
+        <div id="date3" class="xl:text-7xl lg:text-6xl text-4xl font-bold blurred">13</div>
       </div>
 
-      <div class="absolute bottom-10 text-[#F8D100] 2xl:text-[160px] text-9xl font-bold 2xl:left-20 left-16">
+      <div class="absolute xl:bottom-24 md:bottom-20 bottom-0 text-[#F8D100] 2xl:text-[160px] lg:text-8xl text-6xl font-bold 2xl:left-28 xl:left-36 left-16 ">
         2025
       </div>
 
@@ -291,13 +352,15 @@
       </script>
     </div>
 
-    <div class="w-[30%] text-end flex flex-col justify-end pb-20">
-      <p id="dynamic-text" class="text-[#757575]">Mit modernisierter Website, erweiterten Leistungen und klarer Kommunikation setzen wir ein Zeichen für Zukunft und Vertrauen.</p>
-      <h2 class="text-[#F8D100]">Neuer Auftritt</h2>
+    <div class="md:w-[30%] w-full text-end flex flex-col justify-end pb-20 mt-20">
+      <p id="dynamic-text" class="text-[#757575] 2xl:text-2xl xl:text-xl text-sm 2xl:leading-[50px] xl:leading-9 leading-6">Mit modernisierter Website, erweiterten Leistungen und klarer Kommunikation setzen wir ein Zeichen für Zukunft und Vertrauen.</p>
+      <h2 class="text-[#F8D100] 2xl:text-3xl text-xl">Neuer Auftritt</h2>
     </div>
 
   </div>
 </section>
+
+<!-- slider  -->
 <div class="slider1">
 	<div class="slide1-track">
 		<div class="slide1">
@@ -345,11 +408,11 @@
 	</div>
 </div>
 
-
-<section class="px-20 py-20">
-  <div class="flex items-center">
+<!-- Man section  -->
+<section class="xl:px-20 lg:px-10 px-5 py-20">
+  <div class="flex md:flex-row flex-col items-center gap-10 md:gap-0">
     <div>
-      <h1 class="text-7xl font-bold leading-[90px] text-white">Erfolgsgeschichten unserer <br>
+      <h1 class="2xl:text-9xl lg:text-7xl md:text-5xl text-3xl font-bold 2xl:leading-[140px] lg:leading-[85px] md:leading-[55px] leading-10 text-white">Erfolgsgeschichten unserer <br>
 <span class="text-[#F8D100]">Mitglieder</span></h1>
     </div>
     <div>
@@ -358,11 +421,11 @@
   </div>
 
 
-  <div class="text-white px-6 py-16 relative overflow-hidden h-[500px]">
+  <div class="text-white py-16 relative overflow-hidden md:h-[500px] h-full">
 
   <!-- Slide Wrapper -->
    <div class="flex justify-center">
-  <div id="testimonial-slider" class="relative w-1/2">
+  <div id="testimonial-slider" class="relative xl:w-1/2 lg:w-3/5 md:w-4/5">
     <!-- Slides -->
     <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-100" id="slide-0">
       <div class="bg-yellow-400 rounded-2xl p-8">
@@ -400,13 +463,13 @@
   </div>
 </div>
   <!-- Navigation Buttons -->
-  <div class="absolute left-44 top-1/2 transform -translate-y-1/2">
+  <div class="absolute xl:left-44 lg:left-20 left-0 top-1/2 transform -translate-y-1/2">
     <button id="prevBtn"
       class="w-10 h-10 rounded-full border border-white text-white hover:text-[#F8D100] hover:border-[#F8D100] transition-all duration-300 flex items-center justify-center ml-4">
       ←
     </button>
   </div>
-  <div class="absolute right-44 top-1/2 transform -translate-y-1/2">
+  <div class="absolute xl:right-44 lg:right-20 right-0 top-1/2 transform -translate-y-1/2">
     <button id="nextBtn"
       class="w-10 h-10 rounded-full border border-white text-white hover:text-[#F8D100] hover:border-[#F8D100] transition-all duration-300 flex items-center justify-center mr-4">
       →
