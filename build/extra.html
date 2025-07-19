@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Calendar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .calendar-day {
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .calendar-day:hover {
+      background-color: rgba(255, 255, 0, 0.1);
+    }
+    .selected {
+      color: #facc15;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="bg-black text-yellow-400 min-h-screen flex items-center justify-center">
+  <div class="max-w-md bg-black rounded-3xl overflow-hidden shadow-lg w-full">
+    <!-- Header -->
+    <div class="text-center px-6 py-4 text-lg font-semibold uppercase tracking-wider">
+      Jetzt kostenloses Erstgespräch vereinbaren
+    </div>
+
+    <!-- Weekdays -->
+    <div class="bg-white text-yellow-500 grid grid-cols-7 text-center font-medium uppercase text-sm">
+      <div>Mo.</div><div>Di.</div><div>Mi.</div><div>Do.</div><div>Fr.</div><div>Sa.</div><div>So.</div>
+    </div>
+
+    <!-- Month and Navigation -->
+    <div class="flex justify-between items-center px-6 py-4">
+      <button onclick="changeMonth(-1)" class="text-yellow-500">&lt;</button>
+      <div id="monthYear" class="text-yellow-500 font-semibold">Loading...</div>
+      <button onclick="changeMonth(1)" class="text-yellow-500">&gt;</button>
+    </div>
+
+    <!-- Calendar Days -->
+    <div id="calendarDays" class="grid grid-cols-7 gap-2 px-6 pb-6 text-center text-gray-500 text-sm"></div>
+  </div>
+
+
+  <!-- Container -->
+<div class="text-white px-6 py-16 relative overflow-hidden">
+
+  <!-- Slide Wrapper -->
+  <div id="testimonial-slider" class="relative w-full max-w-4xl">
+    <!-- Slides -->
+    <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-100" id="slide-0">
+      <div class="bg-[#111] rounded-2xl p-8">
+        <div class="text-red-500 text-4xl mb-4">❝</div>
+        <p class="text-lg leading-relaxed mb-6">
+          Die Kanzlei hat uns bei der Abgrenzung von Werkverträgen und Zeitarbeit hervorragend unterstützt. 
+          Schnelle, verständliche Beratung, die unsere Risiken deutlich minimiert hat.
+        </p>
+        <div class="flex items-center gap-4">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full" />
+          <div>
+            <p class="font-semibold">Claudia Becker</p>
+            <p class="text-red-500 text-sm">Leiterin Personal Einer Gebäudereinigungsfirma</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-0 absolute top-0 left-0 w-full" id="slide-1">
+      <div class="bg-[#111] rounded-2xl p-8">
+        <div class="text-red-500 text-4xl mb-4">❝</div>
+        <p class="text-lg leading-relaxed mb-6">
+          Hervorragende Betreuung – verständlich, schnell, professionell. Wir fühlen uns sehr gut aufgehoben.
+        </p>
+        <div class="flex items-center gap-4">
+          <img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-10 h-10 rounded-full" />
+          <div>
+            <p class="font-semibold">Michael Braun</p>
+            <p class="text-red-500 text-sm">Geschäftsführer, Braun & Co.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="absolute left-0 top-1/2 transform -translate-y-1/2">
+    <button id="prevBtn" class="text-white text-2xl p-3 hover:text-red-500">←</button>
+  </div>
+  <div class="absolute right-0 top-1/2 transform -translate-y-1/2">
+    <button id="nextBtn" class="text-white text-2xl p-3 hover:text-red-500">→</button>
+  </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll(".testimonial-slide");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  let current = 0;
+
+  function updateSlider(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("opacity-100", i === index);
+      slide.classList.toggle("opacity-0", i !== index);
+      slide.classList.toggle("absolute", i !== index);
+    });
+  }
+
+  nextBtn.addEventListener("click", () => {
+    current = (current + 1) % slides.length;
+    updateSlider(current);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    current = (current - 1 + slides.length) % slides.length;
+    updateSlider(current);
+  });
+</script>
+
+
+  <script>
+    const calendarDays = document.getElementById("calendarDays");
+    const monthYear = document.getElementById("monthYear");
+
+    let today = new Date();
+    let currentMonth = today.getMonth();
+    let currentYear = today.getFullYear();
+
+    const months = [
+      "Januar", "Februar", "März", "April", "Mai", "Juni",
+      "Juli", "August", "September", "Oktober", "November", "Dezember"
+    ];
+
+    function generateCalendar(month, year) {
+      calendarDays.innerHTML = "";
+      monthYear.textContent = `${months[month]} ${year}`;
+
+      const firstDay = new Date(year, month).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const startDay = (firstDay + 6) % 7;
+
+      for (let i = 0; i < startDay; i++) {
+        const empty = document.createElement("div");
+        calendarDays.appendChild(empty);
+      }
+
+      for (let d = 1; d <= daysInMonth; d++) {
+        const day = document.createElement("div");
+        day.textContent = d;
+        day.className = "calendar-day";
+
+        if (
+          d === today.getDate() &&
+          month === today.getMonth() &&
+          year === today.getFullYear()
+        ) {
+          day.classList.add("selected");
+        }
+
+        day.onclick = () => {
+          document.querySelectorAll(".calendar-day").forEach((el) => el.classList.remove("selected"));
+          day.classList.add("selected");
+        };
+
+        calendarDays.appendChild(day);
+      }
+    }
+
+    function changeMonth(offset) {
+      currentMonth += offset;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      } else if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      }
+      generateCalendar(currentMonth, currentYear);
+    }
+
+    generateCalendar(currentMonth, currentYear);
+  </script>
+</body>
+</html>

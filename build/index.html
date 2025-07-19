@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Document</title>
+
+ 
+
+</head>
+<body class="bg-[#121212]">
+
+  <nav class="bg-[#F8D100]">
+    <div class="flex justify-between items-center px-20 pt-8">
+      <div>
+        <img src="./assets/img/Logo.png" alt="">
+      </div>
+      <div>
+        <ul class="flex space-x-10">
+          <li><a href="">Home</a></li>
+          <li><a href="">Home</a></li>
+          <li><a href="">Home</a></li>
+          <li><a href="">Home</a></li>
+          <li><a href="">Home</a></li>
+          <li><a href="">Home</a></li>
+        </ul>
+      </div>
+      <div>
+        <button class="uppercase bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed">Kontakt</button>
+      </div>
+    </div>
+    <div class="px-20 pt-4">
+    <hr class="">
+    </div>
+  </nav>
+<!-- hero section  -->
+  <section class="bg-[#F8D100]  rounded-bl-[60px] rounded-br-[60px]">
+    <!-- slider  -->
+    <div class="slider top-14">
+	<div class="slide-track">
+		<div class="slide">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/SicherheitH.png" class="w-80" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/Klarheithero.png" class=" w-52" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/Klarheithero.png" class=" w-52" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/Klarheithero.png" class=" w-52" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/Klarheithero.png" class=" w-52" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/SicherheitH.png" class="w-80" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/Klarheithero.png" class="w-52" alt="" />
+		</div>
+	</div>
+</div>
+
+<!-- hero content  -->
+    <div class="flex justify-between items-center pb-20 pt-28 px-20">
+
+      <div class="w-1/2 ">
+        <h1 class="text-black text-xl">Gemeinsam stark.</h1>
+        <h1 class="text-white xl:text-6xl 2xl:text-7xl">Ihr Anliegen verdient Kompetenz und Engagement</h1>
+        <p class="text-white text-lg pt-5">Ob arbeits-, sozial- oder strafrechtliche Fragen – wir stehen Ihnen mit Erfahrung, klaren Empfehlungen und persönlichem Einsatz zur Seite. Gemeinsam finden wir rechtssichere und praxisnahe Lösungen für Ihr Unternehmen.</p>
+         <div class="pt-5">
+        <button class="bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed uppercase">JETZT MITGLIED WERDEN</button>
+      </div>
+      </div>
+
+      <div class="w-1/2 flex justify-end">
+        <div class="bg-black rounded-3xl overflow-hidden shadow-lg w-3/4">
+    <!-- Header -->
+    <div class="text-center text-[#F8D100] px-6 py-4 text-lg font-semibold uppercase tracking-wider">
+      Jetzt kostenloses Erstgespräch vereinbaren
+    </div>
+
+    <!-- Weekdays -->
+    <div class="bg-white text-yellow-500 grid grid-cols-7 text-center font-medium uppercase text-sm">
+      <div>Mo.</div><div>Di.</div><div>Mi.</div><div>Do.</div><div>Fr.</div><div>Sa.</div><div>So.</div>
+    </div>
+
+    <!-- Month and Navigation -->
+    <div class="flex justify-between items-center px-6 py-4">
+      <button onclick="changeMonth(-1)" class="text-[#F8D100]">&lt;</button>
+      <div id="monthYear" class="text-[#F8D100] font-semibold">Loading...</div>
+      <button onclick="changeMonth(1)" class="text-[#F8D100]">&gt;</button>
+    </div>
+
+    <!-- Calendar Days -->
+    <div id="calendarDays" class="grid grid-cols-7 gap-2 px-6 pb-6 text-center text-gray-500 text-sm"></div>
+  </div>
+      </div>
+    </div>
+
+  </section>
+
+   <!-- slider  -->
+    <div class="slider2 top-14">
+	<div class="slide2-track">
+		<div class="slide2">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide2">
+			<img src="./assets/img/SicherheitH.png" class="w-80" alt="" />
+		</div>
+		<div class="slide2">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide2">
+			<img src="./assets/img/Klarheithero.png" class=" w-52" alt="" />
+		</div>
+		<div class="slide2">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide2">
+			<img src="./assets/img/Klarheithero.png" class=" w-52" alt="" />
+		</div>
+		<div class="slide2">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide2">
+			<img src="./assets/img/Klarheithero.png" class=" w-52" alt="" />
+		</div>
+		<div class="slide2">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide2">
+			<img src="./assets/img/Klarheithero.png" class=" w-52" alt="" />
+		</div>
+		<div class="slide2">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide2">
+			<img src="./assets/img/SicherheitH.png" class="w-80" alt="" />
+		</div>
+		<div class="slide2">
+			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		</div>
+		<div class="slide2">
+			<img src="./assets/img/Klarheithero.png" class="w-52" alt="" />
+		</div>
+	</div>
+</div>
+
+<div class="slider mt-44">
+	<div class="slide-track">
+		<div class="slide">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/Sicherheit.png" height="" width="" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/Praxis.png" height="" width="" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/Klarheit.png" height="" width="" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/Praxis.png" height="" width="" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/Klarheit.png" height="" width="" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/Sicherheit.png" height="" width="" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide">
+			<img src="./assets/img/Klarheit.png" height="" width="" alt="" />
+		</div>
+	</div>
+</div>
+
+
+<section class="pt-20">
+  <div class="flex justify-between px-20">
+
+    <div class="w-[30%] flex flex-col justify-center items-center"> 
+      <h1 class="text-4xl font-bold text-[#F8D100]">Unsere Geschichte</h1>
+      <img src="./assets/img/unser.png" alt="">
+    </div>
+
+    <div class="w-2/5 relative" id="date-container">
+      <div class="flex flex-col items-center justify-center space-y-8 text-[#F8D100] 2xl:pt-20">
+        <div id="date1" class="text-7xl font-bold blurred">11</div>
+        <div id="date2" class="text-8xl font-extrabold active">12</div>
+        <div id="date3" class="text-7xl font-bold blurred">13</div>
+      </div>
+
+      <div class="absolute bottom-10 text-[#F8D100] 2xl:text-[160px] text-9xl font-bold 2xl:left-20 left-16">
+        2025
+      </div>
+
+      <script>
+        const dateEls = [document.getElementById('date1'), document.getElementById('date2'), document.getElementById('date3')];
+        const baseDate = new Date();
+        let currentIndex = 0;
+
+        // Random texts for right-side div
+        const randomTexts = [
+          "Ein neuer Tag, ein neuer Anfang Mit modernisierter Website, erweiterten Leistungen und klarer Kommunikation setzen wir ein Zeichen für Zukunft und Vertrauen.",
+          "Innovation trifft auf TraditionMit modernisierter Website, erweiterten Leistungen und klarer Kommunikation setzen wir ein Zeichen für Zukunft und Vertrauen..",
+          "Zukunft gestalten wir gemeinsamMit modernisierter Website, erweiterten Leistungen und klarer Kommunikation setzen wir ein Zeichen für Zukunft und Vertrauen..",
+          "Veränderung ist der Schlüssel.Mit modernisierter Website, erweiterten Leistungen und klarer Kommunikation setzen wir ein Zeichen für Zukunft und Vertrauen.",
+          "Heute schreiben wir Geschichte. Mit modernisierter Website, erweiterten Leistungen und klarer Kommunikation setzen wir ein Zeichen für Zukunft und Vertrauen.",
+          "Gemeinsam Richtung Morgen.",
+          "Fortschritt beginnt jetzt.",
+          "Neues Jahr, neue Chancen."
+        ];
+
+        function formatDate(date) {
+          return String(date.getDate()).padStart(2, '0');
+        }
+
+        function updateDates() {
+          for (let i = 0; i < 3; i++) {
+            const date = new Date();
+            date.setDate(baseDate.getDate() + currentIndex + i - 1);
+            dateEls[i].textContent = formatDate(date);
+            dateEls[i].classList.remove('active', 'blurred');
+          }
+
+          dateEls[0].classList.add('blurred');
+          dateEls[1].classList.add('active');
+          dateEls[2].classList.add('blurred');
+
+          // Update right side text
+          const textElement = document.getElementById('dynamic-text');
+          const randomIndex = Math.floor(Math.random() * randomTexts.length);
+          textElement.textContent = randomTexts[randomIndex];
+        }
+
+        const container = document.getElementById('date-container');
+        container.addEventListener('wheel', (e) => {
+          e.preventDefault();
+
+          if (e.deltaY > 0) currentIndex++;
+          else if (e.deltaY < 0 && currentIndex > 0) currentIndex--;
+
+          updateDates();
+        }, { passive: false });
+
+        updateDates();
+      </script>
+    </div>
+
+    <div class="w-[30%] text-end flex flex-col justify-end pb-20">
+      <p id="dynamic-text" class="text-[#757575]">Mit modernisierter Website, erweiterten Leistungen und klarer Kommunikation setzen wir ein Zeichen für Zukunft und Vertrauen.</p>
+      <h2 class="text-[#F8D100]">Neuer Auftritt</h2>
+    </div>
+
+  </div>
+</section>
+<div class="slider1">
+	<div class="slide1-track">
+		<div class="slide1">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="./assets/img/Sicherheit.png" height="" width="" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="./assets/img/Praxis.png" height="" width="" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="./assets/img/Klarheit.png" height="" width="" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="./assets/img/Praxis.png" height="" width="" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="./assets/img/Klarheit.png" height="" width="" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="./assets/img/Sicherheit.png" height="" width="" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="./assets/img/weight.png" height="" width="" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="./assets/img/Klarheit.png" height="" width="" alt="" />
+		</div>
+	</div>
+</div>
+
+
+<section class="px-20 py-20">
+  <div class="flex items-center">
+    <div>
+      <h1 class="text-7xl font-bold leading-[90px] text-white">Erfolgsgeschichten unserer <br>
+<span class="text-[#F8D100]">Mitglieder</span></h1>
+    </div>
+    <div>
+      <img src="./assets/img/man.png" alt="">
+    </div>
+  </div>
+
+
+  <div class="text-white px-6 py-16 relative overflow-hidden h-[500px]">
+
+  <!-- Slide Wrapper -->
+   <div class="flex justify-center">
+  <div id="testimonial-slider" class="relative w-1/2">
+    <!-- Slides -->
+    <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-100" id="slide-0">
+      <div class="bg-yellow-400 rounded-2xl p-8">
+        <div class="text-red-500 text-4xl mb-4">❝</div>
+        <p class="text-lg leading-relaxed mb-6">
+          Die Kanzlei hat uns bei der Abgrenzung von Werkverträgen und Zeitarbeit hervorragend unterstützt. 
+          Schnelle, verständliche Beratung, die unsere Risiken deutlich minimiert hat.
+        </p>
+        <div class="flex items-center gap-4">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full" />
+          <div>
+            <p class="font-semibold">Claudia Becker</p>
+            <p class="text-red-500 text-sm">Leiterin Personal Einer Gebäudereinigungsfirma</p>
+          </div>
+        </div>
+        <div class="text-red-500 text-4xl mb-4 text-end">❝</div>
+      </div>
+    </div>
+
+    <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-0 absolute top-0 left-0 w-full" id="slide-1">
+      <div class="bg-yellow-400 rounded-2xl p-8">
+        <div class="text-red-500 text-4xl mb-4">❝</div>
+        <p class="text-lg leading-relaxed mb-6">
+          Hervorragende Betreuung – verständlich, schnell, professionell. Wir fühlen uns sehr gut aufgehoben.
+        </p>
+        <div class="flex items-center gap-4">
+          <img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-10 h-10 rounded-full" />
+          <div>
+            <p class="font-semibold">Michael Braun</p>
+            <p class="text-red-500 text-sm">Geschäftsführer, Braun & Co.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Navigation Buttons -->
+  <div class="absolute left-44 top-1/2 transform -translate-y-1/2">
+    <button id="prevBtn"
+      class="w-10 h-10 rounded-full border border-white text-white hover:text-[#F8D100] hover:border-[#F8D100] transition-all duration-300 flex items-center justify-center ml-4">
+      ←
+    </button>
+  </div>
+  <div class="absolute right-44 top-1/2 transform -translate-y-1/2">
+    <button id="nextBtn"
+      class="w-10 h-10 rounded-full border border-white text-white hover:text-[#F8D100] hover:border-[#F8D100] transition-all duration-300 flex items-center justify-center mr-4">
+      →
+    </button>
+  </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll(".testimonial-slide");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  let current = 0;
+
+  function updateSlider(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("opacity-100", i === index);
+      slide.classList.toggle("opacity-0", i !== index);
+      slide.classList.toggle("absolute", i !== index);
+    });
+  }
+
+  nextBtn.addEventListener("click", () => {
+    current = (current + 1) % slides.length;
+    updateSlider(current);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    current = (current - 1 + slides.length) % slides.length;
+    updateSlider(current);
+  });
+</script>
+</section>
+
+<!-- calender js  -->
+  <script>
+    const calendarDays = document.getElementById("calendarDays");
+    const monthYear = document.getElementById("monthYear");
+
+    let today = new Date();
+    let currentMonth = today.getMonth();
+    let currentYear = today.getFullYear();
+
+    const months = [
+      "Januar", "Februar", "März", "April", "Mai", "Juni",
+      "Juli", "August", "September", "Oktober", "November", "Dezember"
+    ];
+
+    function generateCalendar(month, year) {
+      calendarDays.innerHTML = "";
+      monthYear.textContent = `${months[month]} ${year}`;
+
+      const firstDay = new Date(year, month).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const startDay = (firstDay + 6) % 7;
+
+      for (let i = 0; i < startDay; i++) {
+        const empty = document.createElement("div");
+        calendarDays.appendChild(empty);
+      }
+
+      for (let d = 1; d <= daysInMonth; d++) {
+        const day = document.createElement("div");
+        day.textContent = d;
+        day.className = "calendar-day";
+
+        if (
+          d === today.getDate() &&
+          month === today.getMonth() &&
+          year === today.getFullYear()
+        ) {
+          day.classList.add("selected");
+        }
+
+        day.onclick = () => {
+          document.querySelectorAll(".calendar-day").forEach((el) => el.classList.remove("selected"));
+          day.classList.add("selected");
+        };
+
+        calendarDays.appendChild(day);
+      }
+    }
+
+    function changeMonth(offset) {
+      currentMonth += offset;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      } else if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      }
+      generateCalendar(currentMonth, currentYear);
+    }
+
+    generateCalendar(currentMonth, currentYear);
+  </script>
+
+
+</body>
+</html>
