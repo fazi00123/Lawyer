@@ -9,12 +9,11 @@
  
 
 </head>
-<body class="bg-[#121212]">
+<body class="bg-[#131313]">
 
-<!-- navbar  -->
-
- <nav class="bg-[#F8D100] w-full">
-  <div class="flex justify-between items-center xl:px-20 lg:px-10 px-5 xl:pt-8 pt-5">
+<!-- Navbar -->
+<nav class="bg-[#F8D100] w-full">
+  <div class="flex justify-between items-center 2xl:px-20 lg:px-10 px-5 xl:pt-8 pt-5">
     <!-- Logo -->
     <div>
       <img src="./assets/img/Logo.png" alt="Logo" class="w-32">
@@ -22,19 +21,44 @@
 
     <!-- Menu (Desktop) -->
     <div class="hidden lg:flex">
-      <ul class="flex space-x-10 font-medium text-lg">
-        <li><a href="#" class="hover:text-[#121212] transition">Home</a></li>
-        <li><a href="#" class="hover:text-[#121212] transition">About</a></li>
-        <li><a href="#" class="hover:text-[#121212] transition">Services</a></li>
-        <li><a href="#" class="hover:text-[#121212] transition">Portfolio</a></li>
-        <li><a href="#" class="hover:text-[#121212] transition">Blog</a></li>
-        <li><a href="#" class="hover:text-[#121212] transition">Contact</a></li>
+      <ul class="flex xl:space-x-10 space-x-5 font-light 2xl:text-lg xl:text-base lg:text-sm items-center">
+        <li><a href="#" class="text-[#131313] transition">Home</a></li>
+
+        <!-- About Dropdown Desktop -->
+        <li class="relative group z-50">
+          <button class="flex items-center gap-1 text-[#131313]">
+            Aktuelles
+              <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
+          </button>
+          <ul class="absolute left-0 bg-white shadow-lg rounded-lg hidden group-hover:block w-40">
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Our Story</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Team</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Careers</a></li>
+          </ul>
+        </li>
+
+        <!-- Services Dropdown Desktop -->
+        <li class="relative group z-50">
+          <button class="flex items-center gap-1 text-[#131313]">
+            Themenfelder
+           <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
+          </button>
+          <ul class="absolute left-0 bg-white shadow-lg rounded-lg hidden group-hover:block w-40">
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg ">Web Design</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Development</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">SEO</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#" class="text-[#131313] transition">Seminare</a></li>
+        <li><a href="#" class="text-[#131313] transition">Veröffentlichungen</a></li>
+        <li><a href="#" class="text-[#131313] transition">Impressum</a></li>
       </ul>
     </div>
 
     <!-- Contact Button (Desktop) -->
     <div class="hidden lg:block">
-      <button class="uppercase bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed transition">Kontakt</button>
+      <button class="uppercase bg-[#121212] py-2 px-10 text-base 2xl:text-lg font-bold text-white rounded-full border-2 border-[#F8D100] border-dashed transition">Kontakt</button>
     </div>
 
     <!-- Hamburger Menu (Mobile) -->
@@ -50,53 +74,53 @@
     </div>
   </div>
 
-  <!-- Mobile Men -->
+  <!-- Mobile Menu -->
   <div id="mobile-menu" class="lg:hidden hidden px-5 pb-5">
-    <ul class="flex flex-col justify-center items-center space-y-4 text-lg font-medium mt-4">
+    <ul class="flex flex-col justify-center items-center space-y-4 font-light 2xl:text-lg xl:text-base lg:text-sm mt-4">
       <li><a href="#" class="block hover:text-[#121212] transition">Home</a></li>
-      <li><a href="#" class="block hover:text-[#121212] transition">About</a></li>
-      <li><a href="#" class="block hover:text-[#121212] transition">Services</a></li>
-      <li><a href="#" class="block hover:text-[#121212] transition">Portfolio</a></li>
-      <li><a href="#" class="block hover:text-[#121212] transition">Blog</a></li>
-      <li><a href="#" class="block hover:text-[#121212] transition">Contact</a></li>
+
+      <!-- About Mobile Dropdown -->
+      <li class="w-full">
+        <button class="flex justify-center items-center w-full hover:text-[#121212] transition" onclick="toggleDropdown('about-dropdown', this)">
+          Aktuelles
+     <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
+        </button>
+        <ul id="about-dropdown" class="hidden mt-2 md:pl-80 lg:pl-4 pl-36 space-y-2 items-center">
+          <li><a href="#" class="block hover:text-[#121212] transition">Our Story</a></li>
+          <li><a href="#" class="block hover:text-[#121212] transition">Team</a></li>
+          <li><a href="#" class="block hover:text-[#121212] transition">Careers</a></li>
+        </ul>
+      </li>
+
+      <!-- Services Mobile Dropdown -->
+      <li class="w-full">
+        <button class="flex justify-center items-center w-full hover:text-[#121212] transition" onclick="toggleDropdown('services-dropdown', this)">
+          Themenfelder
+         <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
+        </button>
+        <ul id="services-dropdown" class="hidden mt-2 md:pl-80 lg:pl-4 pl-36 space-y-2">
+          <li><a href="#" class="block hover:text-[#121212] transition">Web Design</a></li>
+          <li><a href="#" class="block hover:text-[#121212] transition">Development</a></li>
+          <li><a href="#" class="block hover:text-[#121212] transition">SEO</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#" class="block hover:text-[#121212] transition">Seminare</a></li>
+      <li><a href="#" class="block hover:text-[#121212] transition">Veröffentlichungen</a></li>
+      <li><a href="#" class="block hover:text-[#121212] transition">Impressum</a></li>
       <li>
         <button class="uppercase bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed transition w-full">Kontakt</button>
       </li>
     </ul>
   </div>
 
-  <div class="xl:px-20 lg:px-10 px-5 pt-4">
-    <hr>
+  <div class="2xl:px-20 lg:px-10 px-5 pt-4">
+    <hr class="border-[#131313]">
   </div>
 </nav>
 
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const lines = menuBtn.querySelectorAll('span');
-
-  let isOpen = false;
-
-  menuBtn.addEventListener('click', () => {
-    isOpen = !isOpen;
-    mobileMenu.classList.toggle('hidden');
-
-    // Animate hamburger icon
-    if (isOpen) {
-      lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-      lines[1].style.opacity = '0';
-      lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-    } else {
-      lines[0].style.transform = 'rotate(0) translate(0, 0)';
-      lines[1].style.opacity = '1';
-      lines[2].style.transform = 'rotate(0) translate(0, 0)';
-    }
-  });
-</script>
-
-
 <!-- hero section  -->
-  <section class="bg-[#F8D100]  rounded-bl-[60px] rounded-br-[60px]">
+  <section class="bg-[#F8D100] rounded-bl-[60px] rounded-br-[60px]">
     <!-- slider  -->
     <div class="slider lg:top-14 md:top-8 top-4">
 	<div class="slide-track">
@@ -149,90 +173,266 @@
     <div class="flex md:flex-row flex-col justify-between items-center gap-10 md:gap-0 pb-20 lg:pt-28 md:pt-16 pt-6 xl:px-20 lg:px-10 px-5 md:text-start text-center">
 
       <div class="md:w-1/2 w-full">
-        <h1 class="text-black text-xl">Gemeinsam stark.</h1>
-        <h1 class="text-white text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl 2xl:leading-[90px] xl:leading-[75px] lg:leading-[60px] leading-9 font-bold">Ihr Anliegen verdient Kompetenz und Engagement</h1>
-        <p class="text-white lg:text-lg text-sm pt-5">Ob arbeits-, sozial- oder strafrechtliche Fragen – wir stehen Ihnen mit Erfahrung, klaren Empfehlungen und persönlichem Einsatz zur Seite. Gemeinsam finden wir rechtssichere und praxisnahe Lösungen für Ihr Unternehmen.</p>
+        <h2 class="text-[#131313] 2xl:text-[22px] text-base font-medium">Gemeinsam stark.</h2>
+        <h1 class="text-[#131313] text-3xl lg:text-5xl xl:text-6xl 2xl:text-[78px] 2xl:leading-[90px] xl:leading-[75px] lg:leading-[60px] leading-9 font-bold">Ihr Anliegen verdient Kompetenz und Engagement</h1>
+        <p class="text-[#131313] 2xl:text-xl lg:text-lg text-sm pt-5">Ob arbeits-, sozial- oder strafrechtliche Fragen – wir stehen Ihnen mit Erfahrung, klaren Empfehlungen und persönlichem Einsatz zur Seite. Gemeinsam finden wir rechtssichere und praxisnahe Lösungen für Ihr Unternehmen.</p>
+
          <div class="pt-10">
-        <button class="bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed uppercase">JETZT MITGLIED WERDEN</button>
+        <button class="bg-[#131313] py-2 px-10 text-white 2xl:text-lg text-base font-bold rounded-full border-2 border-[#F8D100] border-dashed uppercase">JETZT MITGLIED WERDEN</button>
       </div>
       </div>
 
       <div class="md:w-1/2 w-full flex justify-end">
-        <div class="bg-black rounded-3xl overflow-hidden shadow-lg lg:w-3/4 w-full">
-    <!-- Header -->
-    <div class="text-center text-[#F8D100] px-6 py-4 text-lg font-semibold uppercase tracking-wider">
-      Jetzt kostenloses Erstgespräch vereinbaren
-    </div>
-
-    <!-- Weekdays -->
-    <div class="bg-white text-yellow-500 grid grid-cols-7 text-center font-medium uppercase text-sm">
-      <div>Mo.</div><div>Di.</div><div>Mi.</div><div>Do.</div><div>Fr.</div><div>Sa.</div><div>So.</div>
-    </div>
-
-    <!-- Month and Navigation -->
-    <div class="flex justify-between items-center px-6 py-4">
-      <button onclick="changeMonth(-1)" class="text-[#F8D100]">&lt;</button>
-      <div id="monthYear" class="text-[#F8D100] font-semibold">Loading...</div>
-      <button onclick="changeMonth(1)" class="text-[#F8D100]">&gt;</button>
-    </div>
-
-    <!-- Calendar Days -->
-    <div id="calendarDays" class="grid grid-cols-7 gap-2 px-6 pb-6 text-center text-gray-500 text-sm"></div>
+             <!-- Calendar 1 -->
+<div class="bg-[#131313] rounded-3xl overflow-hidden shadow-lg lg:w-2/3 w-full">
+  <div class="text-center text-[#F8D100] px-6 py-4 text-lg font-semibold uppercase tracking-wider">
+    Jetzt kostenloses Erstgespräch vereinbaren
   </div>
+  <div class="bg-[#202020] text-yellow-500 grid grid-cols-7 text-center font-medium uppercase text-sm">
+    <div>Mo.</div><div>Di.</div><div>Mi.</div><div>Do.</div><div>Fr.</div><div>Sa.</div><div>So.</div>
+  </div>
+  <div class="flex justify-between items-center px-6 py-4">
+    <button onclick="changeMonth(-1, 1)" class="text-[#F8D100]">&lt;</button>
+    <div id="monthYear1" class="text-[#F8D100] font-semibold">Loading...</div>
+    <button onclick="changeMonth(1, 1)" class="text-[#F8D100]">&gt;</button>
+  </div>
+  <div id="calendarDays1" class="grid grid-cols-7 gap-2 px-6 pb-6 text-center text-gray-500 text-sm"></div>
+</div>
       </div>
     </div>
 
   </section>
 
    <!-- slider  -->
-    <div class="slider2 top-14">
-	<div class="slide2-track">
+    <div class="slider2 relative 2xl:mt-40 lg:mt-20 mt-10">
+	<div class="slide2-track xl:space-x-36 md:space-x-16 space-x-8">
 		<div class="slide2">
-			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+			<img src="./assets/img/mobil.png" class="2xl:w-full lg:w-36 w-28" alt="" />
 		</div>
 		<div class="slide2">
-			<img src="./assets/img/SicherheitH.png" class="w-80" alt="" />
+			<img src="./assets/img/ocesa.png" class="2xl:w-full lg:w-36 w-28" alt="" />
 		</div>
 		<div class="slide2">
-			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+			<img src="./assets/img/CINTILLO.png" class="2xl:w-full lg:w-36 w-28" alt="" />
 		</div>
 		<div class="slide2">
-			<img src="./assets/img/Klarheithero.png" class=" w-52" alt="" />
+			<img src="./assets/img/sico.png" class="2xl:w-full w-28" alt="" />
 		</div>
 		<div class="slide2">
-			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+			<img src="./assets/img/viva.png" class="2xl:w-full lg:w-36 w-28" alt="" />
 		</div>
 		<div class="slide2">
-			<img src="./assets/img/Klarheithero.png" class=" w-52" alt="" />
+			<img src="./assets/img/cinemex.png" class="2xl:w-full lg:w-52 w-28" alt="" />
 		</div>
 		<div class="slide2">
-			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+			<img src="./assets/img/mobil.png" class="2xl:w-full lg:w-36 w-28" alt="" />
 		</div>
 		<div class="slide2">
-			<img src="./assets/img/Klarheithero.png" class=" w-52" alt="" />
+			<img src="./assets/img/ocesa.png" class="2xl:w-full lg:w-36 w-28" alt="" />
 		</div>
 		<div class="slide2">
-			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+			<img src="./assets/img/CINTILLO.png" class="2xl:w-full lg:w-36 w-28" alt="" />
 		</div>
 		<div class="slide2">
-			<img src="./assets/img/Klarheithero.png" class=" w-52" alt="" />
+			<img src="./assets/img/sico.png" class="2xl:w-full w-28" alt="" />
 		</div>
 		<div class="slide2">
-			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+			<img src="./assets/img/viva.png" class="2xl:w-full lg:w-36 w-28" alt="" />
 		</div>
 		<div class="slide2">
-			<img src="./assets/img/SicherheitH.png" class="w-80" alt="" />
+			<img src="./assets/img/cinemex.png" class="2xl:w-full lg:w-52 w-28" alt="" />
 		</div>
-		<div class="slide2">
-			<img src="./assets/img/weighthero.png" class="w-16" alt="" />
+		<!-- <div class="slide2">
+			<img src="./assets/img/weighthero.png" class="" alt="" />
 		</div>
 		<div class="slide2">
 			<img src="./assets/img/Klarheithero.png" class="w-52" alt="" />
-		</div>
+		</div> -->
 	</div>
 </div>
 
-<div class="slider mt-44">
+
+<!-- Unsere Stärken  -->
+<section class="2xl:px-20 lg:px-10 px-5 2xl:pt-48 lg:pt-20 pt-10">
+  <div class="text-center">
+    <h2 class="text-[#F8D100] 2xl:text-[22px] text-base uppercase">Unsere Stärken</h2>
+    <h1 class="text-[#FFFFFF] 2xl:text-[56px] lg:text-4xl text-[28px] font-bold pt-2">Unser Beitrag für rechtssichere <span class="bg-[#F8D100] text-[#131313]">Werkverträge</span></h1>
+
+    <div class="flex justify-center">
+    <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] xl:max-w-4xl 2xl:max-w-6xl pt-5">Wir begleiten Unternehmen bei der rechtssicheren Gestaltung und Umsetzung von Werkverträgen und Zeitarbeit. Mit unserer Erfahrung und einem starken Netzwerk unterstützen wir Sie dabei, rechtliche Risiken frühzeitig zu erkennen, praktische Lösungen zu entwickeln und faire Rahmenbedingungen aktiv mitzugestalten.</p>
+    </div>
+  </div>
+
+
+  <!-- cards div  -->
+
+  <div class="flex lg:flex-row flex-col gap-5 w-full h-full lg:pt-14 pt-10">
+
+    <div class="lg:w-1/3 flex flex-col gap-5 h-auto"> 
+      <div class="bg-[#202020] rounded-[30px] xl:p-10 p-5 card">
+        <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">01</span>
+
+        <h1 class="text-[#F8D100] 2xl:text-3xl md:text-2xl text-xl 2xl:pt-40 lg:pt-28 pt-20 font-medium">Unsere Aufgabe</h1>
+        <p class="2xl:text-lg text-sm text-[#757575] 2xl:leading-[45px] leading-6 pt-2">Werkverträge und
+Zeitarbeit sind essenziell für eine flexible und spezialisierte Wirtschaft. Unternehmen profitieren von effizienten Auslagerungen, dem Ausgleich von
+Auftragsspitzen und der Reaktion auf saisonale
+Schwankungen.
+</p>
+      </div>
+      <div class="bg-[#202020] rounded-[30px] xl:p-10 p-5 card ">
+        <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">02</span>
+
+        <h1 class="text-[#F8D100] 2xl:text-3xl md:text-2xl text-xl lg:pt-14 pt-20 font-medium">Unsere Aufgabe</h1>
+        <p class="2xl:text-lg text-sm text-[#757575] 2xl:leading-[45px] leading-6 pt-2">Werkverträge und
+Zeitarbeit sind essenziell für eine flexible und spezialisierte Wirtschaft. Unternehmen profitieren von effizienten Auslagerungen, dem Ausgleich von
+Auftragsspitzen und der Reaktion auf saisonale
+Schwankungen.
+</p>
+      </div>
+    </div>
+
+    
+      <div class="lg:w-2/3 flex flex-col gap-5"> 
+
+      <div class="bg-[#202020] rounded-[30px] xl:p-10 p-5 card">
+        <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">03</span>
+
+        <h1 class="text-[#F8D100] 2xl:text-3xl md:text-2xl text-xl pt-20 font-medium">Unsere Aufgabe</h1>
+        <p class="2xl:text-lg text-sm text-[#757575] 2xl:leading-[45px] leading-6 pt-2">Werkverträge und
+Zeitarbeit sind essenziell für eine flexible und spezialisierte Wirtschaft. Unternehmen profitieren von effizienten Auslagerungen, dem Ausgleich von
+Auftragsspitzen und der Reaktion auf saisonale
+Schwankungen.
+</p>
+      </div>
+
+      <div class="flex md:flex-row flex-col gap-5">
+        <div class="bg-[#202020] rounded-[30px] xl:p-10 p-5 md:w-1/2 hover:bg-[#F8D100] card ">
+        <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">04</span>
+          <div class="flex flex-col xl:pt-40 lg:pt-28 pt-20">
+        <h1 class="text-[#F8D100] 2xl:text-3xl md:text-2xl text-xl font-medium">Unsere Aufgabe</h1>
+        <p class="2xl:text-lg text-sm text-[#757575] 2xl:leading-[45px] leading-6 pt-2">Werkverträge und
+Zeitarbeit sind essenziell für eine flexible und spezialisierte Wirtschaft. Unternehmen profitieren von effizienten Auslagerungen, dem Ausgleich von
+Auftragsspitzen und der Reaktion auf saisonale
+Schwankungen.
+</p>
+</div>
+      </div>
+
+      <div class="bg-[#202020] rounded-[30px] xl:p-10 p-5 md:w-1/2 card">
+        <img src="./assets/img/cardsimg.png" class="w-full h-full" alt="">
+      </div>
+
+      </div>
+    </div>
+
+    </div>
+</section>
+
+
+<!-- die awz  -->
+
+<section class="2xl:px-20 lg:px-10 px-5 2xl:pt-48 lg:pt-20 pt-10">
+  <div class="flex md:flex-row flex-col xl:gap-20 gap-5">
+    <div class="md:w-2/3 w-full">
+      <h2 class="text-[#F8D100] 2xl:text-[22px] text-base uppercase">Über Uns</h2>
+      <h1 class="text-[#FFFFFF] 2xl:text-[56px] lg:text-4xl text-[28px] 2xl:leading-[80px] lg:leading-[65px] leading-[42px] font-bold pt-2">Unser Anspruch: Praxisnahe Beratung mit <span class="bg-[#F8D100] text-[#131313]">Weitblick</span></h1>
+       <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] xl:max-w-4xl 2xl:max-w-6xl pt-5">Wir kennen die komplexen Auswirkungen von Werkverträgen auf das Arbeits-, Sozial- und Strafrecht und beraten Unternehmen frühzeitig, bevor Probleme entstehen. Durch unsere langjährige Erfahrung können wir rechtliche Risiken realistisch einschätzen und klare Handlungsempfehlungen geben – verständlich, pragmatisch und umsetzbar.
+Ein besonderer Schwerpunkt unserer Arbeit liegt auf praxisnahen Audits. Wir prüfen die tatsächliche Umsetzung von Werkverträgen vor Ort, denn nur ein gelebter Werkvertrag ist auch ein rechtssicherer Werkvertrag. Darüber hinaus entwickeln wir individuelle Vertragslösungen, die exakt auf die betrieblichen Abläufe unserer Mitglieder zugeschnitten sind – nicht von der Stange, sondern auf den Punkt. <br>
+Neben der Beratung bieten wir ein starkes Netzwerk aus Wissenstransfer und Weiterbildung. Seit vielen Jahren veranstalten wir Fachseminare im Sheraton Flughafen Hotel in Frankfurt, veröffentlichen regelmäßig Beiträge in Fachzeitschriften und halten unsere Mitglieder durch Rundschreiben und interne Tagungen stets auf dem neuesten Stand. Unser Ziel: Klarheit schaffen, Sicherheit geben und den rechtssicheren Einsatz von Werkverträgen in der Praxis stärken.</p>
+    </div>
+
+    <div class="md:w-1/3 w-full flex flex-col justify-between bg-[#202020] rounded-[30px] xl:px-10 px-5 xl:pt-10 pt-5">
+      <div>
+      <h1 class="text-[#F8D100] 2xl:text-4xl lg:text-3xl text-xl font-bold pt-2">DIE AWZ</h1>
+      <h1 class="text-white 2xl:text-3xl text-xl font-medium pt-2">EIN.. SCHLAGKRAFTIGER VERBAND</h1>
+      <p class="text-[#757575] 2xl:text-base text-sm leading-6 2xl:leading-10 pt-4">Die Arbeitsgemeinschaft Werkverträge und Zeitarbeit, kurz AWZ, ist ein Verband aus Experten, Auftraggebern und
+Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen Werkvertrag und die Zeitarbeit zu rehabilitieren und betroffene Unternehmen zu unterstützen.</p>
+</div>
+<div class="flex justify-center">
+  <img src="./assets/img/dieawz.png" class="w-full" alt="">
+</div>
+    </div>
+  </div>
+
+  <div class="pt-10">
+    <div>
+      <h1 class="text-[#F8D100] 2xl:text-[34px] lg:text-2xl text-lg uppercase 2xl:leading-[60px] lg:leading-10 leading-9">Wir stehen Unternehmen mit Erfahrung und Fachwissen zur Seite – insbesondere bei rechtlichen Herausforderungen im Zusammenhang mit Werkverträgen.</h1>
+    </div>
+
+    <div class="grid md:grid-cols-4 grid-cols-2 gap-5 pt-5">
+      <div class="border-2 border-dashed border-[#F8D100] text-center uppercase transition xl:py-8 xl:px-16 py-2 px-4 lg:rounded-2xl rounded-lg">
+        <h2 class="text-[#F8D100] 2xl:text-3xl xl:text-xl text-base font-light">Sozialrechtliche Fragen</h2>
+      </div>
+
+      <div class="border-2 border-dashed border-[#F8D100] text-center uppercase transition xl:py-8 xl:px-16 py-2 px-4 lg:rounded-2xl rounded-lg">
+        <h2 class="text-[#F8D100] 2xl:text-3xl xl:text-xl text-base font-light">Strafrechtliche Vorwürfe</h2>
+      </div>
+
+      <div class="border-2 border-dashed border-[#F8D100] text-center uppercase transition xl:py-8 xl:px-16 py-2 px-4 lg:rounded-2xl rounded-lg">
+        <h2 class="text-[#F8D100] 2xl:text-3xl xl:text-xl text-base font-light">Arbeitsrechtliche Aspekte</h2>
+      </div>
+
+      <div class="border-2 border-dashed border-[#F8D100] text-center uppercase transition xl:py-8 xl:px-16 py-2 px-4 lg:rounded-2xl rounded-lg">
+        <h2 class="text-[#F8D100] 2xl:text-3xl xl:text-xl text-base font-light">Zivilrechtliche Konsequenzen</h2>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-between gap-10 md:gap-0 2xl:pt-20 pt-10">
+      <div>
+        <button class="bg-white py-2 px-10 text-[#131313] 2xl:text-lg text-base font-bold rounded-full border-2 border-[#131313] border-dashed uppercase">JETZT MITGLIED WERDEN</button>
+      </div>
+      <div>
+        <img src="./assets/img/signature 1.png" alt="">
+        <h1 class="text-[#F8D100] 2xl:text-3xl text-xl">RA Christian Andorfer</h1>
+        <p class="text-[#757575] 2xl:text-xl text-sm font-medium pt-3">Rechtsanwalt für Wirtschafts-, <br class="lg:hidden block"> Arbeits- und Sozialversicherungsrecht <br> Fachautor im Bereich Werkverträge & Mindestlohn </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Jetzt rechtliche  -->
+<section class="2xl:px-20 lg:px-10 px-5 2xl:pt-48 lg:pt-20 pt-10">
+  <div class=" bg-cover bg-no-repeat bg-center h-screen xl:rounded-[80px] rounded-[40px] px-4" style="background-image: url(./assets/img/house.png);">
+  <div class="text-center 2xl:pt-24 md:pt-12 pt-6">
+    <h1 class="text-[#131313] 2xl:text-[70px] xl:text-5xl md:text-4xl text-3xl font-extrabold">Jetzt rechtliche Sicherheit schaffen.</h1>
+    <p class="2xl:text-2xl lg:text-base text-sm text-[#3C3C3C] pt-4">Profitieren Sie von unserer Erfahrung und unserem starken Netzwerk. Gemeinsam finden wir <br> praxisnahe, rechtssichere Lösungen für Ihr Unternehmen — bevor Probleme entstehen.</p>
+
+     <div class="py-10">
+        <button class="bg-[#131313] py-2 px-10 text-white 2xl:text-lg text-base font-bold rounded-full border-2 border-[#F8D100] border-dashed uppercase">JETZT MITGLIED WERDEN</button>
+      </div>
+  </div>
+  </div>
+</section>
+
+<!-- calender section  -->
+<section class="2xl:px-20 lg:px-10 px-5 2xl:pt-48 lg:pt-20 pt-10">
+  <div class="flex md:flex-row flex-col gap-7">
+<!-- Calendar 2 -->
+      <div class="bg-[#202020] rounded-3xl overflow-hidden shadow-lg md:w-2/3 w-full">
+  <div class="text-center text-white px-2 2xl:py-12 lg:py-6 py-4 2xl:text-4xl lg:text-3xl text-xl font-bold uppercase tracking-wider">
+    Jetzt kostenloses Erstgespräch vereinbaren
+  </div>
+  <div class="bg-[#131313] text-white grid grid-cols-7 text-center font-medium uppercase text-sm xl:py-4 py-2">
+    <div>Mo.</div><div>Di.</div><div>Mi.</div><div>Do.</div><div>Fr.</div><div>Sa.</div><div>So.</div>
+  </div>
+  <div class="flex justify-between items-center px-6 xl:py-8 py-4 2xl:text-2xl lg:text-xl text-base">
+    <button onclick="changeMonth(-1, 2)" class="text-[#F8D100]">&lt;</button>
+    <div id="monthYear2" class="text-[#F8D100] font-semibold">Loading...</div>
+    <button onclick="changeMonth(1, 2)" class="text-[#F8D100]">&gt;</button>
+  </div>
+  <div id="calendarDays2" class="grid grid-cols-7 2xl:gap-10 gap-6 px-6 pb-8 text-center text-white xl:text-base text-sm"></div>
+        </div>
+
+    <div class="md:w-1/3 w-full flex justify-center 2xl:p-20 p-10 bg-[#202020] rounded-3xl">
+      <img src="./assets/img/clenderimg.png" class="w-full" alt="">
+    </div>
+  </div>
+</section>
+
+
+<!-- slider  -->
+<div class="slider 2xl:mt-48 lg:mt-20 mt-10">
 	<div class="slide-track">
 		<div class="slide">
 			<img src="./assets/img/weight.png" height="" width="" alt="" />
@@ -280,11 +480,11 @@
 </div>
 
 <!-- date and year section  -->
-<section class="pt-20">
+<section class="2xl:pt-44 lg:pt-20 pt-10 2xl:px-20 lg:px-10 px-5">
   <div class="flex md:flex-row flex-col justify-between xl:px-20lg:px-10 px-5">
 
     <div class="md:w-[30%] w-full flex flex-col justify-center items-center"> 
-      <h1 class="xl:text-5xl lg:text-3xl md:text-2xl text-4xl font-bold text-[#F8D100] pb-2">Unsere Geschichte</h1>
+      <h1 class="text-3xl md:text-2xl 2xl:text-[56px] xl:text-4xl font-bold text-[#F8D100] pb-2">Unsere Geschichte</h1>
       <img src="./assets/img/unser.png" alt="">
     </div>
 
@@ -408,8 +608,160 @@
 	</div>
 </div>
 
+
+<!-- experties section  -->
+ <section class="2xl:px-20 lg:px-10 px-5 2xl:pt-48 lg:pt-20 pt-10" >
+  <div class=" bg-cover bg-center bg-no-repeat" style="background: url(./assets/img/antiquebg.png);">
+
+    
+    <div class="flex md:flex-row flex-col justify-between items-center">
+      <div>
+       <h2 class="text-[#F8D100] 2xl:text-[22px] text-base uppercase">Dienstleistungen</h2>
+      <h1 class="text-[#FFFFFF] 2xl:text-[56px] lg:text-4xl text-[28px] 2xl:leading-[80px] lg:leading-[65px] leading-[42px] font-bold 2xl:pt-2">Lassen Sie uns Ihnen helfen mit  <span class="bg-[#F8D100] text-[#131313]">Erfahrung & Expertise</span></h1>
+       </div>
+      <div class="pt-10 md:pt-0">
+        <button class="bg-white py-2 px-10 text-[#131313] 2xl:text-lg text-sm font-bold rounded-full border-2 border-[#131313] border-dashed uppercase">Jetzt Kontaktieren</button>
+      </div>
+    </div>
+
+
+    <div class="flex md:flex-row flex-col gap-5 2xl:pt-20 pt-10">
+      <div class="md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+        <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">01</span>
+
+        <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-60 lg:pt-32 pt-20 font-medium">Gestaltung von Arbeitsverträgen</h1>
+       
+      </div>
+
+      <div class="md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+        <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">02</span>
+
+        <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-60 lg:pt-32 pt-20 font-medium">Mindestlöhne </h1>
+       
+      </div>
+
+      <div class="md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+        <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">03</span>
+
+        <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-60 lg:pt-32 pt-20 font-medium">Audits, Betriebsbegehungen & Betriebsberatungen</h1>
+       
+      </div>
+    </div>
+
+    <div class="flex md:flex-row flex-col gap-5 mt-5">
+      <div class="lg:w-1/4 md:w-1/3 w-full flex flex-col justify-between bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+        <div>
+        <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">04</span>
+        </div>
+
+        <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-60 lg:pt-32 pt-20 font-medium">Arbeitnehmerüberlassung</h1>
+       
+      </div>
+
+      <div class="lg:w-1/2 md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+        <div class="flex lg:flex-row flex-col md:gap-5 lg:gap-0 justify-between">
+        <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">05</span>
+        <img src="./assets/img/05img.png" alt="">
+        </div>
+
+        <h1 class="text-white 2xl:text-3xl lg:text-xl textx-lg font-medium md:pt-4 lg:pt-0">Werkvertra</h1>
+        <p class="2xl:text-xl xl:text-base text-xs 2xl:leading-[42px] lg:leading-8 leading-5 text-[#757575] xl:max-w-4xl 2xl:max-w-6xl pt-5">Wir gestalten und prüfen Werkverträge auf ihre praktische Umsetzung - denn nur ein klar geregelter und tatsächlich gelebter Werkvertrag schützt vor dem Vorwurf illegaler Arbeitnehmerüberlassung.</p>
+       <div class="lg:pt-10 pt-4">
+        <button class="bg-white py-2 lg:px-10 px-4 text-[#131313] 2xl:text-lg lg:text-base text-sm font-bold rounded-full border-2 border-[#131313] border-dashed uppercase">Jetzt Kontaktieren</button>
+      </div>
+      </div>
+
+      <div class="lg:w-1/4 md:w-1/3 w-full flex flex-col justify-between bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+        <div>
+        <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">06</span>
+          </div>
+        <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-60 lg:pt-32 pt-20 font-medium">Zoll</h1>
+       
+      </div>
+    </div>
+
+    <div class="flex md:flex-row flex-col gap-5 mt-5">
+      <div class="md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+        <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">07</span>
+
+        <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-64 lg:pt-36 pt-24 font-medium">Wirtschaftsrecht</h1>
+       
+      </div>
+
+      <div class="md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+        <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">08</span>
+
+        <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-64 lg:pt-36 pt-24 font-medium">Mindestlohn nach dem MiLoG</h1>
+       
+      </div>
+
+      <div class="md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+        <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">09</span>
+
+        <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-64 lg:pt-36 pt-24 font-medium">Outsourcing-Werkverträge</h1>
+       
+      </div>
+    </div>
+
+    </div>
+ </section>
+
+
+ <!-- Errungenschaften section  -->
+
+ <section class="bg-white 2xl:pl-20 lg:pl-10 md:pl-5 px-5 md:px-0 2xl:mt-48 lg:mt-20 mt-10">
+  <div class="flex md:flex-row flex-col xl:py-20 py-10 gap-5 md:gap-0">
+
+    <div class="md:w-2/3 w-full">
+        <h1 class="text-[#171717] 2xl:text-[54px] lg:text-4xl text-[28px] 2xl:leading-[80px] lg:leading-[65px] leading-[42px] font-bold 2xl:pt-2">Wir sind sehr stolz auf unsere <span class="bg-[#F8D100] text-[#131313]">Errungenschaften</span></h1>
+
+        <div class="flex md:flex-row flex-col gap-5 2xl:pt-12 pt-8">
+             <div class="md:w-1/3 w-full bg-[#131313] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-white">
+        <span class="font-medium text-[#F8D100] 2xl:text-[90px] xl:text-7xl md:text-5xl text-4xl">127+</span>
+              <div class="2xl:pt-48 lg:pt-36 pt-20 text-end">
+        <h1 class="text-white 2xl:text-3xl xl:text-xl text-base font-medium">Gewonnene Fälle</h1>
+        <p class="2xl:text-xl text-sm text-[#757575] pt-2">Erfolgreiche Vertretung in komplexen Verfahren rund um Werkverträge.</p>
+       </div>
+      </div>
+
+      <div class="md:w-1/3 w-full bg-[#131313] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-white">
+        <span class="font-medium text-[#F8D100] 2xl:text-[90px] xl:text-7xl md:text-5xl text-4xl">150+</span>
+              <div class="2xl:pt-48 lg:pt-36 pt-20 text-end">
+        <h1 class="text-white 2xl:text-3xl xl:text-xl text-base font-medium">Zufriedene Mandanten</h1>
+        <p class="2xl:text-xl text-sm text-[#757575] pt-2">Vertrauen von Unternehmen aus allen Branchen.</p>
+       </div>
+      </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-5 pt-5">
+             <div class="md:w-1/3 w-full bg-[#131313] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-white">
+        <span class="font-medium text-[#F8D100] 2xl:text-[90px] xl:text-7xl md:text-5xl text-4xl">10+</span>
+              <div class="2xl:pt-48 lg:pt-36 pt-20 text-end">
+        <h1 class="text-white 2xl:text-3xl xl:text-xl text-base font-medium">Auszeichnungen</h1>
+        <p class="2xl:text-xl text-sm text-[#757575] pt-2">Anerkannt für Kompetenz und Praxisnähe.</p>
+       </div>
+      </div>
+
+      <div class="md:w-1/3 w-full bg-[#131313] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-white">
+        <span class="font-medium text-[#F8D100] 2xl:text-[90px] xl:text-7xl md:text-5xl text-4xl">30+</span>
+              <div class="2xl:pt-48 lg:pt-36 pt-20 text-end">
+        <h1 class="text-white 2xl:text-3xl xl:text-xl text-base font-medium">Team Mitglieder</h1>
+        <p class="2xl:text-xl text-sm text-[#757575] pt-2">Ein starkes Team aus erfahrenen Juristen und Branchenexperten.</p>
+       </div>
+      </div>
+        </div>
+    </div>
+
+    <div class="md:w-1/3 w-full">
+      <img src="./assets/img/AntiqueBronze.png" class="w-full h-full" alt="">
+    </div>
+
+  </div>
+ </section>
+
+
 <!-- Man section  -->
-<section class="xl:px-20 lg:px-10 px-5 py-20">
+<section class="2xl:px-20 lg:px-10 px-5 2xl:pt-48 lg:pt-20 pt-10">
   <div class="flex md:flex-row flex-col items-center gap-10 md:gap-0">
     <div>
       <h1 class="2xl:text-9xl lg:text-7xl md:text-5xl text-3xl font-bold 2xl:leading-[140px] lg:leading-[85px] md:leading-[55px] leading-10 text-white">Erfolgsgeschichten unserer <br>
@@ -422,13 +774,13 @@
 
 <!-- swiper slider  -->
 
-  <div class="text-white py-16 relative overflow-hidden md:h-[500px] h-full">
+  <div class="text-white pt-20 relative overflow-hidden md:h-[500px] h-full">
    <div class="flex justify-center pb-5 md:pb-0">
-  <div id="testimonial-slider" class="relative xl:w-1/2 lg:w-3/5 md:w-4/5">
+  <div id="testimonial-slider" class="relative xl:w-1/2 lg:w-3/5 md:w-4/5 2xl:w-[855px]">
     <!-- Slides -->
     <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-100" id="slide-0">
-      <div class="bg-yellow-400 rounded-2xl p-8">
-        <div class="text-red-500 text-4xl mb-4">❝</div>
+      <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313]">
+        <div class="text-[#F8D100] text-4xl mb-4">❝</div>
         <p class="text-lg leading-relaxed mb-6">
           Die Kanzlei hat uns bei der Abgrenzung von Werkverträgen und Zeitarbeit hervorragend unterstützt. 
           Schnelle, verständliche Beratung, die unsere Risiken deutlich minimiert hat.
@@ -437,16 +789,16 @@
           <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full" />
           <div>
             <p class="font-semibold">Claudia Becker</p>
-            <p class="text-red-500 text-sm">Leiterin Personal Einer Gebäudereinigungsfirma</p>
+            <p class="text-[#F8D100] text-sm">Leiterin Personal Einer Gebäudereinigungsfirma</p>
           </div>
         </div>
-        <div class="text-red-500 text-4xl mb-4 text-end">❝</div>
+        <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
       </div>
     </div>
 
     <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-0 absolute top-0 left-0 w-full" id="slide-1">
-      <div class="bg-yellow-400 rounded-2xl p-8">
-        <div class="text-red-500 text-4xl mb-4">❝</div>
+      <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313]">
+        <div class="text-[#F8D100] text-4xl mb-4">❝</div>
         <p class="text-lg leading-relaxed mb-6">
           Hervorragende Betreuung – verständlich, schnell, professionell. Wir fühlen uns sehr gut aufgehoben.
         </p>
@@ -454,7 +806,7 @@
           <img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-10 h-10 rounded-full" />
           <div>
             <p class="font-semibold">Michael Braun</p>
-            <p class="text-red-500 text-sm">Geschäftsführer, Braun & Co.</p>
+            <p class="text-[#F8D100] text-sm">Geschäftsführer, Braun & Co.</p>
           </div>
         </div>
       </div>
@@ -476,6 +828,349 @@
   </div>
 </div>
 
+</section>
+
+
+ <!-- team section  -->
+
+ <section class="2xl:px-20 lg:px-10 px-5 2xl:mt-48 lg:mt-20 mt-10 " style="background-image: url(./assets/img/lineingbg.png);">
+  <div>
+    <div class="text-center">
+    <h2 class="uppercase text-[#F8D100] 2xl:text-3xl xl:text-xl text-lg">Team Mitglieder</h2>
+    <h1 class="2xl:text-9xl lg:text-7xl md:text-6xl text-[40px] 2xl:leading-[160px] lg:leading-[90px] md:leading-[75px] text-white font-bold pt-2">Lernen Sie unser <br>
+<span class="text-[#F8D100]">Team kennen!</span></h1>
+</div>
+
+<div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 xl:gap-5 lg:gap-2 gap-5 pt-12">
+  <div class="bg-[#202020] rounded-xl xl:p-5 lg:p-2 p-5">
+    <img src="./assets/img/team1.png" alt="">
+    <h2 class="xl:text-sm text-xs text-[#F8D100] pt-3 bold">Geschäftsführer der Arbeitsgemeinschaft</h2>
+    <h1 class="text-white font-medium 2xl:text-3xl lg:text-lg text-base pt-1">RA Michael Rothenhöfer</h1>
+    <p class="text-[#757575] 2xl:text-xl lg:text-base text-sm 2xl:leading-10 xl:leading-7 leading-5 pt-2">(Europäisches) Arbeits- und Sozialrecht aus der Sicht der Unternehmer sowie das Recht der Werkverträge und Zeitarbeit.</p>
+  </div>
+
+  <div class="bg-[#202020] rounded-xl xl:p-5 lg:p-2 p-5">
+    <img src="./assets/img/team2.png" alt="">
+    <h2 class="xl:text-sm text-xs text-[#F8D100] pt-3 bold">Erster Vorsitzender der Arbeitsgemeinschaft</h2>
+    <h1 class="text-white font-medium 2xl:text-3xl lg:text-lg text-base pt-1">RA Prof. Dr. Hansjürgen Tuengerthal</h1>
+    <p class="text-[#757575] 2xl:text-xl lg:text-base text-sm 2xl:leading-10 xl:leading-7 leading-5 pt-2">Umsetzung von EG-Recht in nationales Recht, Arbeits- und Sozialrecht aus der Sicht der Unternehmer, Wirtschaftsrecht sowie Vertragsrecht.</p>
+  </div>
+
+  <div class="bg-[#202020] rounded-xl xl:p-5 lg:p-2 p-5">
+    <img src="./assets/img/team3.png" alt="">
+    <h2 class="xl:text-sm text-xs text-[#F8D100] pt-3 bold">Experte der Arbeitsgemeinschaft</h2>
+    <h1 class="text-white font-medium 2xl:text-3xl lg:text-lg text-base pt-1">RA Christian Andorfer</h1>
+    <p class="text-[#757575] 2xl:text-xl lg:text-base text-sm 2xl:leading-10 xl:leading-7 leading-5 pt-2">Wirtschaftsstrafrecht, Arbeits- und Sozialversicherungsrecht für Unternehmer, (Wirtschaftsrecht), Vertragsrecht sowie Gemeinschaftsrecht.</p>
+  </div>
+
+  <div class="bg-[#202020] rounded-xl xl:p-5 lg:p-2 p-5">
+    <img src="./assets/img/team1.png" alt="">
+    <h2 class="xl:text-sm text-xs text-[#F8D100] pt-3 bold">Wissenschaftliche Mitarbeiterin</h2>
+    <h1 class="text-white font-medium 2xl:text-3xl lg:text-lg text-base pt-1">Janine Geißer</h1>
+    <p class="text-[#757575] 2xl:text-xl lg:text-base text-sm 2xl:leading-10 xl:leading-7 leading-5 pt-2">Vorbereiten von Stellungnahmen, Verfassen von Veröffentlichungen und Halten von Referaten.</p>
+  </div>
+
+
+</div>
+  </div>
+ </section>
+
+
+<!-- contact section  -->
+
+<section class="2xl:px-40 xl:px-28 lg:px-10 px-5 2xl:pt-48 lg:pt-20 pt-10">
+  <div class="bg-white xl:p-10 md:p-6 p-4 2xl:rounded-[50px] rounded-[30px]">
+    <div class="flex flex-col lg:flex-row xl:gap-12 gap-5">
+      <div class="lg:w-2/3 w-full">
+         <h2 class="text-[#141414] 2xl:text-[22px] text-base uppercase">Dienstleistungen</h2>
+      <h1 class="text-[#141414] 2xl:text-[56px] lg:text-4xl text-[28px] 2xl:leading-[80px] lg:leading-[65px] leading-[42px] font-bold 2xl:pt-2">Melden Sie sich gerne bei uns! Wir sind da für Sie</h1>
+
+      <div class="flex items-center gap-5 xl:pt-5 pt-3">
+        <i class="fa-solid fa-phone-volume bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+        <p class="text-[#141414] 2xl:text-xl text-base font-medium">06221 338 63-0</p>
+      </div>
+      <div class="flex items-center gap-5 xl:pt-5 pt-3">
+        <i class="fa-solid fa-envelope bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+        <p class="text-[#141414] 2xl:text-xl text-base font-medium uppercase">info@werkvertrag-zeitarbeit.de</p>
+      </div>
+      <div class="flex items-center gap-5 xl:pt-5 pt-3">
+        <i class="fa-solid fa-location-dot bg-[#F8D100] 2xl:py-3 2xl:px-[14px] py-2 px-[10px] rounded-md"></i>
+        <p class="text-[#141414] 2xl:text-xl text-base font-medium uppercase">Sofienstraße 21; 69115 Heidelberg</p>
+      </div>
+      </div>
+
+      <div class="lg:w-1/3 w-full">
+        <iframe class="w-full 2xl:h-[352px] h-[250px] rounded-[30px]" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/fr/calculer-la-population-sur-une-carte">Estimer la population sur la carte</a></iframe>
+      </div>
+    </div>
+
+    <!-- form  -->
+
+    <form action="" class="2xl:pt-14 pt-10">
+      <div class="flex md:flex-row flex-col gap-5">
+      <div class="flex flex-col w-full">
+        <label for="" class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Vorname..</label>
+        <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full bg-[#EDEDED] border border-[#EDEDED]" type="text" id="" name="" placeholder="Geben Sie hier ein">
+      </div>
+
+      <div class="flex flex-col w-full">
+        <label for="" class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Vorname..</label>
+        <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full bg-[#EDEDED] border border-[#EDEDED]" type="text" id="" name="" placeholder="Geben Sie hier ein">
+      </div>
+      </div>
+
+      <div class="flex md:flex-row flex-col gap-5 2xl:pt-8 pt-5">
+      <div class="flex flex-col w-full">
+        <label for="" class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">E-Mail-Adresse..</label>
+        <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full bg-[#EDEDED] border border-[#EDEDED]" type="text" id="" name="" placeholder="Geben Sie hier ein">
+      </div>
+
+      <div class="flex flex-col w-full">
+        <label for="" class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Telefonnummer</label>
+        <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full bg-[#EDEDED] border border-[#EDEDED]" type="text" id="" name="" placeholder="Geben Sie hier ein">
+      </div>
+      </div>
+
+      <div class="flex flex-col w-full 2xl:pt-8 pt-5">
+        <label for="" class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Nachricht..</label>
+        <textarea class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-xl bg-[#EDEDED] border border-[#EDEDED]" name="" id="" rows="6" placeholder="Geben Sie hier ein" ></textarea>
+      </div>
+
+
+    </form>
+  </div>
+</section>
+
+
+<section class="2xl:px-20 lg:px-10 px-5 2xl:pt-48 lg:pt-20 pt-10">
+
+    <div class="text-center">
+    <h2 class="text-[#F8D100] 2xl:text-[22px] text-base uppercase">Nachrichten</h2>
+    <h1 class="text-[#FFFFFF] 2xl:text-[56px] lg:text-4xl text-[28px] font-bold pt-2">Erfahren Sie mehr über unsere aktuellen<span class="bg-[#F8D100] text-[#131313]">Nachrichten</span></h1>
+
+    <div class="flex justify-center">
+    <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] xl:max-w-4xl 2xl:max-w-6xl pt-5">Wir informieren über rechtliche Entwicklungen in Singapur durch unseren monatlichen Newsletter Notes from the Bar, der für unsere Mandantschaft von Interesse sein könnte. Bleiben Sie auf dieser Seite auf dem Laufenden über unsere neuesten Mitteilungen.</p>
+    </div>
+  </div>
+
+  <div class="bg-[#202020] flex lg:flex-row flex-col items-center 2xl:gap-10 gap-5 2xl:p-12 p-6 xl:rounded-[30px] rounded-3xl 2xl:mt-14 mt-10">
+    <div class="lg:w-1/4 w-full">
+      <img src="./assets/img/lastimg.png" alt="">
+    </div>
+
+    <div class="lg:w-3/4 w-full">
+      <div class="flex gap-6">
+        <p class="text-[#757575] xl:text-sm text-xs"><i class="fa-solid fa-calendar-week text-[#F8D100]"></i>&nbsp;  &nbsp;Sep 06, 2024</p>
+        <p class="text-[#757575] xl:text-sm text-xs"><i class="fa-regular fa-user text-[#F8D100]"></i> &nbsp; &nbsp; Adbul rehman </p>
+      </div>
+
+      <div class="pt-5">
+        <h1 class="text-white 2xl:text-3xl xl:text-lg text-base">Klarheit schaffen in der Zusammenarbeit – Werkverträge richtig gestalten</h1>
+        <p class="text-[#D9D9D9] 2xl:text-lg text-sm 2xl:leading-[42px] leading-6 pt-2">In der heutigen Geschäftswelt ist Flexibilität ein entscheidender Erfolgsfaktor – insbesondere in Branchen mit schwankendem Personalbedarf oder projektbezogenem Arbeiten. Werkverträge bieten Unternehmen eine praktikable Lösung, um externe Leistungen effizient auszulagern. Doch Vorsicht: Wer hier nicht sauber trennt, riskiert rechtliche Konsequenzen.</p>
+      </div>
+      <div class="pt-10">
+        <button class="bg-white py-2 px-10 text-[#131313] 2xl:text-lg text-sm font-bold rounded-full border-2 border-[#131313] border-dashed uppercase">Jetzt Kontaktieren</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- footer  -->
+
+<footer class="bg-[#202020] 2xl:mt-48 lg:mt-20 mt-10">
+  <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 lg:gap-10 gap-5 2xl:px-20 lg:px-10 px-5 2xl:py-20 py-10">
+    <!-- Logo & Contact -->
+    <div>
+      <img src="./assets/img/footerlogo.png" alt="AWZ Logo" class="mb-6 w-32">
+      <div class="space-y-2">
+       
+      <div class="flex items-center gap-5">
+        <div class="flex items-center gap-5">
+        <i class="fa-solid fa-phone-volume bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+        <p class="text-white text-sm">06221 338 63-0</p>
+        </div>
+
+        <div class="flex items-center gap-5">
+        <i class="fa-solid fa-calendar-week bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+        <p class="text-white text-sm">Sep 06, 2024</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-5">
+        <i class="fa-solid fa-envelope bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+        <p class="text-white text-sm uppercase">info@werkvertrag-zeitarbeit.de</p>
+      </div>
+      <div class="flex items-center gap-5">
+        <i class="fa-solid fa-location-dot bg-[#F8D100] 2xl:py-3 2xl:px-[14px] py-2 px-[10px] rounded-md"></i>
+        <p class="text-white text-sm uppercase">Sofienstraße 21; 69115 Heidelberg</p>
+      </div>
+
+      </div>
+    </div>
+
+    <div class="flex gap-10 2xl:gap-20 pt-5 md:pt-0">
+    <!-- Quick Links -->
+    <div>
+      <h2 class="font-medium mb-4 xl:text-base text-sm text-white">QUICK LINK</h2>
+      <ul class="space-y-3 text-[#757575] 2xl:text-sm text-xs">
+        <li><a href="#" class="hover:text-white hover:underline">Home</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">Aktuelles</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">Themenfelder</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">Seminare</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">Veröffentlichungen</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">Impressum</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div>
+      <h2 class="font-medium mb-4 xl:text-base text-sm text-white">FOLGEN SIE UNS</h2>
+      <ul class="space-y-3 text-[#757575] 2xl:text-sm text-xs">
+        <li><a href="#" class="hover:text-white hover:underline">Facebook</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">Twitter</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-medium mb-4 xl:text-base text-sm text-white">SUPPORT</h3>
+      <ul class="space-y-3 text-[#757575] 2xl:text-sm text-xs">
+        <li><a href="#" class="hover:text-white hover:underline">Kontaktiere uns</a></li>
+      </ul>
+    </div>
+
+    </div>
+
+    <!-- Newsletter -->
+    <div class="pt-5 lg:pt-0">
+      <h1 class="2xl:text-4xl lg:text-2xl text-lg font-bold text-white">
+        Abonniere unseren Newsletter<br>
+        und bleibe über Aktionen informiert.
+      </h1>
+      <form class="mt-6 space-y-4">
+        <input 
+          type="email" 
+          placeholder="E-Mail-Adresse.." 
+          class="w-full bg-[#171717] text-[#757575] px-4 py-3 rounded-full outline-none"
+        >
+        <div >
+        <button class="bg-white w-full py-2 px-10 text-[#131313] 2xl:text-lg text-sm font-bold rounded-full border-2 border-[#131313] border-dashed uppercase">abonnieren</button>
+      </div>
+      </form>
+    </div>
+  </div>
+
+   <!-- Copyright -->
+  <div class="bg-[#171717] text-center text-[#FFFFFF] py-4 md:text-sm text-xs px-5">
+    <p>
+       COPYRIGHT 2025 © ARBEITSGEMEINSCHAFT WERKVERTRÄGE UND ZEITARBEIT
+    </p>
+   
+  </div>
+</footer>
+
+
+<!--navbar JS -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const lines = menuBtn.querySelectorAll('span');
+  let isOpen = false;
+
+  // Mobile menu toggle
+  menuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.classList.toggle('hidden');
+    if (isOpen) {
+      lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      lines[1].style.opacity = '0';
+      lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    } else {
+      lines[0].style.transform = 'rotate(0) translate(0, 0)';
+      lines[1].style.opacity = '1';
+      lines[2].style.transform = 'rotate(0) translate(0, 0)';
+    }
+  });
+
+  // Mobile dropdown toggle
+  function toggleDropdown(id, btn) {
+    const dropdown = document.getElementById(id);
+    const arrow = btn.querySelector('span');
+    dropdown.classList.toggle('hidden');
+    arrow.style.transform = dropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+</script>
+
+
+<!-- calender js  -->
+<script>
+  const months = [
+    "Januar", "Februar", "März", "April", "Mai", "Juni",
+    "Juli", "August", "September", "Oktober", "November", "Dezember"
+  ];
+
+  // Har calendar ka apna state
+  const calendars = {
+    1: { date: new Date() },
+    2: { date: new Date() }
+  };
+
+  function generateCalendar(calendarId) {
+    const calendarDays = document.getElementById(`calendarDays${calendarId}`);
+    const monthYear = document.getElementById(`monthYear${calendarId}`);
+
+    const today = new Date();
+    const currentDate = calendars[calendarId].date;
+    const month = currentDate.getMonth();
+    const year = currentDate.getFullYear();
+
+    calendarDays.innerHTML = "";
+    monthYear.textContent = `${months[month]} ${year}`;
+
+    const firstDay = new Date(year, month).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const startDay = (firstDay + 6) % 7;
+
+    for (let i = 0; i < startDay; i++) {
+      const empty = document.createElement("div");
+      calendarDays.appendChild(empty);
+    }
+
+    for (let d = 1; d <= daysInMonth; d++) {
+      const day = document.createElement("div");
+      day.textContent = d;
+      day.className = "calendar-day";
+
+      if (
+        d === today.getDate() &&
+        month === today.getMonth() &&
+        year === today.getFullYear()
+      ) {
+        day.classList.add("selected");
+      }
+
+      day.onclick = () => {
+        calendarDays.querySelectorAll(".calendar-day").forEach(el => el.classList.remove("selected"));
+        day.classList.add("selected");
+      };
+
+      calendarDays.appendChild(day);
+    }
+  }
+
+  function changeMonth(offset, calendarId) {
+    const currentDate = calendars[calendarId].date;
+    currentDate.setMonth(currentDate.getMonth() + offset);
+    generateCalendar(calendarId);
+  }
+
+  // Init both calendars
+  generateCalendar(1);
+  generateCalendar(2);
+</script>
+
+
+ <!-- swiper slider js  -->
 <script>
   const slides = document.querySelectorAll(".testimonial-slide");
   const nextBtn = document.getElementById("nextBtn");
@@ -500,72 +1195,7 @@
     updateSlider(current);
   });
 </script>
-</section>
 
-<!-- calender js  -->
-  <script>
-    const calendarDays = document.getElementById("calendarDays");
-    const monthYear = document.getElementById("monthYear");
-
-    let today = new Date();
-    let currentMonth = today.getMonth();
-    let currentYear = today.getFullYear();
-
-    const months = [
-      "Januar", "Februar", "März", "April", "Mai", "Juni",
-      "Juli", "August", "September", "Oktober", "November", "Dezember"
-    ];
-
-    function generateCalendar(month, year) {
-      calendarDays.innerHTML = "";
-      monthYear.textContent = `${months[month]} ${year}`;
-
-      const firstDay = new Date(year, month).getDay();
-      const daysInMonth = new Date(year, month + 1, 0).getDate();
-      const startDay = (firstDay + 6) % 7;
-
-      for (let i = 0; i < startDay; i++) {
-        const empty = document.createElement("div");
-        calendarDays.appendChild(empty);
-      }
-
-      for (let d = 1; d <= daysInMonth; d++) {
-        const day = document.createElement("div");
-        day.textContent = d;
-        day.className = "calendar-day";
-
-        if (
-          d === today.getDate() &&
-          month === today.getMonth() &&
-          year === today.getFullYear()
-        ) {
-          day.classList.add("selected");
-        }
-
-        day.onclick = () => {
-          document.querySelectorAll(".calendar-day").forEach((el) => el.classList.remove("selected"));
-          day.classList.add("selected");
-        };
-
-        calendarDays.appendChild(day);
-      }
-    }
-
-    function changeMonth(offset) {
-      currentMonth += offset;
-      if (currentMonth > 11) {
-        currentMonth = 0;
-        currentYear++;
-      } else if (currentMonth < 0) {
-        currentMonth = 11;
-        currentYear--;
-      }
-      generateCalendar(currentMonth, currentYear);
-    }
-
-    generateCalendar(currentMonth, currentYear);
-  </script>
-
-
+<script src="https://kit.fontawesome.com/a2ada4947c.js" crossorigin="anonymous"></script> 
 </body>
 </html>

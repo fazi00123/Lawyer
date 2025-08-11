@@ -199,7 +199,7 @@
   /* height: 100px; */
   /* margin: auto; */
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
   width: 100%;
   
 }
@@ -209,9 +209,9 @@
   display: flex;
   width: calc(250px * 14); /* 7 original + 7 duplicate slides */
   animation: scroll 40s linear infinite reverse;
-  gap: 40px;
-  padding-top: 10px;
-   padding-bottom: 10px;
+  /* gap: 40px; */
+  /* padding-top: 10px;
+   padding-bottom: 10px; */
 }
 
 /* Individual slide */
@@ -238,4 +238,18 @@
     }
 
 
+    .card:hover{
+      background-color: #F8D100;
+      color: #202020;
+    }
+
+    .card:hover h1{
+      background-color: #F8D100;
+      color: #202020;
+    }
+
+    .card:hover p{
+      background-color: #F8D100;
+      color: #3C3C3C;
+    }
     
