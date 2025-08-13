@@ -84,7 +84,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 8));
   }
 }
 
@@ -102,7 +102,7 @@
 /* Track (slide wrapper) */
 .slide-track {
   display: flex;
-  width: calc(250px * 14); /* 7 original + 7 duplicate slides */
+  width: calc(250px * 16); /* 7 original + 7 duplicate slides */
   animation: scroll 40s linear infinite;
   gap: 40px;
 
