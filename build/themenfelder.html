@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-[#171717]">
+    
+<nav id="navbar" class="absolute w-full z-50 transition-colors duration-300">
+  <!-- TOP BAR -->
+  <div id="navbar-top" class="flex justify-between items-center 2xl:px-20 lg:px-10 px-5 xl:pt-8 pt-5">
+    <!-- Logo -->
+    <div>
+      <img src="./assets/img/Logo.png" alt="Logo" class="w-32">
+    </div>
+
+    <!-- Menu (Desktop) -->
+    <div class="hidden lg:flex">
+      <ul class="flex 2xl:space-x-10 xl:space-x-8 space-x-5 font-light 2xl:text-lg xl:text-base lg:text-sm items-center">
+        <li><a href="./index.html" class="text-white hover:text-[#F8D100]">Home</a></li>
+          <!-- About Dropdown Desktop -->
+        <li class="relative group z-50">
+            <a href="">
+          <button class="flex items-center gap-1 text-white hover:text-[#F8D100] ">
+            Aktuelles
+              <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
+          </button>
+          </a>
+          <ul class="absolute left-0 bg-white shadow-lg rounded-lg hidden group-hover:block w-40">
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Our Story</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Team</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Careers</a></li>
+          </ul>
+        </li>
+
+        <!-- Services Dropdown Desktop -->
+        <li class="relative group z-50">
+            <a href="./themenfelder.html" class="nav-link active">
+          <button class="flex items-center gap-1 hover:text-[#F8D100]">
+            Themenfelder
+           <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
+          </button>
+          </a>
+          <ul class="absolute left-0 bg-white shadow-lg rounded-lg hidden group-hover:block w-40">
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg ">Web Design</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Development</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">SEO</a></li>
+          </ul>
+        </li>
+        <li><a href="./seminare.html" class="text-white hover:text-[#F8D100]">Seminare</a></li>
+        <li><a href="./Veröffentlichungen.html" class="text-white hover:text-[#F8D100]">Veröffentlichungen</a></li>
+        <li><a href="#" class="text-white hover:text-[#F8D100]">Impressum</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact + Search (Desktop) -->
+    <div class="hidden lg:block">
+      <div class="flex gap-5">
+        <!-- Search Bar -->
+        <!-- <div class="relative xl:w-40 2xl:w-72">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24" stroke-width="1.5"
+                 stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+            </svg>
+          </span>
+          <input type="text" placeholder="Suchen"
+                 class="w-full pl-10 pr-4 py-2 text-white bg-transparent border-2 border-white border-dashed rounded-full focus:outline-none placeholder-white" />
+        </div> -->
+        
+        <a href="./kontakt.html">
+            <button class="uppercase bg-transparent py-2 px-10 text-base 2xl:text-lg font-bold text-white rounded-full border-2 border-[#F8D100] border-dashed">Kontakt</button>
+            </a>
+      </div>
+    </div>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="lg:hidden z-50">
+      <button id="menu-btn" class="relative w-10 h-10 focus:outline-none">
+        <span class="sr-only">Toggle Menu</span>
+        <div class="hamburger-lines">
+          <span class="absolute bg-white w-8 h-[3px] top-2 left-1 transition-all duration-300 origin-top-left"></span>
+          <span class="absolute bg-white w-8 h-[3px] top-4 left-1 transition-all"></span>
+          <span class="absolute bg-white w-8 h-[3px] top-6 left-1 transition-all duration-300 origin-bottom-left"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden px-5 pb-5 bg-[#171717]">
+    <ul class="flex flex-col justify-center items-center space-y-4 font-light text-white py-10">
+      <li><a href="./index.html" class="block">Home</a></li>
+
+      <!-- About Mobile Dropdown -->
+      <li class="w-full">
+        <a href="">
+        <button class="flex justify-center items-center w-full hover:text-white transition" onclick="toggleDropdown('about-dropdown', this)">
+          Aktuelles
+     <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
+        </button>
+        </a>
+        <ul id="about-dropdown" class="hidden mt-2 md:pl-80 lg:pl-4 pl-36 space-y-2 items-center">
+          <li><a href="#" class="block hover:text-white transition text-white">Our Story</a></li>
+          <li><a href="#" class="block hover:text-white] transition">Team</a></li>
+          <li><a href="#" class="block hover:text-white] transition">Careers</a></li>
+        </ul>
+      </li>
+
+      <!-- Services Mobile Dropdown -->
+      <li class="w-full">
+        <a href="./themenfelder.html">
+        <button class="flex justify-center items-center w-full hover:text-white transition" onclick="toggleDropdown('services-dropdown', this)">
+          Themenfelder
+         <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
+        </button>
+        </a>
+        <ul id="services-dropdown" class="hidden mt-2 md:pl-80 lg:pl-4 pl-36 space-y-2">
+          <li><a href="#" class="block hover:text-white transition">Web Design</a></li>
+          <li><a href="#" class="block hover:text-white transition">Development</a></li>
+          <li><a href="#" class="block hover:text-white transition">SEO</a></li>
+        </ul>
+      </li>
+      <li><a href="./seminare.html">Seminare</a></li>
+      <li><a href="./Veröffentlichungen.html">Veröffentlichungen</a></li>
+      <li><a href="#">Impressum</a></li>
+      <li>
+        <a href="./kontakt.html">
+        <button class="uppercase bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed">Kontakt</button>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="2xl:px-20 lg:px-10 px-5 pt-4">
+    <hr class="border-[#757575]">
+  </div>
+</nav>
+
+
+
+
+<section class="2xl:px-20 lg:px-10 px-5 h-screen bg-center bg-no-repeat bg-cover" style="background-image: url(./assets/img/aboutbg.png);">
+    <div class="flex flex-col justify-center items-center xl:pt-60 md:pt-48 pt-40 ">
+        <h2 class="2xl:text-[22px] text-lg uppercase text-[#F8D100]">Themenfelder</h2>
+             <h1 class="text-[#FFFFFF]/20 text-3xl lg:text-5xl xl:text-6xl 2xl:text-[78px] 2xl:leading-[90px] xl:leading-[75px] lg:leading-[60px] leading-9 font-bold">Arbeitnehmerüberlassung</h1>
+    </div>
+
+<div class="flex flex-col justify-center items-center xl:pt-8 pt-4">
+    <div class="flex flex-wrap justify-center items-center md:gap-4 gap-2 z-10 md:max-w-5xl w-full text-center">
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] text-base uppercase px-10 py-3 bg-[#171717] rounded-full">Flexibel</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717]  2xl:text-[22px] text-base uppercase px-10 py-3 bg-[#171717] rounded-full">Effizient</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717]  2xl:text-[22px] text-base uppercase px-10 py-3 bg-[#171717] rounded-full">Passgenau</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717]  2xl:text-[22px] text-base uppercase px-10 py-3 bg-[#171717] rounded-full">Passgenau</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717]  2xl:text-[22px] text-base uppercase px-10 py-3 bg-[#171717] rounded-full">Ihre Lösung</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717]  2xl:text-[22px] text-base uppercase px-10 py-3 bg-[#171717] rounded-full"> Ihr Tempo</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717]  2xl:text-[22px] text-base uppercase px-10 py-3 bg-[#171717] rounded-full">Unsere Stärke</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717]  2xl:text-[22px] text-base uppercase px-10 py-3 bg-[#171717] rounded-full">Ihre Lösung</button>
+        
+    </div>
+    </div>
+</section>
+
+
+<section class="2xl:px-40 lg:px-20 px-5 2xl:pt-44 lg:pt-20 pt-10">
+    <div>
+        <h1 class="text-[#FFFFFF] 2xl:text-[56px] lg:text-4xl text-[28px] 2xl:leading-[80px] lg:leading-[65px] leading-[42px] font-bold pt-2">Arbeitnehmerüberlassung</h1>
+
+              <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] pt-5">Von Arbeitnehmerüberlassung spricht man, wenn einem Unternehmer - dem sogenannten Entleiher - von einem Drittunternehmer - dem sogenannten Verleiher - Arbeitnehmer des Verleihers derart überlassen werden, dass der Entleiher diese nach seinen eigenen Vorstellungen in seinem Betrieb einsetzt, wie er dies für erforderlich hält. <br>
+In Deutschland ist die Arbeitnehmerüberlassung durch das Arbeitnehmerüberlassungsgesetz - AÜG - geregelt. Nach dessen § 1 Abs. 1 bedürfen Verleihunternehmen einer Erlaubnis, da sonst der Entleiher als Arbeitgeber angesehen wird. Zeitarbeitsunternehmen müssen den Grundsatz des ‘equal pay/equal treatment‘ berücksichtigen. Die Zeitarbeiter haben danach den Anspruch, genauso behandelt zu werden wie die Stammbelegschaft in den Betrieben, in denen sie eingesetzt werden. Tarifverträge können hiervon jedoch abweichen. Beim Einsatz von Zeitarbeitsunternehmen muss sich der Entleiher absichern. Er muss prüfen, ob der Verleiher eine Erlaubnis hat. <br>
+Ein besonderes Augenmerk ist auch auf die Rechtsprechung sowie anstehende Gesetzesvorhaben zu richten. Insbesondere darf Arbeitnehmerüberlassung nur vorübergehend erfolgen. Klare Grenzen hierzu bestehen noch nicht. Die große Koalition hat jedoch im Koalitionsvertrag eine Höchstüberlassungsdauer von 18 Monaten angedacht. Unternehmen sind hier gut beraten die weiteren Entwicklungen im Auge zu behalten. <br>
+Ein weiteres Problem ergibt sich dadurch, dass der Zoll vielfach gegen Subunternehmen, die auf Werkvertragsbasis tätig sind, vorgeht. Hierbei wird die werkvertragliche Tätigkeit unter Verkennung der rechtlichen Kriterien als Arbeitnehmerüberlassung angesehen. Da die Subunternehmen keine Erlaubnis für die Durchführung von Arbeitnehmerüberlassung besitzen, ist hier regelmäßig die Rede von ‘illegaler Arbeitnehmerüberlassung’ und der Auftraggeber wird als tatsächlicher Arbeitgeber angesehen. Kommen diese ‘illegalen Verleiher’ aus anderen Staaten, haben sie regelmäßig die Sozialabgaben im Heimatland gezahlt, aber nicht in Deutschland. Da der Auftraggeber als Arbeitgeber angesehen wird, wird ihm Sozialabgabenbetrug u.ä. vorgeworfen. In einem solchen Fall müssen die Betroffenen den Nachweis der ordnungsgemäßen Abwicklung erbringen. Sie müssen darlegen, dass ein Werkvertrag vorliegt. Dieser ist durch die Herbeiführung eines bestimmten Erfolgs gekennzeichnet. Die Betroffenen müssen vor allem nachweisen, dass der Werkvertrag in der Praxis auch gelebt wurde. <br>
+Entscheidend ist in diesem Zusammenhang, die Indizien, die nach Ansicht des Zolls auf eine illegale Arbeitnehmerüberlassung hindeuten, zu entkräften. Hierzu muss nachdrücklich auf die geänderte positive Rechtsprechung hingewiesen werden. Diese verlangt wegen der Grundrechte der Betroffenen aus Art. 2 GG (geschützte persönliche Freiheit) und Art. 12 GG (Berufsfreiheit) eine enge Auslegung des Begriffs der illegalen Arbeitnehmerüberlassung.
+Die Betroffenen müssen daher nachdrücklich gegen die Vorwürfe vorgehen. Hierzu steht die AG Werkverträge und Zeitarbeit, mit ihren langjährigen Erfahrungen, zur Verfügung.</p>
+    </div>
+
+    <div class="bg-[#F8D100] rounded-3xl 2xl:p-12 p-6 xl:mt-12 mt-6">
+        <h1 class="text-[#171717] xl:text-3xl text-xl font-medium xl:leading-[42px] leading-7 text-center">Geplante Befristung der Zeitarbeit: “Tarif vor Gesetz- Zeitarbeit fair gestalten” - Wirtschaftsrat Deutschland</h1>
+        <p class="2xl:text-xl text-center xl:px-16 lg:px-6 lg:text-base text-sm font-medium italic 2xl:leading-[42px] lg:leading-8 leading-6 text-[#3C3C3C] pt-5">Herr Prof. Dr. Tuengerthal war bei einer Tagung des Wirtschaftsrates am 08.10.2014 anwesend, in der ein Vertreter der IGZ die Positionen zur geplanten Zeitarbeit-Gesetzgebung vortrug. Auch im 3. Potsdamer Rechtsforum zur Zeitarbeit am 23.09.2014 heißt das Statement “Tarif vor Gesetz”. Der Koalitionsvertrag sieht eine zeitliche Höchstüberlassungsdauer von 18 Monaten vor. Der IGZ spricht sich ausdrücklich dafür aus, Öffnungsklauseln in die geplanten Neuregelungen aufzunehmen.</p>
+    </div>
+
+    <div class="xl:mt-12 mt-6">
+        <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575]">Nach § 1 Abs. 1 AÜG erfolgt eine legale Arbeitnehmerüberlassung an den Entleiher “vorübergehend”. Nun wird nach dem Koalitionsvertrag geplant, die Arbeitnehmerüberlassung weiter zu entwickeln und die Überlassungsdauer zu befristen. Danach soll eine Arbeitnehmerüberlassung auf eine Höchstdauer von 18 Monaten begrenzt werden. Allerdings sieht hierbei der Koalitionsvertrag eine Öffnungsklausel für abweichende Tarifvereinbarungen vor. Kritik an der Überlassungsdauer von 18 Monaten wird aufgrund der Einschränkung der Flexibilität von der IGZ ausgeübt, obwohl diese nach der EU-Zeitarbeitsrichtlinie europarechtlich geboten sei. Als Lösung werden hier neben den Öffnungsklauseln, allgemein formulierte Ausnahmeklauseln mit Hinterlegung von Sachgründen vorgeschlagen. Weiter soll nach 9 Monaten für die Leiharbeitnehmer eine Gleichstellung hinsichtlich des Arbeitsentgelts mit den Stammarbeitnehmern des Entleihers erfolgen. Der Vertreter der IGZ trägt hierzu vor, dass auch bezüglich der 9 Monate-Regelung eine Öffnungsklausel notwendig ist, um nicht in die Tarifautonomie einzugreifen und Entgelttransparenz und finanzielle Planbarkeit zu verlieren. <br>
+Nach dem Koalitionsvertrag wurde ein Gesetzesvorschlag des Landes Nordrhein-Westfalen ausgearbeitet von Schüren und Brors vorgelegt, welcher noch weiter als der Koalitionsvertrag geht und eine dreistufige Regelung der Befristung von Leiharbeit vorsieht:</p>
+
+<div class="flex items-center lg:gap-8 gap-5 lg:pt-7 pt-5">
+    <img src="./assets/img/orderstick.png" alt="">
+    <h2 class="text-white 2xl:text-xl md:text-base text-sm 2xl:leading-[42px] lmd:eading-7">Stufe: Nach 6 Monaten beim Einsatz eines oder mehrerer nacheinander eingesetzter Leiharbeitnehmer soll gem. § 1 Abs. 3 AÜG eine Vermutung eingreifen, dass die Überlassung nicht nur einen vorübergehenden Bedarf deckt.</h2>
+</div>
+
+<div class="flex items-center lg:gap-8 gap-5 lg:pt-8 pt-6">
+    <img src="./assets/img/orderstick.png" alt="">
+    <h2 class="text-white 2xl:text-xl md:text-base text-sm 2xl:leading-[42px] lmd:eading-7">Stufe: Nach 6 Monaten beim 2. Stufe: Nach 9 Monaten beim gleichen Entleiher müssen die Leiharbeitnehmer den gleichen Stundenlohn wie ein vergleichbarer Stammarbeitnehmer beim Entleiher erhalten.</h2>
+</div>
+
+<div class="flex items-center lg:gap-8 gap-5 lg:pt-8 pt-6">
+    <img src="./assets/img/orderstick.png" alt="">
+    <h2 class="text-white 2xl:text-xl md:text-base text-sm 2xl:leading-[42px] lmd:eading-7">3. Stufe: Nach 18 Monaten soll eine Höchstgrenze für die legale Leiharbeit gelten. Dabei wird keine Öffnungsklausel für Tarifverträge vorgesehen. Eine einzige Ausnahme soll das Gesetz vorsehen, nämlich für den Fall, dass nur ein vorübergehender Bedarf besteht und keine Kräfte auf dem Arbeitsmarkt für eine entsprechend befristete Einstellung vorhanden sind.</h2>
+</div>
+
+<p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] lg:pt-7 pt-5">Zu der dreistufigen Regelung soll festgeschrieben werden, dass sich eine vorübergehende Überlassung auf den Bedarf des Entleihers an Leiharbeit für die Tätigkeit bezieht und somit arbeitsplatzbezogenen ist. Diese Bezugnahme ist momentan noch in Rechtsprechung und Literatur heftig umstritten. Sie soll verhindern, dass es zu Aneinanderreihungen von vorübergehenden Überlassungen auf einen Dauerarbeitsplatz kommt. <br>
+Die geplanten Neuregelungen haben schon in der Presse, gerade auf Arbeitgeberseite viel Kritik ausgelöst. So hat der BAP (Bundesarbeitgeberverband der Personaldienstleister) und der IGZ (Interessenverband Deutscher Zeitarbeitsunternehmen e.V.) ein Positionspapier zur geplanten Zeitarbeit-Gesetzgebung herausgebracht. Auch die Wirtschaftswoche spricht von einer “sinnlosen Befristung” der Zeitarbeit (abrufbar unter: <span class="text-[#F8D100]">LINK</span></p>
+    </div>
+</section>
+
+
+<!-- footer  -->
+
+<footer class="bg-[#202020] 2xl:mt-48 lg:mt-20 mt-10">
+  <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 lg:gap-10 gap-5 2xl:px-20 lg:px-10 px-5 2xl:py-20 py-10">
+    <!-- Logo & Contact -->
+    <div>
+        <div class="flex justify-center md:justify-start">
+      <img src="./assets/img/footerlogo.png" alt="AWZ Logo" class="mb-6 w-32">
+      </div>
+      <div class="space-y-2 2xl:pt-10 pt-5">
+       
+      <div class="flex items-center gap-5">
+        <div class="flex items-center gap-5">
+        <i class="fa-solid fa-phone-volume bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+        <p class="text-white text-sm">06221 338 63-0</p>
+        </div>
+
+        <div class="flex items-center gap-5">
+        <i class="fa-solid fa-calendar-week bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+        <p class="text-white text-sm">Sep 06, 2024</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-5">
+        <i class="fa-solid fa-envelope bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+        <p class="text-white text-sm uppercase">info@werkvertrag-zeitarbeit.de</p>
+      </div>
+      <div class="flex items-center gap-5">
+        <i class="fa-solid fa-location-dot bg-[#F8D100] 2xl:py-3 2xl:px-[14px] py-2 px-[10px] rounded-md"></i>
+        <p class="text-white text-sm uppercase">Sofienstraße 21; 69115 Heidelberg</p>
+      </div>
+
+      </div>
+    </div>
+
+    <div class="flex gap-10 2xl:gap-20 pt-5 md:pt-0">
+    <!-- Quick Links -->
+    <div>
+      <h2 class="font-medium mb-4 xl:text-base text-sm text-white">QUICK LINK</h2>
+      <ul class="space-y-3 text-[#757575] 2xl:text-sm text-xs">
+        <li><a href="#" class="hover:text-white hover:underline">Home</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">Aktuelles</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">Themenfelder</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">Seminare</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">Veröffentlichungen</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">Impressum</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div>
+      <h2 class="font-medium mb-4 xl:text-base text-sm text-white">FOLGEN SIE UNS</h2>
+      <ul class="space-y-3 text-[#757575] 2xl:text-sm text-xs">
+        <li><a href="#" class="hover:text-white hover:underline">Facebook</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">Twitter</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-medium mb-4 xl:text-base text-sm text-white">SUPPORT</h3>
+      <ul class="space-y-3 text-[#757575] 2xl:text-sm text-xs">
+        <li><a href="#" class="hover:text-white hover:underline">Kontaktiere uns</a></li>
+      </ul>
+    </div>
+
+    </div>
+
+    <!-- Newsletter -->
+    <div class="pt-5 lg:pt-0">
+      <h1 class="2xl:text-4xl lg:text-2xl text-lg font-bold text-white">
+        Abonniere unseren Newsletter<br>
+        und bleibe über Aktionen informiert.
+      </h1>
+      <form class="mt-6 space-y-4">
+        <input 
+          type="email" 
+          placeholder="E-Mail-Adresse.." 
+          class="w-full bg-[#171717] text-[#757575] px-4 py-3 rounded-full outline-none"
+        >
+        <div >
+        <button class="bg-white w-full py-2 px-10 text-[#131313] 2xl:text-lg text-sm font-bold rounded-full border-2 border-[#131313] border-dashed uppercase">abonnieren</button>
+      </div>
+      </form>
+    </div>
+  </div>
+
+   <!-- Copyright -->
+  <div class="bg-[#171717] text-center text-[#FFFFFF] py-4 md:text-sm text-xs px-5">
+    <p>
+       COPYRIGHT 2025 © ARBEITSGEMEINSCHAFT WERKVERTRÄGE UND ZEITARBEIT
+    </p>
+   
+  </div>
+</footer>
+
+<!--navbar JS -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const lines = menuBtn.querySelectorAll('span');
+  const navbarTop = document.getElementById('navbar-top'); // top logo + toggle container
+  let isOpen = false;
+
+  // Mobile menu toggle
+  menuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.classList.toggle('hidden');
+
+    // Animate hamburger lines
+    if (isOpen) {
+      lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      lines[1].style.opacity = '0';
+      lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+
+      // Add black background only on mobile view
+      if (window.innerWidth < 1024) {
+        navbarTop.classList.add('bg-[#171717]');
+      }
+    } else {
+      lines[0].style.transform = 'rotate(0) translate(0, 0)';
+      lines[1].style.opacity = '1';
+      lines[2].style.transform = 'rotate(0) translate(0, 0)';
+
+      // Remove black background when closing menu
+      if (window.innerWidth < 1024) {
+        navbarTop.classList.remove('bg-[#171717]');
+      }
+    }
+  });
+
+  // Mobile dropdown toggle
+  function toggleDropdown(id, btn) {
+    const dropdown = document.getElementById(id);
+    const arrow = btn.querySelector('span');
+    dropdown.classList.toggle('hidden');
+    arrow.style.transform = dropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+</script>
+
+
+<script src="https://kit.fontawesome.com/a2ada4947c.js" crossorigin="anonymous"></script> 
+
+</body>
+</html>

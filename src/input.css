@@ -5,6 +5,36 @@
 @tailwind utilities;
 
 
+  .nav-link {
+    @apply  hover:text-[#F8D100] font-light relative;
+    padding-bottom: 5px;
+  }
+
+  .nav-link.active {
+    @apply font-bold text-[#F8D100];
+  }
+
+  .nav-link.active::after {
+    content: '';
+    @apply absolute left-1/2 -translate-x-1/2 -bottom-2 w-2 h-2  bg-[#F8D100] rounded-full;
+  }
+
+
+  .navv-linkk {
+    @apply  hover:text-[#131313] font-light relative;
+    padding-bottom: 5px;
+  }
+
+  .navv-linkk.active {
+    @apply font-bold text-[#131313];
+  }
+
+  .navv-linkk.active::after {
+    content: '';
+    @apply absolute left-1/2 -translate-x-1/2 -bottom-2 w-2 h-2  bg-[#131313] rounded-full;
+  }
+
+
 
    .blurred {
       opacity: 0.3;
@@ -67,7 +97,6 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  
 }
 
 /* Track (slide wrapper) */
@@ -76,8 +105,7 @@
   width: calc(250px * 14); /* 7 original + 7 duplicate slides */
   animation: scroll 40s linear infinite;
   gap: 40px;
-  padding-top: 10px;
-   padding-bottom: 10px;
+
 }
 
 /* Individual slide */
@@ -142,8 +170,7 @@
   width: calc(250px * 14); /* 7 original + 7 duplicate slides */
   animation: scroll 40s linear infinite reverse;
   gap: 40px;
-  padding-top: 10px;
-   padding-bottom: 10px;
+
 }
 
 /* Individual slide */

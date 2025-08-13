@@ -21,15 +21,17 @@
 
     <!-- Menu (Desktop) -->
     <div class="hidden lg:flex">
-      <ul class="flex xl:space-x-10 space-x-5 font-light 2xl:text-lg xl:text-base lg:text-sm items-center">
-        <li><a href="#" class="text-[#131313] transition">Home</a></li>
+      <ul class="flex 2xl:space-x-10 xl:space-x-8  space-x-5 font-bold 2xl:text-lg xl:text-base lg:text-sm items-center">
+        <li><a href="./index.html" class="text-[#131313] transition navv-linkk active">Home</a></li>
 
         <!-- About Dropdown Desktop -->
         <li class="relative group z-50">
+          <a href="">
           <button class="flex items-center gap-1 text-[#131313]">
             Aktuelles
               <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
           </button>
+          </a>
           <ul class="absolute left-0 bg-white shadow-lg rounded-lg hidden group-hover:block w-40">
             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Our Story</a></li>
             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Team</a></li>
@@ -39,10 +41,12 @@
 
         <!-- Services Dropdown Desktop -->
         <li class="relative group z-50">
+          <a href="./themenfelder.html">
           <button class="flex items-center gap-1 text-[#131313]">
             Themenfelder
            <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
           </button>
+          </a>
           <ul class="absolute left-0 bg-white shadow-lg rounded-lg hidden group-hover:block w-40">
             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg ">Web Design</a></li>
             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Development</a></li>
@@ -50,15 +54,38 @@
           </ul>
         </li>
 
-        <li><a href="#" class="text-[#131313] transition">Seminare</a></li>
-        <li><a href="#" class="text-[#131313] transition">Veröffentlichungen</a></li>
+        <li><a href="./seminare.html" class="text-[#131313] transition">Seminare</a></li>
+        <li><a href="./Veröffentlichungen.html" class="text-[#131313] transition">Veröffentlichungen</a></li>
         <li><a href="#" class="text-[#131313] transition">Impressum</a></li>
       </ul>
     </div>
 
     <!-- Contact Button (Desktop) -->
     <div class="hidden lg:block">
+      <div class="flex gap-5">
+      <!-- Search Bar -->
+     <!-- <div class="relative xl:w-40 2xl:w-72">
+  
+  <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-white ">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" 
+         fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
+         stroke="currentColor" class="w-5 h-5">
+      <path stroke-linecap="round" stroke-linejoin="round" 
+            d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+    </svg>
+  </span>
+
+ 
+  <input type="text" placeholder="Search..."
+         class="w-full pl-10 pr-4 py-2 text-white bg-transparent border-2 
+                border-white border-dashed rounded-full shadow-sm focus:outline-none 
+                focus:border-white placeholder-white" />
+</div> -->
+  <a href="./kontakt.html">
       <button class="uppercase bg-[#121212] py-2 px-10 text-base 2xl:text-lg font-bold text-white rounded-full border-2 border-[#F8D100] border-dashed transition">Kontakt</button>
+      </a>
+      </div>
     </div>
 
     <!-- Hamburger Menu (Mobile) -->
@@ -77,14 +104,16 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="lg:hidden hidden px-5 pb-5">
     <ul class="flex flex-col justify-center items-center space-y-4 font-light 2xl:text-lg xl:text-base lg:text-sm mt-4">
-      <li><a href="#" class="block hover:text-[#121212] transition">Home</a></li>
+      <li><a href="./index.html" class="block hover:text-[#121212] transition">Home</a></li>
 
       <!-- About Mobile Dropdown -->
       <li class="w-full">
+        <a href="">
         <button class="flex justify-center items-center w-full hover:text-[#121212] transition" onclick="toggleDropdown('about-dropdown', this)">
           Aktuelles
      <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
         </button>
+        </a>
         <ul id="about-dropdown" class="hidden mt-2 md:pl-80 lg:pl-4 pl-36 space-y-2 items-center">
           <li><a href="#" class="block hover:text-[#121212] transition">Our Story</a></li>
           <li><a href="#" class="block hover:text-[#121212] transition">Team</a></li>
@@ -94,10 +123,12 @@
 
       <!-- Services Mobile Dropdown -->
       <li class="w-full">
+        <a href="./themenfelder.html">
         <button class="flex justify-center items-center w-full hover:text-[#121212] transition" onclick="toggleDropdown('services-dropdown', this)">
           Themenfelder
          <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
         </button>
+        </a>
         <ul id="services-dropdown" class="hidden mt-2 md:pl-80 lg:pl-4 pl-36 space-y-2">
           <li><a href="#" class="block hover:text-[#121212] transition">Web Design</a></li>
           <li><a href="#" class="block hover:text-[#121212] transition">Development</a></li>
@@ -105,11 +136,13 @@
         </ul>
       </li>
 
-      <li><a href="#" class="block hover:text-[#121212] transition">Seminare</a></li>
-      <li><a href="#" class="block hover:text-[#121212] transition">Veröffentlichungen</a></li>
+      <li><a href="./seminare.html" class="block hover:text-[#121212] transition">Seminare</a></li>
+      <li><a href="./Veröffentlichungen.html" class="block hover:text-[#121212] transition">Veröffentlichungen</a></li>
       <li><a href="#" class="block hover:text-[#121212] transition">Impressum</a></li>
       <li>
+        <a href="./kontakt.html">
         <button class="uppercase bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed transition w-full">Kontakt</button>
+        </a>
       </li>
     </ul>
   </div>
@@ -433,48 +466,48 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
 
 <!-- slider  -->
 <div class="slider 2xl:mt-48 lg:mt-20 mt-10">
-	<div class="slide-track">
+	<div class="slide-track 2xl:py-5 py-2">
 		<div class="slide">
-			<img src="./assets/img/weight.png" height="" width="" alt="" />
+			<img src="./assets/img/weightblack.png" height="" width="" alt="" />
 		</div>
 		<div class="slide">
-			<img src="./assets/img/Sicherheit.png" height="" width="" alt="" />
+			<img src="./assets/img/Sicherheitblack.png" height="" width="" alt="" />
 		</div>
 		<div class="slide">
-			<img src="./assets/img/weight.png" height="" width="" alt="" />
+			<img src="./assets/img/weightblack.png" height="" width="" alt="" />
 		</div>
 		<div class="slide">
-			<img src="./assets/img/Praxis.png" height="" width="" alt="" />
+			<img src="./assets/img/Praxisblack.png" height="" width="" alt="" />
 		</div>
 		<div class="slide">
-			<img src="./assets/img/weight.png" height="" width="" alt="" />
+			<img src="./assets/img/weightblack.png" height="" width="" alt="" />
 		</div>
 		<div class="slide">
-			<img src="./assets/img/Klarheit.png" height="" width="" alt="" />
+			<img src="./assets/img/Klarheitblack.png" height="" width="" alt="" />
 		</div>
 		<div class="slide">
-			<img src="./assets/img/weight.png" height="" width="" alt="" />
+			<img src="./assets/img/weightblack.png" height="" width="" alt="" />
 		</div>
 		<div class="slide">
-			<img src="./assets/img/Praxis.png" height="" width="" alt="" />
+			<img src="./assets/img/Praxisblack.png" height="" width="" alt="" />
 		</div>
 		<div class="slide">
-			<img src="./assets/img/weight.png" height="" width="" alt="" />
+			<img src="./assets/img/weightblack.png" height="" width="" alt="" />
 		</div>
 		<div class="slide">
-			<img src="./assets/img/Klarheit.png" height="" width="" alt="" />
+			<img src="./assets/img/Klarheitblack.png" height="" width="" alt="" />
 		</div>
 		<div class="slide">
-			<img src="./assets/img/weight.png" height="" width="" alt="" />
+			<img src="./assets/img/weightblack.png" height="" width="" alt="" />
 		</div>
 		<div class="slide">
-			<img src="./assets/img/Sicherheit.png" height="" width="" alt="" />
+			<img src="./assets/img/Sicherheitblack.png" height="" width="" alt="" />
 		</div>
 		<div class="slide">
-			<img src="./assets/img/weight.png" height="" width="" alt="" />
+			<img src="./assets/img/weightblack.png" height="" width="" alt="" />
 		</div>
 		<div class="slide">
-			<img src="./assets/img/Klarheit.png" height="" width="" alt="" />
+			<img src="./assets/img/Klarheitblack.png" height="" width="" alt="" />
 		</div>
 	</div>
 </div>
@@ -562,7 +595,7 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
 
 <!-- slider  -->
 <div class="slider1">
-	<div class="slide1-track">
+	<div class="slide1-track 2xl:py-5 py-2">
 		<div class="slide1">
 			<img src="./assets/img/weight.png" height="" width="" alt="" />
 		</div>
@@ -983,8 +1016,10 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
   <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 lg:gap-10 gap-5 2xl:px-20 lg:px-10 px-5 2xl:py-20 py-10">
     <!-- Logo & Contact -->
     <div>
+      <div class="flex justify-center md:justify-start">
       <img src="./assets/img/footerlogo.png" alt="AWZ Logo" class="mb-6 w-32">
-      <div class="space-y-2">
+      </div>
+      <div class="space-y-2 2xl:pt-10 pt-5">
        
       <div class="flex items-center gap-5">
         <div class="flex items-center gap-5">
