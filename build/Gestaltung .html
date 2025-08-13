@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+      <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body class="bg-[#171717]">
     
-    <nav id="navbar" class="absolute w-full z-50 transition-colors duration-300">
+<nav id="navbar" class="absolute w-full z-50 transition-colors duration-300">
   <!-- TOP BAR -->
   <div id="navbar-top" class="flex justify-between items-center 2xl:px-20 lg:px-10 px-5 xl:pt-8 pt-5">
     <!-- Logo -->
@@ -20,11 +20,10 @@
     <div class="hidden lg:flex">
       <ul class="flex 2xl:space-x-10 xl:space-x-8 space-x-5 font-light 2xl:text-lg xl:text-base lg:text-sm items-center">
         <li><a href="./index.html" class="text-white hover:text-[#F8D100]">Home</a></li>
-
           <!-- About Dropdown Desktop -->
         <li class="relative group z-50">
-          <a href="">
-          <button class="flex items-center gap-1 text-white hover:text-[#F8D100]">
+            <a href="">
+          <button class="flex items-center gap-1 text-white hover:text-[#F8D100] ">
             Aktuelles
               <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
           </button>
@@ -38,10 +37,10 @@
           </ul>
         </li>
 
-       <!-- Services Dropdown Desktop -->
+        <!-- Services Dropdown Desktop -->
         <li class="relative group z-50">
-            <a href="./themenfelder.html">
-          <button class="flex items-center gap-1 hover:text-[#F8D100] text-white">
+            <a href="./themenfelder.html" class="nav-link active">
+          <button class="flex items-center gap-1 hover:text-[#F8D100]">
             Themenfelder
            <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
           </button>
@@ -81,9 +80,10 @@
           <input type="text" placeholder="Suchen"
                  class="w-full pl-10 pr-4 py-2 text-white bg-transparent border-2 border-white border-dashed rounded-full focus:outline-none placeholder-white" />
         </div> -->
+        
         <a href="./kontakt.html">
-        <button class="uppercase bg-transparent py-2 px-10 text-base 2xl:text-lg font-bold text-white rounded-full border-2 border-[#F8D100] border-dashed">Kontakt</button>
-        </a>
+            <button class="uppercase bg-transparent py-2 px-10 text-base 2xl:text-lg font-bold text-white rounded-full border-2 border-[#F8D100] border-dashed">Kontakt</button>
+            </a>
       </div>
     </div>
 
@@ -124,13 +124,13 @@
 
       <!-- Services Mobile Dropdown -->
       <li class="w-full">
-        <a href="./themenfelder.html">
+        
         <button class="flex justify-center items-center w-full hover:text-white transition" onclick="toggleDropdown('services-dropdown', this)">
           Themenfelder
          <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
         </button>
-        </a>
-         <ul id="services-dropdown" class="hidden mt-2 lg:pl-4 space-y-2 text-center">
+        
+        <ul id="services-dropdown" class="hidden mt-2 lg:pl-4 space-y-2 text-center">
           
           <li><a href="./themenfelder.html" class="block hover:text-white transition">Arbeitnehmerüberlassung</a></li>
             <li><a href="./werkvertrag.html" class="block hover:text-white transition">Werkvertrag</a></li>
@@ -161,77 +161,36 @@
 </nav>
 
 
-<section class="2xl:px-20 lg:px-10 px-5 h-screen bg-center bg-no-repeat bg-cover" style="background-image: url(./assets/img/konatakbg.png);">
-    <div class="flex flex-col justify-center items-center 2xl:pt-96 xl:pt-80 pt-60">
-             <h1 class="text-[#F8D100] text-3xl lg:text-5xl xl:text-6xl 2xl:text-[78px] 2xl:leading-[90px] xl:leading-[75px] lg:leading-[60px] leading-9 font-bold">Kontakt</h1>
+<section class="2xl:px-20 lg:px-10 px-5 h-screen bg-center bg-no-repeat bg-cover" style="background-image: url(./assets/img/aboutbg.png);">
+    <div class="flex flex-col justify-center items-center xl:pt-60 md:pt-48 pt-40 ">
+        <h2 class="2xl:text-[22px] text-lg uppercase text-[#F8D100]">Themenfelder</h2>
+             <h1 class="text-[#FFFFFF]/20 md:text-3xl text-2xl lg:text-5xl xl:text-6xl 2xl:text-[78px] 2xl:leading-[90px] xl:leading-[75px] lg:leading-[60px] leading-9 font-bold text-center">Gestaltung von Arbeitsverträgen</h1>
+    </div>
+
+<div class="flex flex-col justify-center items-center xl:pt-8 pt-4">
+    <div class="flex flex-wrap justify-center items-center md:gap-4 gap-2 z-10 md:max-w-5xl w-full text-center">
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Flexibel</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Effizient</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Passgenau</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Passgenau</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Ihre Lösung</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full"> Ihr Tempo</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Unsere Stärke</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Ihre Lösung</button>
+        
+    </div>
     </div>
 </section>
 
-<!-- contact section  -->
 
-<section class="2xl:px-48 xl:px-28 lg:px-10 px-5 2xl:pt-48 lg:pt-20 pt-10">
-  <div class="bg-white xl:p-10 md:p-6 p-4 2xl:rounded-[50px] rounded-[30px]">
-    <div class="flex flex-col lg:flex-row xl:gap-12 gap-5">
-      <div class="lg:w-2/3 w-full">
-         <h2 class="text-[#141414] 2xl:text-[22px] text-base uppercase">Dienstleistungen</h2>
-      <h1 class="text-[#141414] 2xl:text-[56px] lg:text-4xl text-[28px] 2xl:leading-[80px] lg:leading-[65px] leading-[42px] font-bold 2xl:pt-2">Melden Sie sich gerne bei uns! Wir sind da für Sie</h1>
+<section class="2xl:px-40 lg:px-20 px-5 2xl:pt-44 lg:pt-20 pt-10">
+    <div>
+        <h1 class="text-[#FFFFFF] 2xl:text-[56px] lg:text-4xl md:text-[28px] text-2xl 2xl:leading-[80px] lg:leading-[65px] leading-[42px] font-bold pt-2">Gestaltung von Arbeitsverträgen</h1>
 
-      <div class="flex items-center gap-5 xl:pt-5 pt-3">
-        <i class="fa-solid fa-phone-volume bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
-        <p class="text-[#141414] 2xl:text-xl text-base font-medium">06221 338 63-0</p>
-      </div>
-      <div class="flex items-center gap-5 xl:pt-5 pt-3">
-        <i class="fa-solid fa-envelope bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
-        <p class="text-[#141414] 2xl:text-xl text-base font-medium uppercase">info@werkvertrag-zeitarbeit.de</p>
-      </div>
-      <div class="flex items-center gap-5 xl:pt-5 pt-3">
-        <i class="fa-solid fa-location-dot bg-[#F8D100] 2xl:py-3 2xl:px-[14px] py-2 px-[10px] rounded-md"></i>
-        <p class="text-[#141414] 2xl:text-xl text-base font-medium uppercase">Sofienstraße 21; 69115 Heidelberg</p>
-      </div>
-      </div>
-
-      <div class="lg:w-1/3 w-full">
-        <iframe class="w-full 2xl:h-[352px] h-[250px] rounded-[30px]" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/fr/calculer-la-population-sur-une-carte">Estimer la population sur la carte</a></iframe>
-      </div>
+              <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] pt-5">Ein Arbeitsvertrag kommt bereits dann zustande, wenn sich die Parteien stillschweigend über die Hauptflichten des Arbeitsvertrages, also die Pflicht zur Arbeit seitens des Arbeitnehmers und die Pflicht zur Zahlung des Arbeitsentgelts durch den Arbeitgeber einigen. Einen mittelbaren Formzwang übt allerdings das Nachweisgesetz aus, das vom Arbeitgeber fordert, die wesentlichen Arbeitsbedingungen niederzulegen. Die Nichteinhaltung von § 2 Abs. 1 S. 2 NachwG durch den Arbeitgeber wird in der Rechtsprechung überwiegend als Fall einer Beweisvereitelung gewertet, die prozessual zu einer erheblichen Erleichterung der Beweisführungslast für den Arbeitnehmer führen kann. Deshalb ist es für Arbeitgeber geboten, die Arbeitsbedingungen ihrer Arbeitnehmer schriftlich zu fixieren. Angesichts eines Geflechts zwingender Einzelgesetze (z.B. § 13 Abs. 1 S. 1 BUrlG; § 3 MiLoG; § 626 BGB etc.), vorrangiger Kollektivnormen (Tarifverträge und Betriebsvereinbarungen), einer sich häufig ändernden Rechtsprechung und dem Umstand, dass einseitig vorformulierte Vertragsbedingungen grundsätzlich einer Inhaltskontrolle auf ihre Angemessenheit unterliegen, sollte die Gestaltung von Arbeitsverträgen nur durch Experten erfolgen. Die mit der Arbeitsgemeinschaft Werkverträge und Zeitarbeit kooperierende Anwaltskanzlei Prof. Dr. Tuengerthal und Kollegen berät Sie über die Möglichkeiten und Risiken arbeitsvertraglicher Rechtsgestaltung unter Berücksichtigung der höchstricherlichen Rechtsprechung und unter Wahrung des Gebots des sichersten Weges.
+</p>
     </div>
-
-    <!-- form  -->
-
-    <form action="" class="2xl:pt-14 pt-10">
-      <div class="flex md:flex-row flex-col gap-5">
-      <div class="flex flex-col w-full">
-        <label for="" class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Vorname..</label>
-        <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full bg-[#EDEDED] border border-[#EDEDED]" type="text" id="" name="" placeholder="Geben Sie hier ein">
-      </div>
-
-      <div class="flex flex-col w-full">
-        <label for="" class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Vorname..</label>
-        <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full bg-[#EDEDED] border border-[#EDEDED]" type="text" id="" name="" placeholder="Geben Sie hier ein">
-      </div>
-      </div>
-
-      <div class="flex md:flex-row flex-col gap-5 2xl:pt-8 pt-5">
-      <div class="flex flex-col w-full">
-        <label for="" class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">E-Mail-Adresse..</label>
-        <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full bg-[#EDEDED] border border-[#EDEDED]" type="text" id="" name="" placeholder="Geben Sie hier ein">
-      </div>
-
-      <div class="flex flex-col w-full">
-        <label for="" class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Telefonnummer</label>
-        <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full bg-[#EDEDED] border border-[#EDEDED]" type="text" id="" name="" placeholder="Geben Sie hier ein">
-      </div>
-      </div>
-
-      <div class="flex flex-col w-full 2xl:pt-8 pt-5">
-        <label for="" class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Nachricht..</label>
-        <textarea class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-xl bg-[#EDEDED] border border-[#EDEDED]" name="" id="" rows="6" placeholder="Geben Sie hier ein" ></textarea>
-      </div>
-
-
-    </form>
-  </div>
 </section>
-
 
 
 <!-- footer  -->
