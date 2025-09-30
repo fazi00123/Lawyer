@@ -4,6 +4,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: Satoshi;
+    src: url(../font/Satoshi-Regular.otf);
+}
+
+@font-face {
+    font-family: CabinetGrotesk;
+    src: url(../font/CabinetGrotesk-Regular.otf);
+}
+
+
+body h2, p, li, a{
+    font-family: Satoshi;
+}
+
+body h1{
+   font-family: CabinetGrotesk;
+}
+
+
 
   .nav-link {
     @apply  hover:text-[#F8D100] font-light relative;

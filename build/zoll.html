@@ -81,9 +81,9 @@
                  class="w-full pl-10 pr-4 py-2 text-white bg-transparent border-2 border-white border-dashed rounded-full focus:outline-none placeholder-white" />
         </div> -->
         
-        <a href="./kontakt.html">
-            <button class="uppercase bg-transparent py-2 px-10 text-base 2xl:text-lg font-bold text-white rounded-full border-2 border-[#F8D100] border-dashed">Kontakt</button>
-            </a>
+       
+            <button onclick="openModal()" class="uppercase bg-transparent py-2 px-10 text-base 2xl:text-lg font-bold text-white rounded-full border-2 border-[#F8D100] border-dashed">Kontakt</button>
+            
       </div>
     </div>
 
@@ -148,9 +148,9 @@
       <li><a href="./Veröffentlichungen.html">Veröffentlichungen</a></li>
       <li><a href="#">Impressum</a></li>
       <li>
-        <a href="./kontakt.html">
-        <button class="uppercase bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed">Kontakt</button>
-        </a>
+        
+        <button onclick="openModal()" class="uppercase bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed">Kontakt</button>
+       
       </li>
     </ul>
   </div>
@@ -212,12 +212,11 @@ In dieser Situation ist es für die betroffenen Unternehmen von äußerster Wich
 
 
 <!-- footer  -->
-
 <footer class="bg-[#202020] 2xl:mt-48 lg:mt-20 mt-10">
   <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 lg:gap-10 gap-5 2xl:px-20 lg:px-10 px-5 2xl:py-20 py-10">
     <!-- Logo & Contact -->
     <div>
-        <div class="flex justify-center md:justify-start">
+      <div class="flex justify-center md:justify-start">
       <img src="./assets/img/footerlogo.png" alt="AWZ Logo" class="mb-6 w-32">
       </div>
       <div class="space-y-2 2xl:pt-10 pt-5">
@@ -248,20 +247,20 @@ In dieser Situation ist es für die betroffenen Unternehmen von äußerster Wich
     <div class="flex gap-10 2xl:gap-20 pt-5 md:pt-0">
     <!-- Quick Links -->
     <div>
-      <h2 class="font-medium mb-4 xl:text-base text-sm text-white">QUICK LINK</h2>
+      <h2 class="font-bold mb-4 xl:text-base text-sm text-white ">QUICK LINK</h2>
       <ul class="space-y-3 text-[#757575] 2xl:text-sm text-xs">
-        <li><a href="#" class="hover:text-white hover:underline">Home</a></li>
-        <li><a href="#" class="hover:text-white hover:underline">Aktuelles</a></li>
-        <li><a href="#" class="hover:text-white hover:underline">Themenfelder</a></li>
-        <li><a href="#" class="hover:text-white hover:underline">Seminare</a></li>
-        <li><a href="#" class="hover:text-white hover:underline">Veröffentlichungen</a></li>
-        <li><a href="#" class="hover:text-white hover:underline">Impressum</a></li>
+        <li><a href="./index.html" class="hover:text-white hover:underline">Home</a></li>
+        <li><a href="./aktuelles" class="hover:text-white hover:underline">Aktuelles</a></li>
+        <li><a href="./themenfelder.html" class="hover:text-white hover:underline">Themenfelder</a></li>
+        <li><a href="./seminare.html" class="hover:text-white hover:underline">Seminare</a></li>
+        <li><a href="./Veröffentlichungen.html" class="hover:text-white hover:underline">Veröffentlichungen</a></li>
+        <li><a href="./impressem" class="hover:text-white hover:underline">Impressum</a></li>
       </ul>
     </div>
 
     <!-- Social -->
     <div>
-      <h2 class="font-medium mb-4 xl:text-base text-sm text-white">FOLGEN SIE UNS</h2>
+      <h2 class="font-bold mb-4 xl:text-base text-sm text-white">FOLGEN SIE UNS</h2>
       <ul class="space-y-3 text-[#757575] 2xl:text-sm text-xs">
         <li><a href="#" class="hover:text-white hover:underline">Facebook</a></li>
         <li><a href="#" class="hover:text-white hover:underline">Twitter</a></li>
@@ -270,7 +269,7 @@ In dieser Situation ist es für die betroffenen Unternehmen von äußerster Wich
     </div>
 
     <div>
-      <h3 class="font-medium mb-4 xl:text-base text-sm text-white">SUPPORT</h3>
+      <h3 class="font-bold mb-4 xl:text-base text-sm text-white">SUPPORT</h3>
       <ul class="space-y-3 text-[#757575] 2xl:text-sm text-xs">
         <li><a href="#" class="hover:text-white hover:underline">Kontaktiere uns</a></li>
       </ul>
@@ -305,6 +304,116 @@ In dieser Situation ist es für die betroffenen Unternehmen von äußerster Wich
    
   </div>
 </footer>
+
+<!--contact popup Modal -->
+<div id="contactModal" 
+     class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 hidden"
+     onclick="closeOnOverlay(event)">
+  
+  <!-- Modal Content -->
+  <div class="relative w-[95%] lg:w-[80%] 2xl:w-[70%] max-h-[95vh] overflow-y-auto bg-white 2xl:p-10 md:p-6 p-4 
+              2xl:rounded-[50px] rounded-[30px] shadow-xl"
+       onclick="event.stopPropagation()">
+    
+    <!-- Close Button -->
+    <button onclick="closeModal()" 
+            class="absolute top-4 right-4 text-[#141414] text-2xl font-bold">
+      &times;
+    </button>
+
+    <!-- Your Section Start -->
+    <section class="2xl:px-10 xl:px-6 lg:px-4 px-2">
+      <div class="flex flex-col lg:flex-row xl:gap-12 gap-5">
+        <div class="lg:w-2/3 w-full">
+          <h2 class="text-[#141414] 2xl:text-[22px] text-base uppercase font-bold">Dienstleistungen</h2>
+          <h1 class="text-[#141414] 2xl:text-[56px] lg:text-4xl text-[28px] 2xl:leading-[80px] lg:leading-[65px] leading-[42px] font-bold 2xl:pt-2">
+            Melden Sie sich gerne bei uns! Wir sind da für Sie
+          </h1>
+
+          <div class="flex items-center gap-5 xl:pt-5 pt-3">
+            <i class="fa-solid fa-phone-volume bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+            <p class="text-[#141414] 2xl:text-xl text-base font-medium">06221 338 63-0</p>
+          </div>
+          <div class="flex items-center gap-5 xl:pt-5 pt-3">
+            <i class="fa-solid fa-envelope bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+            <p class="text-[#141414] 2xl:text-xl text-base font-medium uppercase">info@werkvertrag-zeitarbeit.de</p>
+          </div>
+          <div class="flex items-center gap-5 xl:pt-5 pt-3">
+            <i class="fa-solid fa-location-dot bg-[#F8D100] 2xl:py-3 2xl:px-[14px] py-2 px-[10px] rounded-md"></i>
+            <p class="text-[#141414] 2xl:text-xl text-base font-medium uppercase">Sofienstraße 21; 69115 Heidelberg</p>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 w-full">
+          <iframe class="w-full 2xl:h-[352px] h-[250px] rounded-[30px]" 
+                  frameborder="0" scrolling="no"
+                  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=de&amp;q=Sofienstraße%2021,%2069115%20Heidelberg&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- form -->
+      <form action="" class="2xl:pt-14 pt-10">
+        <div class="flex md:flex-row flex-col gap-5">
+          <div class="flex flex-col w-full">
+            <label class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Vorname..</label>
+            <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full 
+                          bg-[#EDEDED] border border-[#EDEDED]" 
+                   type="text" placeholder="Geben Sie hier ein">
+          </div>
+
+          <div class="flex flex-col w-full">
+            <label class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Nachname..</label>
+            <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full 
+                          bg-[#EDEDED] border border-[#EDEDED]" 
+                   type="text" placeholder="Geben Sie hier ein">
+          </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-5 2xl:pt-8 pt-5">
+          <div class="flex flex-col w-full">
+            <label class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">E-Mail-Adresse..</label>
+            <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full 
+                          bg-[#EDEDED] border border-[#EDEDED]" 
+                   type="text" placeholder="Geben Sie hier ein">
+          </div>
+
+          <div class="flex flex-col w-full">
+            <label class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Telefonnummer</label>
+            <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full 
+                          bg-[#EDEDED] border border-[#EDEDED]" 
+                   type="text" placeholder="Geben Sie hier ein">
+          </div>
+        </div>
+
+        <div class="flex flex-col w-full 2xl:pt-8 pt-5">
+          <label class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Nachricht..</label>
+          <textarea class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-xl 
+                           bg-[#EDEDED] border border-[#EDEDED]" 
+                    rows="6" placeholder="Geben Sie hier ein"></textarea>
+        </div>
+      </form>
+    </section>
+    <!-- Your Section End -->
+  </div>
+</div>
+<!-- contact popup js  -->
+<script>
+  function openModal() {
+    document.getElementById("contactModal").classList.remove("hidden");
+    document.body.classList.add("overflow-hidden"); // disable background scroll
+  }
+  function closeModal() {
+    document.getElementById("contactModal").classList.add("hidden");
+    document.body.classList.remove("overflow-hidden"); // enable background scroll
+  }
+  function closeOnOverlay(e) {
+    if (e.target.id === "contactModal") {
+      closeModal();
+    }
+  }
+</script>
+
 
 <!--navbar JS -->
 <script>

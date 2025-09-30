@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-[#171717]">
+    
+<nav id="navbar" class="absolute w-full z-50 transition-colors duration-300">
+  <!-- TOP BAR -->
+  <div id="navbar-top" class="flex justify-between items-center 2xl:px-20 lg:px-10 px-5 xl:pt-8 pt-5">
+    <!-- Logo -->
+    <div>
+      <img src="./assets/img/Logo.png" alt="Logo" class="w-32">
+    </div>
+
+    <!-- Menu (Desktop) -->
+    <div class="hidden lg:flex">
+      <ul class="flex 2xl:space-x-10 xl:space-x-8 space-x-5 font-light 2xl:text-lg xl:text-base lg:text-sm items-center">
+        <li><a href="./index.html" class="text-white hover:text-[#F8D100]">Home</a></li>
+          <!-- About Dropdown Desktop -->
+        <li class="relative group z-50">
+            <a href="">
+          <button class="flex items-center gap-1 text-white hover:text-[#F8D100] ">
+            Aktuelles
+              <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
+          </button>
+          </a>
+          <ul class="absolute left-0 bg-white shadow-lg rounded-lg hidden group-hover:block w-52">
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Standpunkte der AWZ</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Urteilsbesprechungen</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Rechtsvorschriften</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Veranstaltungen</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Aus den Medien</a></li>
+          </ul>
+        </li>
+
+        <!-- Services Dropdown Desktop -->
+        <li class="relative group z-50">
+            <a href="./themenfelder.html" class="nav-link active">
+          <button class="flex items-center gap-1 hover:text-[#F8D100]">
+            Themenfelder
+           <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
+          </button>
+          </a>
+          <ul class="absolute left-0 bg-white shadow-lg rounded-lg hidden group-hover:block w-60">
+            <li><a href="./themenfelder.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg ">Arbeitnehmerüberlassung</a></li>
+            <li><a href="./werkvertrag.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Werkvertrag</a></li>
+            <li><a href="./zoll.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Zoll</a></li>
+             <li><a href="./AEntG.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg ">Mindestlöhne nach dem AEntG</a></li>
+            <li><a href="./MiLog.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Mindestlöhne nach dem MiLog</a></li>
+            <li><a href="./wirtschaftsstrafrecht.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Wirtschaftsstrafrecht</a></li>
+             <li><a href="./audits.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg ">Audits / Betriebsbesichtigungen /Betriebsbesichtigungen</a></li>
+            <li><a href="./Outsourcing.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Gestaltung von Outsourcing-Werkverträgen</a></li>
+            <li><a href="./Gestaltung .html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Gestaltung von Arbeitsverträgen</a></li>
+            <li><a href="solo.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Solo-Selbständige</a></li>
+          </ul>
+        </li>
+        <li><a href="./seminare.html" class="text-white hover:text-[#F8D100]">Seminare</a></li>
+        <li><a href="./Veröffentlichungen.html" class="text-white hover:text-[#F8D100]">Veröffentlichungen</a></li>
+        <!-- <li><a href="#" class="text-white hover:text-[#F8D100]">Impressum</a></li> -->
+      </ul>
+    </div>
+
+    <!-- Contact + Search (Desktop) -->
+    <div class="hidden lg:block">
+      <div class="flex gap-5">
+        <!-- Search Bar -->
+        <!-- <div class="relative xl:w-40 2xl:w-72">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                 viewBox="0 0 24 24" stroke-width="1.5"
+                 stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+            </svg>
+          </span>
+          <input type="text" placeholder="Suchen"
+                 class="w-full pl-10 pr-4 py-2 text-white bg-transparent border-2 border-white border-dashed rounded-full focus:outline-none placeholder-white" />
+        </div> -->
+        
+        
+            <button onclick="openModal()" class="uppercase bg-transparent py-2 px-10 text-base 2xl:text-lg font-bold text-white rounded-full border-2 border-[#F8D100] border-dashed">Kontakt</button>
+            
+      </div>
+    </div>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="lg:hidden z-50">
+      <button id="menu-btn" class="relative w-10 h-10 focus:outline-none">
+        <span class="sr-only">Toggle Menu</span>
+        <div class="hamburger-lines">
+          <span class="absolute bg-white w-8 h-[3px] top-2 left-1 transition-all duration-300 origin-top-left"></span>
+          <span class="absolute bg-white w-8 h-[3px] top-4 left-1 transition-all"></span>
+          <span class="absolute bg-white w-8 h-[3px] top-6 left-1 transition-all duration-300 origin-bottom-left"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden px-5 pb-5 bg-[#171717]">
+    <ul class="flex flex-col justify-center items-center space-y-4 font-light text-white py-10">
+      <li><a href="./index.html" class="block">Home</a></li>
+
+      <!-- About Mobile Dropdown -->
+      <li class="w-full">
+        
+        <button class="flex justify-center items-center w-full hover:text-white transition" onclick="toggleDropdown('about-dropdown', this)">
+          Aktuelles
+     <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
+        </button>
+        
+        <ul id="about-dropdown" class="hidden mt-2 lg:pl-4 space-y-2 items-center text-white text-center">
+         <li><a href="#" class="block transition text-white">Standpunkte der AWZ</a></li>
+            <li><a href="#" class="block transition text-white">Urteilsbesprechungen</a></li>
+            <li><a href="#" class="block transition text-white">Rechtsvorschriften</a></li>
+              <li><a href="#" class="block transition text-white">Veranstaltungen</a></li>
+            <li><a href="#" class="block transition text-white">Aus den Medien</a></li>
+        </ul>
+      </li>
+
+      <!-- Services Mobile Dropdown -->
+      <li class="w-full">
+        
+        <button class="flex justify-center items-center w-full hover:text-white transition" onclick="toggleDropdown('services-dropdown', this)">
+          Themenfelder
+         <i class="fa-solid fa-chevron-down text-sm pl-1"></i>
+        </button>
+        
+        <ul id="services-dropdown" class="hidden mt-2 lg:pl-4 space-y-2 text-center">
+          
+          <li><a href="./themenfelder.html" class="block hover:text-white transition">Arbeitnehmerüberlassung</a></li>
+            <li><a href="./werkvertrag.html" class="block hover:text-white transition">Werkvertrag</a></li>
+            <li><a href="./zoll.html" class="block hover:text-white transition">Zoll</a></li>
+             <li><a href="./AEntG.html" class="block hover:text-white transition ">Mindestlöhne nach dem AEntG</a></li>
+            <li><a href="./MiLog.html" class="block hover:text-white transition">Mindestlöhne nach dem MiLog</a></li>
+            <li><a href="./wirtschaftsstrafrecht.html" class="block hover:text-white transition">Wirtschaftsstrafrecht</a></li>
+             <li><a href="./audits.html" class="block hover:text-white transition ">Audits / Betriebsbesichtigungen /Betriebsbesichtigungen</a></li>
+            <li><a href="./Outsourcing.html" class="block hover:text-white transition">Gestaltung von Outsourcing-Werkverträgen</a></li>
+            <li><a href="./Gestaltung .html" class="block hover:text-white transition">Gestaltung von Arbeitsverträgen</a></li>
+            <li><a href="./solo.html" class="block hover:text-white transition">Solo-Selbständige</a></li>
+        </ul>
+      </li>
+      <li><a href="./seminare.html">Seminare</a></li>
+      <li><a href="./Veröffentlichungen.html">Veröffentlichungen</a></li>
+      <!-- <li><a href="#">Impressum</a></li> -->
+      <li>
+        
+        <button onclick="openModal()" class="uppercase bg-[#121212] py-2 px-10 text-white rounded-full border-2 border-[#F8D100] border-dashed">Kontakt</button>
+       
+      </li>
+    </ul>
+  </div>
+
+  <div class="2xl:px-20 lg:px-10 px-5 pt-4">
+    <hr class="border-[#757575]">
+  </div>
+</nav>
+
+
+<section class="2xl:px-20 lg:px-10 px-5 h-screen bg-center bg-no-repeat bg-cover" style="background-image: url(./assets/img/aboutbg.png);">
+    <div class="flex flex-col justify-center items-center xl:pt-60 md:pt-48 pt-40 ">
+        <h2 class="2xl:text-[22px] text-lg uppercase text-[#F8D100]">Themenfelder</h2>
+             <h1 class="text-[#FFFFFF]/20 md:text-3xl text-2xl lg:text-5xl xl:text-6xl 2xl:text-[78px] 2xl:leading-[90px] xl:leading-[75px] lg:leading-[60px] leading-9 font-bold text-center">Solo-Selbständige
+</h1>
+    </div>
+
+<div class="flex flex-col justify-center items-center xl:pt-8 pt-4">
+    <div class="flex flex-wrap justify-center items-center md:gap-4 gap-2 z-10 md:max-w-5xl w-full text-center">
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Flexibel</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Effizient</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Passgenau</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Passgenau</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Ihre Lösung</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full"> Ihr Tempo</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Unsere Stärke</button>
+        <button class="text-[#F8D100] hover:bg-[#F8D100] hover:text-[#171717] 2xl:text-[22px] md:text-base text-sm uppercase md:px-10 py-3 px-6 bg-[#171717] rounded-full">Ihre Lösung</button>
+        
+    </div>
+    </div>
+</section>
+
+
+<section class="2xl:px-40 lg:px-20 px-5 2xl:pt-44 lg:pt-20 pt-10">
+    <div>
+        <h1 class="text-[#FFFFFF] 2xl:text-[56px] lg:text-4xl md:text-[28px] text-2xl 2xl:leading-[80px] lg:leading-[65px] leading-[42px] font-bold pt-2">Mindestlöhne nach dem MiLog
+</h1>           
+    </div>
+
+    <div class="lg:pt-10 pt-5">
+        <h1 class="text-white xl:text-2xl text-lg">
+            1. Wer bekommt den Mindestlohn, wer nicht?
+        </h1>
+        <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] pt-5">
+            Den allgemeingültigen Mindestlohn erhalten alle Arbeitnehmer, unabhängig davon ob es Minijobber, Rentner, Saisonarbeiter, Arbeitnehmer auf Probe, Familienmitglieder usw. sind. Das Mindestlohngesetz (MiLoG) gilt hinsichtlich seiner weiteren Pflichten aber auch für alle Arbeitnehmer, die mehr verdienen. Allerdings sind hier bereits Ausnahmen seitens der Regierung in der Planung. <br>
+            Vom Mindestlohn ausgenommen werden zunächst einige Praktikanten. Darunter fallen Pflichtpraktika im Rahmen eines Studiums oder einer schulischen Ausbildung, Orientierungspraktika, die zur Orientierung für eine Berufsausbildung oder ein Studium dienen, sowie Praktika im Rahmen einer Ausbildung oder eines Hochschulstudiums, sofern nicht mit dem Arbeitgeber zuvor ein entsprechendes Praktikumsverhältnis bestanden hat. Als vierte Ausnahme gelten Praktika im Rahmen einer Einstiegsqualifizierung oder einer Berufsausbildungsvorbereitung. <br>Ebenfalls nicht den Mindestlohn erhalten Kinder und Jugendliche unter 18 Jahren sowie Auszubildende und Langzeitarbeitslose. Unter Langzeitarbeitslosen versteht der Gesetzgeber Arbeitslose, die länger als ein Jahr lang arbeitslos waren. <br>Schließlich werden Selbstständige nicht erfasst. Allerdings wird Arbeitgebern, die Arbeitsverhältnisse in selbstständige Verhältnisse umwandeln wollen, hier dringend empfohlen, sich Rechtsrat einzuholen, da sonst Strafverfahren wegen Hinterziehung von Sozialabgaben drohen. <br>Schließlich müssen Arbeitgeber für eine Übergangszeit bis zum 31.12.2017 nicht den allgemeinen Mindestlohn zahlen, wenn sie unter das Arbeitnehmerentsendegesetz fallen. Hier gelten teilweise höhere teilweise niedrigere Mindestlöhne. Das Gleiche gilt für Leiharbeiter. Schließlich gibt es noch eine Ausnahmeregelung für Zeitungszusteller.
+        </p>
+    </div>
+
+     <div class="lg:pt-10 pt-5">
+        <h1 class="text-white xl:text-2xl text-lg">
+            2. Wie hoch ist der Mindestlohn?
+        </h1>
+        <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] pt-5">
+           Der Mindestlohn ist ein Zeitlohn in Höhe von 8,50€ brutto je Stunde. In Zukunft wird dessen Höhe durch eine Mindestlohnkommission bestimmt. Zusätzlich müssen Arbeitgeber nach der Rechtsprechung die 2/3-Grenze berücksichtigen. Ein Lohn, der weniger als 2/3 der branchenüblichen Vergütung beträgt, ist nämlich sittenwidrig. Wenn also ein Arbeitgeber 8,50 € brutto je Stunde zahlt und dieser Betrag liegt unterhalb von 2/3 der branchenüblichen Vergütung, hat der Arbeitnehmer einen Anspruch auf die tarifliche Vergütung.<br>
+         Akkordlöhne, Provisionen, ein monatliches Fixum, Umsatzbeteiligungen etc. sind weiterhin möglich. Allerdings muss der Arbeitgeber gewährleisten, dass der Arbeitnehmer einen Mindestlohn von 8,50 € brutto je Stunde erhält.
+        </p>
+    </div>
+
+    <div class="lg:pt-10 pt-5">
+        <h1 class="text-white xl:text-2xl text-lg">
+            3. Was kann auf den Mindestlohn angerechnet werden?
+        </h1>
+        <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] pt-5">
+       Grundsätzlich kann auf den Mindestlohn jede Leistung angerechnet werden, die von der Funktion her dem Mindestlohn gleichwertig ist, die also die Normalleistung des Arbeitnehmers vergüten soll. Damit sind zugleich alle Leistungen nicht anrechenbar, die eine darüber hinausgehende Leistung vergüten sollen wie zum Beispiel Zuschläge für Überstunden, Schicht- bzw.Wechselschichtzulagen, Nachtarbeit, Feiertagsarbeit, Prämien für besondere Leistungen, Schmutz-oder Gefahrenzulagen etc.. Arbeitgeber sollten also genau prüfen ob sie die Leistung anrechnen können und gegebenenfalls ihr Vergütungsmodell umstellen, soweit es möglich ist.<br>
+         Ebenfalls können Entsendezulagen und Aufwendungsersatz nicht angerechnet werden. Diese stellen keine Vergütung für die Arbeitsleistung dar. Das Gleiche gilt für Trinkgelder, die der Arbeitnehmer von Kunden geschenkt bekommt. <br> Einmalzahlungen wie ein dreizehntes oder vierzehntes Monatsgehalt können nur eingeschränkt angerechnet werden. Sie müssen zum einen die Normalleistung vergüten, zum anderen müssen sie dem Arbeitnehmer auch zum jeweiligen Fälligkeitsdatum tatsächlich und unwiderruflich ausgezahlt worden sein. Als Fälligkeitsdatum gilt das arbeitsvertragliche vereinbarte Fälligkeitsdatum oder der letzte Bankarbeitstag im Folgemonat.
+        </p>
+    </div>
+
+     <div class="lg:pt-10 pt-5">
+        <h1 class="text-white xl:text-2xl text-lg">
+        4. Arbeitszeitkonten zur Flexibilisierung
+        </h1>
+        <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] pt-5">
+       Der Mindestlohn muss bis zum Fälligkeitszeitunkt ausgezahlt sein, sonst droht ein Bußgeld. Arbeitgeber und Arbeitnehmer können allerdings ein Arbeitszeitkonto vereinbaren. In dieses können bis zu 50 % der vertraglich vereinbarten Arbeitszeit eingestellt werden, sodass dem Arbeitnehmer diese Stunden auch später ausgezahlt werden können, wenn er sie abfeiert. Der Ausgleich muss spätestens nach 12 Monaten erfolgen. Erhält der Arbeitnehmer jedoch eine Pauschalvergütung und liegt diese über dem Mindestlohnanspruch für den jeweiligen Monat, ist man in der Gestaltung des Arbeitszeitkontos frei.
+        </p>
+    </div>
+
+        <div class="lg:pt-10 pt-5">
+        <h1 class="text-white xl:text-2xl text-lg">
+        5. Mindestlohn ist keine Verhandlungssache
+        </h1>
+        <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] pt-5">
+       Der Mindestlohn ist unabdingbar, d.h. jede Vereinbarung die ihn unterschreitet oder seine Geldmachung beschränkt oder ausschließt ist unwirksam. Arbeitnehmer können auch nicht auf ihn verzichten. Eine Ausnahme wird nur für bereits entstandene Ansprüche bei gerichtlichen Vergleichen gemacht. Ebenso können Arbeitnehmer den Mindestlohnanspruch nicht verwirken. Allerdings verjährt der Mindestlohnanspruch im Rahmen der regelmäßigen Verjährungsfrist. Arbeitgeber müssen daher zwei Dinge beachten, nämlich die Vergütungsregelung und die Ausschlussfristen anzupassen, sonst drohen erhebliche Nachzahlungen.
+        </p>
+    </div>
+
+     <div class="lg:pt-10 pt-5">
+        <h1 class="text-white xl:text-2xl text-lg">
+        6. Was darf der Zoll, was ist zu beachten?
+        </h1>
+        <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] pt-5">
+       Der Zoll prüft die Einhaltung des Mindestlohns. Er darf daher ohne Vorankündigung Arbeitgeber überprüfen und in sämtliche Unterlagen Einblick nehmen, die ihm Aufschluss geben, ob der Mindestlohn bezahlt wurde oder nicht. Auch dürfen Arbeitnehmer befragt werden und Dritte die in den Geschäftsräumen angetroffen werden. <br>
+
+      <span class="italic">Praxistipp:</span> <br>
+      <span class="italic text-white">Wer nichts zu verbergen hat, sollte mit den Zollbeamten bei Prüfungen kooperieren. Dabei gilt: Reden ist Silber, Schweigen ist Gold. Beantworten Sie nur die Fragen, die gestellt werden und geben sie alle, aber auch nur die Unterlagen heraus, die die Zollbeamten benötigen. Hier empfiehlt es sich, die voraussichtlich benötigten Unterlagen vorab zusammenzustellen und stets zu aktualisieren. Denn je schneller der Zoll seine Prüfung abgeschlossen hat, desto schneller können Sie wieder ihren Geschäftsbetrieb aufnehmen.</span>
+        </p>
+    </div>
+
+
+      <div class="lg:pt-10 pt-5">
+        <h1 class="text-white xl:text-2xl text-lg">
+        Gibt es für gewisse Branchen und Arbeitgeber besondere Pflichten?
+        </h1>
+        <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] pt-5">
+      Arbeitgeber aus dem Ausland haben noch besondere Meldepflichten und zwar bevor sie Werk-oder Dienstleistungen ausführen. Diese gelten bei folgenden Branchen: <br>
+
+ im Baugewerbe,<br>
+
+ im Gaststätten- und Beherbergungsgewerbe,<br>
+
+ im Personenbeförderungsgewerbe,<br>
+
+ im Speditions-, Transport- und damit verbundenen Logistikgewerbe,<br>
+
+ im Schaustellergewerbe,<br>
+
+ in der Forstwirtschaft,<br>
+
+ im Gebäudereinigungsgewerbe,<br>
+
+ bei Unternehmen, die sich am Auf- und Abbau von Messen und Ausstellungen beteiligen,<br>
+
+ in der Fleischwirtschaft.<br>
+
+In diesen Branchen besteht auch die Pflicht für alle Arbeitnehmer die Personalausweise, Pässe bzw. Ersatzdokumente mitzuführen und dem Zoll auf Verlangen vorzulegen. Arbeitgeber müssen des Weiteren eine Versicherung beifügen, dass sie den Mindestlohn bezahlen. Entsprechende Formulare sind unter www.zoll.de zu finden.<br>
+
+Wenn ein deutsches Unternehmen ausländische Arbeitnehmer entleiht, trifft das deutsche Unternehmen die Meldepflicht und es muss auch eine Versicherung des Verleihers beifügen.<br>
+
+In den soeben genannten Branchen haben alle Arbeitgeber (also deutsche und ausländische) die Pflicht Beginn, Dauer und Ende der täglichen Arbeitszeit aufzuzeichnen. Das Gleiche gilt für Minijobber unabhängig von der Branche. Dies muss innerhalb von sieben Tagen geschehen. Die Aufzeichnungen sind dann zwei Jahre aufzubewahren. Bei Einsatz von Leiharbeitnehmern trifft diese Pflicht den Entleiher. Erleichterung gibt es für Arbeitnehmer in ausschließlich mobilen Tätigkeiten sowie für Arbeitnehmer, die über 2.958,00 € verdienen.
+</p>
+    </div>
+
+    <div class="lg:pt-10 pt-5">
+        <h1 class="text-white xl:text-2xl text-lg">
+        Haftung des Auftraggebers für den Mindestlohn und Schutz des Auftraggebers
+
+        </h1>
+        <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] pt-5">
+     Eine weitere Neuerung ist, dass zukünftig alle Auftraggeber für den Nettomindestlohn der eingesetzten Arbeitnehmer des Subunternehmens haften werden. Allerdings sind Privatpersonen ausgenommen. Diese Haftung lässt sich nicht ganz ausschalten, sie lässt sich aber minimieren. In die Verträge müssen daher entsprechende vertragliche Formulierungen zukünftig aufgenommen werden. Soweit wie möglich sollten Arbeitgeber sich auch Sicherheiten geben lassen.
+</p>
+    </div>
+    
+    <div class="lg:pt-10 pt-5">
+        <h1 class="text-white xl:text-2xl text-lg">
+       7. Was droht bei Verstößen?
+
+        </h1>
+        <p class="2xl:text-xl lg:text-base text-sm 2xl:leading-[42px] lg:leading-8 leading-6 text-[#757575] pt-5">
+     Der Gesetzgeber hat eine Reihe von Sanktionen vorgesehen, um Arbeitgeber zur Einhaltung des MiLoG anzuhalten. Falls ein Arbeitgeber den Mindestlohn nicht bezahlt, droht eine Geldbuße bis zu 500.000 €. Bei Arbeitgebern, bei denen der wirtschaftliche Vorteil noch höher ist, kann die Geldbuße auch in diese Höhe festgesetzt werden. Ebenso drohen Bußgelder wenn Verstöße gegen die genannten Mitwirkungs- und Duldungspflichten oder die Melde- und Bereithaltungspflichten vorliegen. Hier drohen Bußgelder bis zu 30.000 €.
+</p>
+    </div>
+
+   
+</section>
+
+
+<!-- footer  -->
+<footer class="bg-[#202020] 2xl:mt-48 lg:mt-20 mt-10">
+  <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 lg:gap-10 gap-5 2xl:px-20 lg:px-10 px-5 2xl:py-20 py-10">
+    <!-- Logo & Contact -->
+    <div>
+      <div class="flex justify-center md:justify-start">
+      <img src="./assets/img/footerlogo.png" alt="AWZ Logo" class="mb-6 w-32">
+      </div>
+      <div class="space-y-2 2xl:pt-10 pt-5">
+       
+      <div class="flex items-center gap-5">
+        <div class="flex items-center gap-5">
+        <i class="fa-solid fa-phone-volume bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+        <p class="text-white text-sm">06221 338 63-0</p>
+        </div>
+
+        <div class="flex items-center gap-5">
+        <i class="fa-solid fa-calendar-week bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+        <p class="text-white text-sm">Sep 06, 2024</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-5">
+        <i class="fa-solid fa-envelope bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+        <p class="text-white text-sm uppercase">info@werkvertrag-zeitarbeit.de</p>
+      </div>
+      <div class="flex items-center gap-5">
+        <i class="fa-solid fa-location-dot bg-[#F8D100] 2xl:py-3 2xl:px-[14px] py-2 px-[10px] rounded-md"></i>
+        <p class="text-white text-sm uppercase">Sofienstraße 21; 69115 Heidelberg</p>
+      </div>
+
+      </div>
+    </div>
+
+    <div class="flex gap-10 2xl:gap-20 pt-5 md:pt-0">
+    <!-- Quick Links -->
+    <div>
+      <h2 class="font-bold mb-4 xl:text-base text-sm text-white ">QUICK LINK</h2>
+      <ul class="space-y-3 text-[#757575] 2xl:text-sm text-xs">
+        <li><a href="./index.html" class="hover:text-white hover:underline">Home</a></li>
+        <li><a href="./aktuelles" class="hover:text-white hover:underline">Aktuelles</a></li>
+        <li><a href="./themenfelder.html" class="hover:text-white hover:underline">Themenfelder</a></li>
+        <li><a href="./seminare.html" class="hover:text-white hover:underline">Seminare</a></li>
+        <li><a href="./Veröffentlichungen.html" class="hover:text-white hover:underline">Veröffentlichungen</a></li>
+        <li><a href="./impressem" class="hover:text-white hover:underline">Impressum</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div>
+      <h2 class="font-bold mb-4 xl:text-base text-sm text-white">FOLGEN SIE UNS</h2>
+      <ul class="space-y-3 text-[#757575] 2xl:text-sm text-xs">
+        <li><a href="#" class="hover:text-white hover:underline">Facebook</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">Twitter</a></li>
+        <li><a href="#" class="hover:text-white hover:underline">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-bold mb-4 xl:text-base text-sm text-white">SUPPORT</h3>
+      <ul class="space-y-3 text-[#757575] 2xl:text-sm text-xs">
+        <li><a href="#" class="hover:text-white hover:underline">Kontaktiere uns</a></li>
+      </ul>
+    </div>
+
+    </div>
+
+    <!-- Newsletter -->
+    <div class="pt-5 lg:pt-0">
+      <h1 class="2xl:text-4xl lg:text-2xl text-lg font-bold text-white">
+        Abonniere unseren Newsletter<br>
+        und bleibe über Aktionen informiert.
+      </h1>
+      <form class="mt-6 space-y-4">
+        <input 
+          type="email" 
+          placeholder="E-Mail-Adresse.." 
+          class="w-full bg-[#171717] text-[#757575] px-4 py-3 rounded-full outline-none"
+        >
+        <div >
+        <button class="bg-white w-full py-2 px-10 text-[#131313] 2xl:text-lg text-sm font-bold rounded-full border-2 border-[#131313] border-dashed uppercase">abonnieren</button>
+      </div>
+      </form>
+    </div>
+  </div>
+
+   <!-- Copyright -->
+  <div class="bg-[#171717] text-center text-[#FFFFFF] py-4 md:text-sm text-xs px-5">
+    <p>
+       COPYRIGHT 2025 © ARBEITSGEMEINSCHAFT WERKVERTRÄGE UND ZEITARBEIT
+    </p>
+   
+  </div>
+</footer>
+
+<!--contact popup Modal -->
+<div id="contactModal" 
+     class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 hidden"
+     onclick="closeOnOverlay(event)">
+  
+  <!-- Modal Content -->
+  <div class="relative w-[95%] lg:w-[80%] 2xl:w-[70%] max-h-[95vh] overflow-y-auto bg-white 2xl:p-10 md:p-6 p-4 
+              2xl:rounded-[50px] rounded-[30px] shadow-xl"
+       onclick="event.stopPropagation()">
+    
+    <!-- Close Button -->
+    <button onclick="closeModal()" 
+            class="absolute top-4 right-4 text-[#141414] text-2xl font-bold">
+      &times;
+    </button>
+
+    <!-- Your Section Start -->
+    <section class="2xl:px-10 xl:px-6 lg:px-4 px-2">
+      <div class="flex flex-col lg:flex-row xl:gap-12 gap-5">
+        <div class="lg:w-2/3 w-full">
+          <h2 class="text-[#141414] 2xl:text-[22px] text-base uppercase font-bold">Dienstleistungen</h2>
+          <h1 class="text-[#141414] 2xl:text-[56px] lg:text-4xl text-[28px] 2xl:leading-[80px] lg:leading-[65px] leading-[42px] font-bold 2xl:pt-2">
+            Melden Sie sich gerne bei uns! Wir sind da für Sie
+          </h1>
+
+          <div class="flex items-center gap-5 xl:pt-5 pt-3">
+            <i class="fa-solid fa-phone-volume bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+            <p class="text-[#141414] 2xl:text-xl text-base font-medium">06221 338 63-0</p>
+          </div>
+          <div class="flex items-center gap-5 xl:pt-5 pt-3">
+            <i class="fa-solid fa-envelope bg-[#F8D100] 2xl:p-3 p-2 rounded-md"></i>
+            <p class="text-[#141414] 2xl:text-xl text-base font-medium uppercase">info@werkvertrag-zeitarbeit.de</p>
+          </div>
+          <div class="flex items-center gap-5 xl:pt-5 pt-3">
+            <i class="fa-solid fa-location-dot bg-[#F8D100] 2xl:py-3 2xl:px-[14px] py-2 px-[10px] rounded-md"></i>
+            <p class="text-[#141414] 2xl:text-xl text-base font-medium uppercase">Sofienstraße 21; 69115 Heidelberg</p>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 w-full">
+          <iframe class="w-full 2xl:h-[352px] h-[250px] rounded-[30px]" 
+                  frameborder="0" scrolling="no"
+                  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=de&amp;q=Sofienstraße%2021,%2069115%20Heidelberg&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- form -->
+      <form action="" class="2xl:pt-14 pt-10">
+        <div class="flex md:flex-row flex-col gap-5">
+          <div class="flex flex-col w-full">
+            <label class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Vorname..</label>
+            <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full 
+                          bg-[#EDEDED] border border-[#EDEDED]" 
+                   type="text" placeholder="Geben Sie hier ein">
+          </div>
+
+          <div class="flex flex-col w-full">
+            <label class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Nachname..</label>
+            <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full 
+                          bg-[#EDEDED] border border-[#EDEDED]" 
+                   type="text" placeholder="Geben Sie hier ein">
+          </div>
+        </div>
+
+        <div class="flex md:flex-row flex-col gap-5 2xl:pt-8 pt-5">
+          <div class="flex flex-col w-full">
+            <label class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">E-Mail-Adresse..</label>
+            <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full 
+                          bg-[#EDEDED] border border-[#EDEDED]" 
+                   type="text" placeholder="Geben Sie hier ein">
+          </div>
+
+          <div class="flex flex-col w-full">
+            <label class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Telefonnummer</label>
+            <input class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-full 
+                          bg-[#EDEDED] border border-[#EDEDED]" 
+                   type="text" placeholder="Geben Sie hier ein">
+          </div>
+        </div>
+
+        <div class="flex flex-col w-full 2xl:pt-8 pt-5">
+          <label class="text-[#757575] 2xl:text-lg text-base font-bold pb-2 pl-5">Nachricht..</label>
+          <textarea class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-xl 
+                           bg-[#EDEDED] border border-[#EDEDED]" 
+                    rows="6" placeholder="Geben Sie hier ein"></textarea>
+        </div>
+      </form>
+    </section>
+    <!-- Your Section End -->
+  </div>
+</div>
+<!-- contact popup js  -->
+<script>
+  function openModal() {
+    document.getElementById("contactModal").classList.remove("hidden");
+    document.body.classList.add("overflow-hidden"); // disable background scroll
+  }
+  function closeModal() {
+    document.getElementById("contactModal").classList.add("hidden");
+    document.body.classList.remove("overflow-hidden"); // enable background scroll
+  }
+  function closeOnOverlay(e) {
+    if (e.target.id === "contactModal") {
+      closeModal();
+    }
+  }
+</script>
+
+
+<!--navbar JS -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const lines = menuBtn.querySelectorAll('span');
+  const navbarTop = document.getElementById('navbar-top'); // top logo + toggle container
+  let isOpen = false;
+
+  // Mobile menu toggle
+  menuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.classList.toggle('hidden');
+
+    // Animate hamburger lines
+    if (isOpen) {
+      lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      lines[1].style.opacity = '0';
+      lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+
+      // Add black background only on mobile view
+      if (window.innerWidth < 1024) {
+        navbarTop.classList.add('bg-[#171717]');
+      }
+    } else {
+      lines[0].style.transform = 'rotate(0) translate(0, 0)';
+      lines[1].style.opacity = '1';
+      lines[2].style.transform = 'rotate(0) translate(0, 0)';
+
+      // Remove black background when closing menu
+      if (window.innerWidth < 1024) {
+        navbarTop.classList.remove('bg-[#171717]');
+      }
+    }
+  });
+
+  // Mobile dropdown toggle
+  function toggleDropdown(id, btn) {
+    const dropdown = document.getElementById(id);
+    const arrow = btn.querySelector('span');
+    dropdown.classList.toggle('hidden');
+    arrow.style.transform = dropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+</script>
+
+
+<script src="https://kit.fontawesome.com/a2ada4947c.js" crossorigin="anonymous"></script> 
+
+</body>
+</html>
