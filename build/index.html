@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
   <title>Document</title>
 
 </head>
@@ -90,7 +93,7 @@
                 focus:border-white placeholder-white" />
 </div> -->
  
-      <button onclick="openModal()" class="uppercase bg-[#121212] py-2 px-10 text-base 2xl:text-lg font-bold text-white rounded-full border-2 border-[#F8D100] border-dashed transition">Kontakt</button>
+      <button onclick="openModal()" class="uppercase bg-[#121212] hover:bg-transparent hover:text-[#121212] py-2 px-10 text-base 2xl:text-lg font-bold text-white rounded-full border-2 border-[#F8D100] hover:border-[#121212] border-dashed transition">Kontakt</button>
       
       </div>
     </div>
@@ -407,21 +410,26 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
       <h1 class="text-[#F8D100] 2xl:text-[34px] lg:text-2xl text-lg uppercase 2xl:leading-[60px] lg:leading-10 leading-9">Wir stehen Unternehmen mit Erfahrung und Fachwissen zur Seite – insbesondere bei rechtlichen Herausforderungen im Zusammenhang mit Werkverträgen.</h1>
     </div>
 
-    <div class="grid md:grid-cols-4 grid-cols-2 gap-5 pt-5">
-      <div class="border-2 border-dashed border-[#F8D100] hover:border-[#171717] text-center uppercase transition xl:py-8 xl:px-16 py-2 px-4 lg:rounded-2xl rounded-lg hover:bg-[#F8D100] text-[#F8D100] hover:text-[#171717]">
-        <h2 class="2xl:text-3xl xl:text-xl text-base font-bold">Sozialrechtliche Fragen</h2>
+    <div class="grid lg:grid-cols-4 grid-cols-2 gap-5 pt-5">
+      <div class="relative text-center uppercase transition xl:py-8 xl:px-16 lg:py-2 lg:px-4 md:py-8 py-4 px-4 lg:rounded-2xl rounded-lg hover:bg-[#F8D100] text-[#F8D100] hover:text-[#171717]">
+  <div class="absolute inset-0 border-2 border-dashed border-[#F8D100] rounded-lg lg:rounded-2xl animate-border"></div>
+  <h2 class="relative z-10 2xl:text-3xl xl:text-xl md:text-base text-sm font-bold">Sozialrechtliche Fragen</h2>
+</div>
+
+
+      <div class="relative text-center uppercase transition xl:py-8 xl:px-16 lg:py-2 lg:px-4 md:py-8 py-4 px-4 lg:rounded-2xl rounded-lg hover:bg-[#F8D100] text-[#F8D100] hover:text-[#171717]">
+        <div class="absolute inset-0 border-2 border-dashed border-[#F8D100] rounded-lg lg:rounded-2xl animate-border"></div>
+        <h2 class="2xl:text-3xl xl:text-xl md:text-base text-sm font-bold">Strafrechtliche Vorwürfe</h2>
       </div>
 
-      <div class="border-2 border-dashed border-[#F8D100] hover:border-[#171717] text-center uppercase transition xl:py-8 xl:px-16 py-2 px-4 lg:rounded-2xl rounded-lg hover:bg-[#F8D100] text-[#F8D100] hover:text-[#171717]">
-        <h2 class="2xl:text-3xl xl:text-xl text-base font-bold">Strafrechtliche Vorwürfe</h2>
+      <div class="relative text-center uppercase transition xl:py-8 xl:px-16 lg:py-2 lg:px-4 md:py-8 py-4 px-4 lg:rounded-2xl rounded-lg hover:bg-[#F8D100] text-[#F8D100] hover:text-[#171717]">
+        <div class="absolute inset-0 border-2 border-dashed border-[#F8D100] rounded-lg lg:rounded-2xl animate-border"></div>
+        <h2 class="2xl:text-3xl xl:text-xl md:text-base text-sm font-bold">Arbeitsrechtliche Aspekte</h2>
       </div>
 
-      <div class="border-2 border-dashed border-[#F8D100] hover:border-[#171717] text-center uppercase transition xl:py-8 xl:px-16 py-2 px-4 lg:rounded-2xl rounded-lg hover:bg-[#F8D100] text-[#F8D100] hover:text-[#171717]">
-        <h2 class="2xl:text-3xl xl:text-xl text-base font-bold">Arbeitsrechtliche Aspekte</h2>
-      </div>
-
-      <div class="border-2 border-dashed border-[#F8D100] hover:border-[#171717] text-center uppercase transition xl:py-8 xl:px-16 py-2 px-4 lg:rounded-2xl rounded-lg hover:bg-[#F8D100] text-[#F8D100] hover:text-[#171717]">
-        <h2 class="2xl:text-3xl xl:text-xl text-base font-bold">Zivilrechtliche Konsequenzen</h2>
+      <div class="relative text-center uppercase transition xl:py-8 xl:px-16 lg:py-2 lg:px-4 md:py-8 py-4 px-4 lg:rounded-2xl rounded-lg hover:bg-[#F8D100] text-[#F8D100] hover:text-[#171717]">
+        <div class="absolute inset-0 border-2 border-dashed border-[#F8D100] rounded-lg lg:rounded-2xl animate-border"></div>
+        <h2 class="2xl:text-3xl xl:text-xl md:text-base text-sm font-bold">Zivilrechtliche Konsequenzen</h2>
       </div>
     </div>
 
@@ -674,21 +682,24 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
 
 
     <div class="flex md:flex-row flex-col gap-5 2xl:pt-20 pt-10">
-      <div class="md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+      <div class="relative md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5">
+        <div class="absolute inset-0 border-2 border-dashed border-[#F8D100] rounded-lg lg:rounded-[30px] animate-border1"></div>
         <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">01</span>
 
         <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-60 lg:pt-32 pt-20 font-medium">Gestaltung von Arbeitsverträgen</h1>
        
       </div>
 
-      <div class="md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+      <div class="relative md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 ">
+        <div class="absolute inset-0 border-2 border-dashed border-[#F8D100] rounded-lg lg:rounded-[30px] animate-border1"></div>
         <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">02</span>
 
         <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-60 lg:pt-32 pt-20 font-medium">Mindestlöhne </h1>
        
       </div>
 
-      <div class="md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+      <div class="relative md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5">
+        <div class="absolute inset-0 border-2 border-dashed border-[#F8D100] rounded-lg lg:rounded-[30px] animate-border1"></div>
         <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">03</span>
 
         <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-60 lg:pt-32 pt-20 font-medium">Audits, Betriebsbegehungen & Betriebsberatungen</h1>
@@ -697,7 +708,8 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
     </div>
 
     <div class="flex md:flex-row flex-col gap-5 mt-5">
-      <div class="lg:w-1/4 md:w-1/3 w-full flex flex-col justify-between bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+      <div class="relative lg:w-1/4 md:w-1/3 w-full flex flex-col justify-between bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 ">
+        <div class="absolute inset-0 border-2 border-dashed border-[#F8D100] rounded-lg lg:rounded-[30px] animate-border1"></div>
         <div>
         <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">04</span>
         </div>
@@ -706,7 +718,8 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
        
       </div>
 
-      <div class="lg:w-1/2 md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+      <div class="relative lg:w-1/2 md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5">
+        <div class="absolute inset-0 border-2 border-dashed border-[#F8D100] rounded-lg lg:rounded-[30px] animate-border1"></div>
         <div class="flex lg:flex-row flex-col md:gap-5 lg:gap-0 justify-between">
         <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">05</span>
         <img src="./assets/img/05img.png" alt="">
@@ -719,7 +732,8 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
       </div>
       </div>
 
-      <div class="lg:w-1/4 md:w-1/3 w-full flex flex-col justify-between bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+      <div class="relative lg:w-1/4 md:w-1/3 w-full flex flex-col justify-between bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 ">
+        <div class="absolute inset-0 border-2 border-dashed border-[#F8D100] rounded-lg lg:rounded-[30px] animate-border1"></div>
         <div>
         <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">06</span>
           </div>
@@ -729,21 +743,24 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
     </div>
 
     <div class="flex md:flex-row flex-col gap-5 mt-5">
-      <div class="md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+      <div class="relative md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5">
+        <div class="absolute inset-0 border-2 border-dashed border-[#F8D100] rounded-lg lg:rounded-[30px] animate-border1"></div>
         <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">07</span>
 
         <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-64 lg:pt-36 pt-24 font-medium">Wirtschaftsrecht</h1>
        
       </div>
 
-      <div class="md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+      <div class="relative md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5">
+        <div class="absolute inset-0 border-2 border-dashed border-[#F8D100] rounded-lg lg:rounded-[30px] animate-border1"></div>
         <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">08</span>
 
         <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-64 lg:pt-36 pt-24 font-medium">Mindestlohn nach dem MiLoG</h1>
        
       </div>
 
-      <div class="md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5 border-2 border-dashed border-[#F8D100]">
+      <div class="relative md:w-1/3 w-full bg-transparent hover:bg-[#202020] rounded-[30px] 2xl:p-10 p-5">
+        <div class="absolute inset-0 border-2 border-dashed border-[#F8D100] rounded-lg lg:rounded-[30px] animate-border1"></div>
         <span class="bg-[#F8D100] w-12 h-12 flex items-center justify-center rounded-full text-black font-bold">09</span>
 
         <h1 class="text-white 2xl:text-3xl xl:text-xl text-base 2xl:pt-64 lg:pt-36 pt-24 font-medium">Outsourcing-Werkverträge</h1>
@@ -842,115 +859,165 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
 </section>
 
 <!-- testimonial slider  -->
-<section class="2xl:px-20 lg:px-10 px-5">
-  
+<section class="2xl:px-20 lg:px-10 px-5 2xl:py-28 py-10 lg:py-20">
 <!-- swiper slider  -->
-
-  <div class="text-white xl:pt-24 pt-16 relative overflow-hidden md:h-[650px] h-[600px]">
-   <div class="flex justify-center pb-5 md:pb-0">
-  <div id="testimonial-slider" class="relative 2xl:w-1/3 xl:w-1/2 lg:w-3/5 md:w-4/5">
-    <!-- Slides -->
-    <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-100" id="slide-0">
-      <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313]">
-        <div class="text-[#F8D100] text-4xl mb-4">❝</div>
-        <p class="text-lg leading-relaxed mb-6">
-          Die Kanzlei hat uns bei der Abgrenzung von Werkverträgen und Zeitarbeit hervorragend unterstützt. 
-          Schnelle, verständliche Beratung, die unsere Risiken deutlich minimiert hat.
-        </p>
-        <div class="flex items-center gap-4">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full" />
+<div class="container mx-auto py-10 relative overflow-hidden">
+  <!-- Slider main container -->
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313] flex flex-col justify-between">
           <div>
-            <p class="font-semibold">Claudia Becker</p>
-            <p class="text-[#F8D100] text-sm">Leiterin Personal Einer Gebäudereinigungsfirma</p>
+          <div class="text-[#F8D100] text-4xl mb-4">❝</div>
+          <p class="text-lg leading-relaxed text-[#D9D9D9]">
+            Sehr kompetente Kanzlei, schnelle Rückmeldungen und klare Handlungsempfehlungen. 
+          </p>
+          <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
           </div>
-        </div>
-        <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
-      </div>
-    </div>
-
-    <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-0 absolute top-0 left-0 w-full" id="slide-1">
-      <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313]">
-        <div class="text-[#F8D100] text-4xl mb-4">❝</div>
-        <p class="text-lg leading-relaxed mb-6">
-          Hervorragende Betreuung – verständlich, schnell, professionell. Wir fühlen uns sehr gut aufgehoben.
-        </p>
-        <div class="flex items-center gap-4">
-          <img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-10 h-10 rounded-full" />
-          <div>
-            <p class="font-semibold">Michael Braun</p>
-            <p class="text-[#F8D100] text-sm">Geschäftsführer, Braun & Co.</p>
+          <div class="flex items-center gap-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
+            <div>
+              <p class="font-semibold text-[#D9D9D9]">Thomas Müller</p>
+              <p class="text-[#F8D100] text-sm">Geschäftsführer Bauunternehmen</p>
+              
+            </div>
           </div>
+          
         </div>
       </div>
-    </div>
 
-    <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-0 absolute top-0 left-0 w-full" id="slide-2">
-      <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313]">
-        <div class="text-[#F8D100] text-4xl mb-4">❝</div>
-        <p class="text-lg leading-relaxed mb-6">
-          Sehr kompetente Beratung. Die Zusammenarbeit war effizient und angenehm.
-        </p>
-        <div class="flex items-center gap-4">
-          <img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-10 h-10 rounded-full" />
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313] flex flex-col justify-between">
           <div>
-            <p class="font-semibold">Anna Müller</p>
-            <p class="text-[#F8D100] text-sm">rojektmanagerin</p>
+          <div class="text-[#F8D100] text-4xl mb-4">❝</div>
+          <p class="text-lg leading-relaxed text-[#D9D9D9]">
+            Sehr kompetente Kanzlei, schnelle Rückmeldungen und klare Handlungsempfehlungen. 
+          </p>
+          <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
           </div>
+          <div class="flex items-center gap-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
+            <div>
+              <p class="font-semibold text-[#D9D9D9]">Thomas Müller</p>
+              <p class="text-[#F8D100] text-sm">Geschäftsführer Bauunternehmen</p>
+              
+            </div>
+          </div>
+          
         </div>
       </div>
-    </div>
 
-
-    <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-0 absolute top-0 left-0 w-full" id="slide-3">
-      <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313]">
-        <div class="text-[#F8D100] text-4xl mb-4">❝</div>
-        <p class="text-lg leading-relaxed mb-6">
-          Eine vertrauensvolle Zusammenarbeit, die uns in vielen rechtlichen Fragen Sicherheit gibt.
-        </p>
-        <div class="flex items-center gap-4">
-          <img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-10 h-10 rounded-full" />
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313] flex flex-col justify-between">
           <div>
-            <p class="font-semibold">Thomas Fischer</p>
-            <p class="text-[#F8D100] text-sm">Unternehmer</p>
+          <div class="text-[#F8D100] text-4xl mb-4">❝</div>
+          <p class="text-lg leading-relaxed text-[#D9D9D9]">
+            Sehr kompetente Kanzlei, schnelle Rückmeldungen und klare Handlungsempfehlungen. 
+          </p>
+          <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
           </div>
+          <div class="flex items-center gap-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
+            <div>
+              <p class="font-semibold text-[#D9D9D9]">Thomas Müller</p>
+              <p class="text-[#F8D100] text-sm">Geschäftsführer Bauunternehmen</p>
+              
+            </div>
+          </div>
+          
         </div>
       </div>
-    </div>
 
-    <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-0 absolute top-0 left-0 w-full" id="slide-3">
-      <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313]">
-        <div class="text-[#F8D100] text-4xl mb-4">❝</div>
-        <p class="text-lg leading-relaxed mb-6">
-          Eine vertrauensvolle Zusammenarbeit, die uns in vielen rechtlichen Fragen Sicherheit gibt.
-        </p>
-        <div class="flex items-center gap-4">
-          <img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-10 h-10 rounded-full" />
+       <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313] flex flex-col justify-between">
           <div>
-            <p class="font-semibold">Thomas Fischer</p>
-            <p class="text-[#F8D100] text-sm">Unternehmer</p>
+          <div class="text-[#F8D100] text-4xl mb-4">❝</div>
+          <p class="text-lg leading-relaxed text-[#D9D9D9]">
+            Sehr kompetente Kanzlei, schnelle Rückmeldungen und klare Handlungsempfehlungen. 
+          </p>
+          <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
           </div>
+          <div class="flex items-center gap-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
+            <div>
+              <p class="font-semibold text-[#D9D9D9]">Thomas Müller</p>
+              <p class="text-[#F8D100] text-sm">Geschäftsführer Bauunternehmen</p>
+              
+            </div>
+          </div>
+          
         </div>
       </div>
+
+       <!-- Slide 5 -->
+      <div class="swiper-slide">
+        <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313] flex flex-col justify-between">
+          <div>
+          <div class="text-[#F8D100] text-4xl mb-4">❝</div>
+          <p class="text-lg leading-relaxed text-[#D9D9D9]">
+            Sehr kompetente Kanzlei, schnelle Rückmeldungen und klare Handlungsempfehlungen. 
+          </p>
+          <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
+          </div>
+          <div class="flex items-center gap-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
+            <div>
+              <p class="font-semibold text-[#D9D9D9]">Thomas Müller</p>
+              <p class="text-[#F8D100] text-sm">Geschäftsführer Bauunternehmen</p>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+       <!-- Slide 6 -->
+      <div class="swiper-slide">
+        <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313] flex flex-col justify-between">
+          <div>
+          <div class="text-[#F8D100] text-4xl mb-4">❝</div>
+          <p class="text-lg leading-relaxed text-[#D9D9D9]">
+            Sehr kompetente Kanzlei, schnelle Rückmeldungen und klare Handlungsempfehlungen. 
+          </p>
+          <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
+          </div>
+          <div class="flex items-center gap-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
+            <div>
+              <p class="font-semibold text-[#D9D9D9]">Thomas Müller</p>
+              <p class="text-[#F8D100] text-sm">Geschäftsführer Bauunternehmen</p>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
     </div>
-    
   </div>
-</div>
-  <!-- Navigation Buttons -->
-  <div class="absolute 2xl:left-60 xl:left-44 lg:left-20 md:left-0 md:top-1/2  bottom-0 md:bottom-36  transform -translate-y-1/2">
-    <button id="prevBtn"
-      class="w-10 h-10 rounded-full border border-white text-white hover:text-[#F8D100] hover:border-[#F8D100] transition-all duration-300 flex items-center justify-center ml-4">
+
+  <!-- Custom Navigation Buttons -->
+  <div class="absolute top-1/2 left-6 transform -translate-y-1/2 z-10 custom-prev">
+    <button
+      class="w-10 h-10 rounded-full border border-white text-white hover:text-[#F8D100] hover:border-[#F8D100] transition-all duration-300 flex items-center justify-center">
       ←
     </button>
   </div>
-  <div class="absolute 2xl:right-60 xl:right-44 lg:right-20 right-0 md:top-1/2  bottom-0 md:bottom-36 transform -translate-y-1/2">
-    <button id="nextBtn"
-      class="w-10 h-10 rounded-full border border-white text-white hover:text-[#F8D100] hover:border-[#F8D100] transition-all duration-300 flex items-center justify-center mr-4">
+
+  <div class="absolute top-1/2 right-6 transform -translate-y-1/2 z-10 custom-next">
+    <button
+      class="w-10 h-10 rounded-full border border-white text-white hover:text-[#F8D100] hover:border-[#F8D100] transition-all duration-300 flex items-center justify-center">
       →
     </button>
   </div>
 </div>
 </section>
-
 
  <!-- team section  -->
 <section class="2xl:px-20 lg:px-10 px-5 pt-10 xl:pt-20 bg-center bg-cover bg-no-repeat" style="background-image: url(./assets/img/linebg.png);">
@@ -1029,7 +1096,6 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
   </div>
 </section>
 
-
 <!-- contact section  -->
 <section class="2xl:px-40 xl:px-28 lg:px-10 px-5 2xl:pt-48 lg:pt-20 pt-10">
   <div class="bg-white xl:p-10 md:p-6 p-4 2xl:rounded-[50px] rounded-[30px]">
@@ -1096,7 +1162,6 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
   </div>
 </section>
 
-
 <section class="2xl:px-20 lg:px-10 px-5 2xl:pt-48 lg:pt-20 pt-10">
 
     <div class="text-center">
@@ -1131,7 +1196,6 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
     </div>
   </div>
 </section>
-
 
 <!-- footer  -->
 <footer class="bg-[#202020] 2xl:mt-48 lg:mt-20 mt-10">
@@ -1226,7 +1290,6 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
    
   </div>
 </footer>
-
 
 <!--contact popup Modal -->
 <div id="contactModal" 
@@ -1482,29 +1545,41 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
 </script>
 
 
-<!-- slider js -->
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- slider js  -->
+
 <script>
-  const slides = document.querySelectorAll(".testimonial-slide");
-  const nextBtn = document.getElementById("nextBtn");
-  const prevBtn = document.getElementById("prevBtn");
-  let current = 0;
-
-  function updateSlider(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("opacity-100", i === index);
-      slide.classList.toggle("opacity-0", i !== index);
-      slide.classList.toggle("absolute", i !== index);
+  $(document).ready(function () {
+    new Swiper('.swiper-container', {
+      loop: true,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.custom-next',
+        prevEl: '.custom-prev',
+      },
+      breakpoints: {
+        // Mobile
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        },
+        // Tablet
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        // Desktop
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
+      }
     });
-  }
-
-  nextBtn.addEventListener("click", () => {
-    current = (current + 1) % slides.length;
-    updateSlider(current);
-  });
-
-  prevBtn.addEventListener("click", () => {
-    current = (current - 1 + slides.length) % slides.length;
-    updateSlider(current);
   });
 </script>
 
