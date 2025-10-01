@@ -6,8 +6,6 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Document</title>
 
- 
-
 </head>
 <body class="bg-[#131313]">
 
@@ -33,11 +31,11 @@
           </button>
           </a>
           <ul class="absolute left-0 bg-white shadow-lg rounded-lg hidden group-hover:block w-52">
-            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Standpunkte der AWZ</a></li>
-            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Urteilsbesprechungen</a></li>
-            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Rechtsvorschriften</a></li>
-              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Veranstaltungen</a></li>
-            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Aus den Medien</a></li>
+            <li><a href="./Aktuelles.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Standpunkte der AWZ</a></li>
+            <li><a href="./urteilsbesprechungen.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Urteilsbesprechungen</a></li>
+            <li><a href="./rechtsvorschriften.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Rechtsvorschriften</a></li>
+              <li><a href="veranstaltungen.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Veranstaltungen</a></li>
+            <li><a href="./Ausden.html" class="block px-4 py-2 hover:bg-gray-100 rounded-lg">Aus den Medien</a></li>
           </ul>
         </li>
 
@@ -124,11 +122,11 @@
         </button>
         
         <ul id="about-dropdown" class="hidden mt-2 lg:pl-4 space-y-2 items-center text-[#171717] text-center">
-         <li><a href="#" class="block transition hover:text-white">Standpunkte der AWZ</a></li>
-            <li><a href="#" class="block transition hover:text-white">Urteilsbesprechungen</a></li>
-            <li><a href="#" class="block transition hover:text-white">Rechtsvorschriften</a></li>
-              <li><a href="#" class="block transition hover:text-white">Veranstaltungen</a></li>
-            <li><a href="#" class="block transition hover:text-white">Aus den Medien</a></li>
+         <li><a href="./Aktuelles.html" class="block transition hover:text-white">Standpunkte der AWZ</a></li>
+        <li><a href="./urteilsbesprechungen.html" class="block transition hover:text-white">Urteilsbesprechungen</a></li>
+            <li><a href="./rechtsvorschriften.html" class="block transition hover:text-white">Rechtsvorschriften</a></li>
+              <li><a href="./veranstaltungen.html" class="block transition hover:text-white">Veranstaltungen</a></li>
+            <li><a href="./Ausden.html" class="block transition hover:text-white">Aus den Medien</a></li>
         </ul>
       </li>
 
@@ -1091,7 +1089,9 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
         <textarea class="w-full text-[#757575] 2xl:text-xl text-base font-medium py-2 px-5 rounded-xl bg-[#EDEDED] border border-[#EDEDED]" name="" id="" rows="6" placeholder="Geben Sie hier ein" ></textarea>
       </div>
 
-
+      <div class="pt-10 2xl:pt-14">
+        <button class="bg-[#131313] py-3 px-20 text-white 2xl:text-lg text-sm font-bold rounded-full border-2 border-white border-dashed uppercase">Absenden</button>
+      </div>
     </form>
   </div>
 </section>
@@ -1134,7 +1134,6 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
 
 
 <!-- footer  -->
-
 <footer class="bg-[#202020] 2xl:mt-48 lg:mt-20 mt-10">
   <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 lg:gap-10 gap-5 2xl:px-20 lg:px-10 px-5 2xl:py-20 py-10">
     <!-- Logo & Contact -->
@@ -1173,11 +1172,11 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
       <h2 class="font-bold mb-4 xl:text-base text-sm text-white ">QUICK LINK</h2>
       <ul class="space-y-3 text-[#757575] 2xl:text-sm text-xs">
         <li><a href="./index.html" class="hover:text-white hover:underline">Home</a></li>
-        <li><a href="./aktuelles" class="hover:text-white hover:underline">Aktuelles</a></li>
+        <li><a href="./Aktuelles.html" class="hover:text-white hover:underline">Aktuelles</a></li>
         <li><a href="./themenfelder.html" class="hover:text-white hover:underline">Themenfelder</a></li>
         <li><a href="./seminare.html" class="hover:text-white hover:underline">Seminare</a></li>
         <li><a href="./Veröffentlichungen.html" class="hover:text-white hover:underline">Veröffentlichungen</a></li>
-        <li><a href="./impressem" class="hover:text-white hover:underline">Impressum</a></li>
+        <li><a href="./impressem.html" class="hover:text-white hover:underline">Impressum</a></li>
       </ul>
     </div>
 
@@ -1227,7 +1226,6 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
    
   </div>
 </footer>
-
 
 
 <!--contact popup Modal -->
@@ -1317,11 +1315,16 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
                            bg-[#EDEDED] border border-[#EDEDED]" 
                     rows="6" placeholder="Geben Sie hier ein"></textarea>
         </div>
+
+        <div class="pt-10 2xl:pt-14">
+        <button class="bg-[#131313] py-3 px-20 text-white 2xl:text-lg text-sm font-bold rounded-full border-2 border-white border-dashed uppercase">Absenden</button>
+      </div>
       </form>
     </section>
     <!-- Your Section End -->
   </div>
 </div>
+
 <!-- contact popup js  -->
 <script>
   function openModal() {

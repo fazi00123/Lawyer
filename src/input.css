@@ -25,6 +25,8 @@ body h1{
 
 
 
+
+
   .nav-link {
     @apply  hover:text-[#F8D100] font-light relative;
     padding-bottom: 5px;
