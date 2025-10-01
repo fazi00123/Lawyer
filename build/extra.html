@@ -4,228 +4,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Swiper Slider Custom Buttons</title>
+<link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-  <style>
-    /* Default swiper buttons hide */
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: none !important;
-    }
-
-    /* Swiper slides equal height */
-.swiper-slide {
-  display: flex;
-  height: auto; /* Allow flexible height */
-}
-
-.swiper-slide > div {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-  </style>
 </head>
 <body class="bg-black">
 
-<div class="container mx-auto py-10 relative overflow-hidden">
-  <!-- Slider main container -->
-  <div class="swiper-container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313] flex flex-col justify-between">
-          <div>
-          <div class="text-[#F8D100] text-4xl mb-4">❝</div>
-          <p class="text-lg leading-relaxed text-[#D9D9D9]">
-            Sehr kompetente Kanzlei, schnelle Rückmeldungen und klare Handlungsempfehlungen. 
-          </p>
-          <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
-          </div>
-          <div class="flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
-            <div>
-              <p class="font-semibold text-[#D9D9D9]">Thomas Müller</p>
-              <p class="text-[#F8D100] text-sm">Geschäftsführer Bauunternehmen</p>
-              
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313] flex flex-col justify-between">
-          <div>
-          <div class="text-[#F8D100] text-4xl mb-4">❝</div>
-          <p class="text-lg leading-relaxed text-[#D9D9D9]">
-            Sehr kompetente Kanzlei, schnelle Rückmeldungen und klare Handlungsempfehlungen. 
-          </p>
-          <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
-          </div>
-          <div class="flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
-            <div>
-              <p class="font-semibold text-[#D9D9D9]">Thomas Müller</p>
-              <p class="text-[#F8D100] text-sm">Geschäftsführer Bauunternehmen</p>
-              
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313] flex flex-col justify-between">
-          <div>
-          <div class="text-[#F8D100] text-4xl mb-4">❝</div>
-          <p class="text-lg leading-relaxed text-[#D9D9D9]">
-            Sehr kompetente Kanzlei, schnelle Rückmeldungen und klare Handlungsempfehlungen. 
-          </p>
-          <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
-          </div>
-          <div class="flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
-            <div>
-              <p class="font-semibold text-[#D9D9D9]">Thomas Müller</p>
-              <p class="text-[#F8D100] text-sm">Geschäftsführer Bauunternehmen</p>
-              
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
-       <!-- Slide 4 -->
-      <div class="swiper-slide">
-        <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313] flex flex-col justify-between">
-          <div>
-          <div class="text-[#F8D100] text-4xl mb-4">❝</div>
-          <p class="text-lg leading-relaxed text-[#D9D9D9]">
-            Sehr kompetente Kanzlei, schnelle Rückmeldungen und klare Handlungsempfehlungen. 
-          </p>
-          <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
-          </div>
-          <div class="flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
-            <div>
-              <p class="font-semibold text-[#D9D9D9]">Thomas Müller</p>
-              <p class="text-[#F8D100] text-sm">Geschäftsführer Bauunternehmen</p>
-              
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
-       <!-- Slide 5 -->
-      <div class="swiper-slide">
-        <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313] flex flex-col justify-between">
-          <div>
-          <div class="text-[#F8D100] text-4xl mb-4">❝</div>
-          <p class="text-lg leading-relaxed text-[#D9D9D9]">
-            Sehr kompetente Kanzlei, schnelle Rückmeldungen und klare Handlungsempfehlungen. 
-          </p>
-          <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
-          </div>
-          <div class="flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
-            <div>
-              <p class="font-semibold text-[#D9D9D9]">Thomas Müller</p>
-              <p class="text-[#F8D100] text-sm">Geschäftsführer Bauunternehmen</p>
-              
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
-       <!-- Slide 6 -->
-      <div class="swiper-slide">
-        <div class="bg-[#202020] rounded-2xl p-8 border-2 border-dashed border-[#131313] flex flex-col justify-between">
-          <div>
-          <div class="text-[#F8D100] text-4xl mb-4">❝</div>
-          <p class="text-lg leading-relaxed text-[#D9D9D9]">
-            Sehr kompetente Kanzlei, schnelle Rückmeldungen und klare Handlungsempfehlungen. 
-          </p>
-          <div class="text-[#F8D100] text-4xl mb-4 text-end">❝</div>
-          </div>
-          <div class="flex items-center gap-4">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
-            <div>
-              <p class="font-semibold text-[#D9D9D9]">Thomas Müller</p>
-              <p class="text-[#F8D100] text-sm">Geschäftsführer Bauunternehmen</p>
-              
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
+<div class="md:w-1/2 w-full flex justify-end">
+  <!-- Calendar 1 -->
+  <div class="bg-[#131313] rounded-3xl overflow-hidden shadow-lg lg:w-2/3 w-full 2xl:w-3/4 2xl:h-[550px] xl:h-[450px] xl:py-10 py-5">
+    <div class="text-center text-[#F8D100] px-6 pb-4 text-lg 2xl:text-3xl font-bold uppercase tracking-wider">
+      Jetzt kostenloses Erstgespräch vereinbaren
     </div>
-  </div>
-
-  <!-- Custom Navigation Buttons -->
-  <div class="absolute top-1/2 left-6 transform -translate-y-1/2 z-10 custom-prev">
-    <button
-      class="w-10 h-10 rounded-full border border-white text-white hover:text-[#F8D100] hover:border-[#F8D100] transition-all duration-300 flex items-center justify-center">
-      ←
-    </button>
-  </div>
-
-  <div class="absolute top-1/2 right-6 transform -translate-y-1/2 z-10 custom-next">
-    <button
-      class="w-10 h-10 rounded-full border border-white text-white hover:text-[#F8D100] hover:border-[#F8D100] transition-all duration-300 flex items-center justify-center">
-      →
-    </button>
+    <div class="bg-[#202020] text-yellow-500 grid grid-cols-7 2xl:py-4 py-2 text-center font-medium uppercase text-sm 2xl:text-base">
+      <div>Mo.</div><div>Di.</div><div>Mi.</div><div>Do.</div><div>Fr.</div><div>Sa.</div><div>So.</div>
+    </div>
+    <div class="flex justify-center space-x-6 items-center px-6 2xl:py-10 lg:py-8 py-4 text-bold 2xl:text-2xl text-lg">
+      <button onclick="changeMonth(-1, 1)" class="text-[#F8D100]">&lt;</button>
+      <div id="monthYear1" class="text-[#F8D100] font-semibold">Loading...</div>
+      <button onclick="changeMonth(1, 1)" class="text-[#F8D100]">&gt;</button>
+    </div>
+    <div id="calendarDays1" class="grid grid-cols-7 gap-4 px-6 pb-6 text-center text-gray-500 text-sm 2xl:text-lg"></div>
   </div>
 </div>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- slider js  -->
-<script>
-  $(document).ready(function () {
-    new Swiper('.swiper-container', {
-      loop: true,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: '.custom-next',
-        prevEl: '.custom-prev',
-      },
-      breakpoints: {
-        // Mobile
-        0: {
-          slidesPerView: 1,
-          spaceBetween: 10
-        },
-        // Tablet
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20
-        },
-        // Desktop
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30
-        }
-      }
-    });
-  });
-</script>
 
+<!-- 🔹 Popup Modal -->
+<div id="popupModal" class="fixed inset-0 bg-black bg-opacity-70 hidden justify-center items-center z-50">
+  <div class="bg-[#1E1E1E] text-white rounded-2xl p-6 w-full max-w-lg shadow-lg relative">
+    
+    <!-- Step 1: Date & Time -->
+    <div id="step1" class="space-y-4">
+      <h2 class="text-xl font-bold text-[#F8D100]">Datum & Uhrzeit auswählen</h2>
+      <input type="text" id="selectedDate" class="w-full p-2 rounded-lg bg-[#2A2A2A] border border-gray-600" readonly>
+      <input type="time" id="selectedTime" class="w-full p-2 rounded-lg bg-[#2A2A2A] border border-gray-600">
+      <button onclick="goToStep(2)" class="bg-[#F8D100] text-black px-4 py-2 rounded-lg w-full">Next</button>
+    </div>
+
+    <!-- Step 2: Random Fields -->
+    <div id="step2" class="space-y-4 hidden">
+      <h2 class="text-xl font-bold text-[#F8D100]">Zusätzliche Angaben</h2>
+      <input type="text" placeholder="Name eingeben" class="w-full p-2 rounded-lg bg-[#2A2A2A] border border-gray-600">
+      <input type="email" placeholder="Email eingeben" class="w-full p-2 rounded-lg bg-[#2A2A2A] border border-gray-600">
+      <input type="text" placeholder="Telefonnummer" class="w-full p-2 rounded-lg bg-[#2A2A2A] border border-gray-600">
+      <input type="text" placeholder="Nachricht" class="w-full p-2 rounded-lg bg-[#2A2A2A] border border-gray-600">
+      <button class="bg-[#F8D100] text-black px-4 py-2 rounded-lg w-full">Absenden</button>
+    </div>
+
+    <!-- Close Button -->
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-[#F8D100] text-2xl">&times;</button>
+  </div>
+</div>
+
+
+<!-- 🔹 Calendar + Modal JS -->
+<script>
+  const months = [
+    "Januar", "Februar", "März", "April", "Mai", "Juni",
+    "Juli", "August", "September", "Oktober", "November", "Dezember"
+  ];
+
+  const calendars = {
+    1: { date: new Date() }
+  };
+
+  function generateCalendar(calendarId) {
+    const calendarDays = document.getElementById(`calendarDays${calendarId}`);
+    const monthYear = document.getElementById(`monthYear${calendarId}`);
+
+    const today = new Date();
+    const currentDate = calendars[calendarId].date;
+    const month = currentDate.getMonth();
+    const year = currentDate.getFullYear();
+
+    calendarDays.innerHTML = "";
+    monthYear.textContent = `${months[month]} ${year}`;
+
+    const firstDay = new Date(year, month).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const startDay = (firstDay + 6) % 7;
+
+    for (let i = 0; i < startDay; i++) {
+      const empty = document.createElement("div");
+      calendarDays.appendChild(empty);
+    }
+
+    for (let d = 1; d <= daysInMonth; d++) {
+      const day = document.createElement("div");
+      day.textContent = d;
+      day.className = "calendar-day cursor-pointer hover:text-[#F8D100]";
+
+      if (
+        d === today.getDate() &&
+        month === today.getMonth() &&
+        year === today.getFullYear()
+      ) {
+        day.classList.add("selected");
+      }
+
+      day.onclick = () => {
+        calendarDays.querySelectorAll(".calendar-day").forEach(el => el.classList.remove("selected"));
+        day.classList.add("selected");
+
+        // open popup with selected date
+        const selectedFullDate = `${d}.${month + 1}.${year}`;
+        openModal(selectedFullDate);
+      };
+
+      calendarDays.appendChild(day);
+    }
+  }
+
+  function changeMonth(offset, calendarId) {
+    const currentDate = calendars[calendarId].date;
+    currentDate.setMonth(currentDate.getMonth() + offset);
+    generateCalendar(calendarId);
+  }
+
+  // 🔹 Popup Functions
+  function openModal(date) {
+    document.getElementById('popupModal').classList.remove('hidden');
+    document.getElementById('popupModal').classList.add('flex');
+    document.getElementById('selectedDate').value = date;
+    goToStep(1);
+  }
+
+  function closeModal() {
+    document.getElementById('popupModal').classList.add('hidden');
+    document.getElementById('popupModal').classList.remove('flex');
+  }
+
+  function goToStep(step) {
+    document.getElementById('step1').classList.add('hidden');
+    document.getElementById('step2').classList.add('hidden');
+    document.getElementById('step' + step).classList.remove('hidden');
+  }
+
+  // Init
+  generateCalendar(1);
+</script>
 
 </body>
 </html>

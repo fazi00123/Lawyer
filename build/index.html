@@ -10,7 +10,7 @@
   <title>Document</title>
 
 </head>
-<body class="bg-[#131313]">
+<body class="bg-[#171717]">
 
 <!-- Navbar -->
 <nav class="bg-[#F8D100] w-full">
@@ -230,7 +230,7 @@
         <p class="text-[#131313] 2xl:text-xl lg:text-lg text-sm pt-5">Ob arbeits-, sozial- oder strafrechtliche Fragen – wir stehen Ihnen mit Erfahrung, klaren Empfehlungen und persönlichem Einsatz zur Seite. Gemeinsam finden wir rechtssichere und praxisnahe Lösungen für Ihr Unternehmen.</p>
 
          <div class="pt-10">
-        <button class="bg-[#131313] py-2 px-10 text-white 2xl:text-lg text-base font-bold rounded-full border-2 border-[#F8D100] border-dashed uppercase">JETZT MITGLIED WERDEN</button>
+        <button class="bg-[#131313] py-2 px-10 text-white 2xl:text-lg text-base font-bold rounded-full border-2 border-[#F8D100] hover:bg-transparent hover:text-[#131313] hover:border-[#131313] border-dashed uppercase">JETZT MITGLIED WERDEN</button>
       </div>
       </div>
 
@@ -1020,7 +1020,7 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
 </section>
 
  <!-- team section  -->
-<section class="2xl:px-20 lg:px-10 px-5 pt-10 xl:pt-20 bg-center bg-cover bg-no-repeat" style="background-image: url(./assets/img/linebg.png);">
+<section class="2xl:px-20 lg:px-10 px-5 py-10 xl:py-20 bg-center bg-cover bg-no-repeat" style="background-image: url(./assets/img/linesbg.png);">
   <div>
     <div class="text-center">
       <h2 class="uppercase text-[#F8D100] 2xl:text-3xl xl:text-xl text-lg font-bold">Team Mitglieder</h2>
@@ -1080,7 +1080,7 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
       <!-- Card 4 -->
       <div class="bg-[#202020] rounded-xl xl:p-5 lg:p-2 p-5 group">
         <div class="relative overflow-hidden rounded-xl">
-          <img src="./assets/img/team1.png" alt="Team 4"
+          <img src="./assets/img/jennifer.png" alt="Team 4"
             class="w-full h-auto transition-transform duration-500 group-hover:scale-110" />
           <!-- Overlay -->
           <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -1477,14 +1477,42 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
 </script>
 
 
-<!-- calender js  -->
+
+
+<!-- 🔹 Popup Modal -->
+<div id="popupModal" class="fixed inset-0 bg-black bg-opacity-70 hidden justify-center items-center z-50">
+  <div class="bg-[#1E1E1E] text-white rounded-2xl p-6 w-full max-w-lg shadow-lg relative">
+    
+    <!-- Step 1: Date & Time -->
+    <div id="step1" class="space-y-4">
+      <h2 class="text-xl font-bold text-[#F8D100]">Datum & Uhrzeit auswählen</h2>
+      <input type="text" id="selectedDate" class="w-full p-2 rounded-lg bg-[#2A2A2A] border border-[#D9D9D9]" readonly>
+      <input type="time" id="selectedTime" class="w-full p-2 rounded-lg bg-[#2A2A2A] border border-[#D9D9D9]">
+      <button onclick="goToStep(2)" class="bg-[#F8D100] text-black px-4 py-2 rounded-lg w-full">Next</button>
+    </div>
+
+    <!-- Step 2: Random Fields -->
+    <div id="step2" class="space-y-4 hidden">
+      <h2 class="text-xl font-bold text-[#F8D100]">Zusätzliche Angaben</h2>
+      <input type="text" placeholder="Name eingeben" class="w-full p-2 rounded-lg bg-[#2A2A2A] border border-gray-600">
+      <input type="email" placeholder="Email eingeben" class="w-full p-2 rounded-lg bg-[#2A2A2A] border border-gray-600">
+      <input type="text" placeholder="Telefonnummer" class="w-full p-2 rounded-lg bg-[#2A2A2A] border border-gray-600">
+      <input type="text" placeholder="Nachricht" class="w-full p-2 rounded-lg bg-[#2A2A2A] border border-gray-600">
+      <button onclick="submitForm()" class="bg-[#F8D100] text-black px-4 py-2 rounded-lg w-full">Absenden</button>
+    </div>
+
+    <!-- Close Button -->
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-[#F8D100] text-2xl">&times;</button>
+  </div>
+</div>
+
+<!--Calender 🔹 JS -->
 <script>
   const months = [
     "Januar", "Februar", "März", "April", "Mai", "Juni",
     "Juli", "August", "September", "Oktober", "November", "Dezember"
   ];
 
-  // Har calendar ka apna state
   const calendars = {
     1: { date: new Date() },
     2: { date: new Date() }
@@ -1514,7 +1542,7 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
     for (let d = 1; d <= daysInMonth; d++) {
       const day = document.createElement("div");
       day.textContent = d;
-      day.className = "calendar-day";
+      day.className = "calendar-day cursor-pointer hover:text-[#F8D100]";
 
       if (
         d === today.getDate() &&
@@ -1527,6 +1555,10 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
       day.onclick = () => {
         calendarDays.querySelectorAll(".calendar-day").forEach(el => el.classList.remove("selected"));
         day.classList.add("selected");
+
+        // open popup with selected date and calendar info
+        const selectedFullDate = `${d}.${month + 1}.${year} (Kalender ${calendarId})`;
+        openModal(selectedFullDate);
       };
 
       calendarDays.appendChild(day);
@@ -1539,7 +1571,33 @@ Auftragnehmern, der sich zum Ziel gesetzt hat, den medial in Verruf geratenen We
     generateCalendar(calendarId);
   }
 
-  // Init both calendars
+  // 🔹 Popup Functions
+  function openModal(date) {
+    document.getElementById('popupModal').classList.remove('hidden');
+    document.getElementById('popupModal').classList.add('flex');
+    document.getElementById('selectedDate').value = date;
+    goToStep(1);
+  }
+
+  function closeModal() {
+    document.getElementById('popupModal').classList.add('hidden');
+    document.getElementById('popupModal').classList.remove('flex');
+  }
+
+  function goToStep(step) {
+    document.getElementById('step1').classList.add('hidden');
+    document.getElementById('step2').classList.add('hidden');
+    document.getElementById('step' + step).classList.remove('hidden');
+  }
+
+  function submitForm() {
+    const date = document.getElementById('selectedDate').value;
+    const time = document.getElementById('selectedTime').value;
+    alert(`Datum: ${date}\nZeit: ${time}\n(Daten gespeichert ✅)`);
+    closeModal();
+  }
+
+  // Init
   generateCalendar(1);
   generateCalendar(2);
 </script>
